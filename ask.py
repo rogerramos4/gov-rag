@@ -32,11 +32,12 @@ def retrieve(question: str, collection: str = "nist_800", k: int = 6) -> list[di
     """
     client = chromadb.PersistentClient(path="./chroma_db")
     col = client.get_collection(collection)
+    fingerprint = (col.metadata or {}).get("fingerprint", collection)
     q = embed([question], prefix="search_query: ")[0]
     res = col.query(query_embeddings=[q], n_results=k, include=["documents", "metadatas", "distances"])
     out = []
     for cid, text, meta, dist in zip(res["ids"][0], res["documents"][0], res["metadatas"][0], res["distances"][0]):
-        out.append({"id": cid, "doc": meta["doc"], "page": meta["page"], "text": text, "distance": dist})
+        out.append({"id": cid, "doc": meta["doc"], "page": meta["page"], "text": text, "distance": dist, "fingerprint": fingerprint})
     return out
 
 
@@ -64,6 +65,16 @@ def generate_local(system: str, user: str) -> tuple[str, dict]:
     return j["message"]["content"].strip(), usage
 
 
+def classify_abstention(text: str) -> bool:
+    """True only if the reply is an abstention, not an answer that merely mentions the token.
+
+    Why not a substring check: 'The doc says "NOT IN DOCUMENTS" means X' is an answer.
+    We call it an abstention when the token appears and the reply is short with no citation.
+    """
+    t = text.strip()
+    return ABSTAIN in t.upper() and "(" not in t and len(t) <= 200
+
+
 def answer(question: str, collection: str = "nist_800", k: int = 6, passages: list[dict] | None = None) -> dict:
     """Full pipeline for one question; logs a record to runs.jsonl and returns it.
 
@@ -73,10 +84,14 @@ def answer(question: str, collection: str = "nist_800", k: int = 6, passages: li
     if passages is None:
         passages = retrieve(question, collection, k)
     text, usage = generate_local(SYSTEM, build_prompt(question, passages))
+    abstained = classify_abstention(text)
+    if abstained:
+        text = ABSTAIN  # normalize so downstream code sees the documented exact sentinel
     rec = {
-        "ts": time.time(), "backend": GEN_MODEL, "collection": collection, "question": question,
+        "ts": time.time(), "backend": GEN_MODEL, "collection": collection,
+        "fingerprint": passages[0]["fingerprint"] if passages else None, "question": question,
         "retrieved_ids": [p["id"] for p in passages], "answer": text,
-        "abstained": ABSTAIN in text.upper(),  # models often add a sentence before the token
+        "abstained": abstained,
         **usage, "seconds": round(time.time() - t0, 2),
     }
     with Path("runs.jsonl").open("a", encoding="utf-8") as f:

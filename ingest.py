@@ -34,7 +34,10 @@ def chunk_page(text: str, size: int, overlap: int) -> list[str]:
     """Split one page's text into fixed-size overlapping windows.
 
     Why never cross pages: a chunk that spans two pages has no single page to cite.
+    Why validate: overlap >= size would loop forever; negative overlap would skip text.
     """
+    if size <= 0 or not (0 <= overlap < size):
+        raise ValueError(f"need size > 0 and 0 <= overlap < size, got size={size} overlap={overlap}")
     text = " ".join(text.split())  # collapse whitespace so chunk sizes are meaningful
     if not text:
         return []
@@ -84,20 +87,32 @@ def main() -> None:
             docs.append(chunk)
             metas.append({"doc": args.doc, "page": page_no, "sha256": sha[:12]})
 
+    if args.batch <= 0:
+        raise ValueError("--batch must be > 0")
     client = chromadb.PersistentClient(path="./chroma_db")
     name = f"{args.doc}_{args.size}"
-    # Why delete first: re-running ingest must give the same store, not duplicates.
-    if name in [c.name for c in client.list_collections()]:
-        client.delete_collection(name)
-    col = client.create_collection(name, embedding_function=None, metadata={"hnsw:space": "cosine"})
+    # Why build into a temp collection first: if Ollama dies mid-run, the old index
+    # must survive untouched. We swap names only after every chunk is embedded.
+    tmp_name = f"{name}__building"
+    existing = {c.name for c in client.list_collections()}
+    if tmp_name in existing:
+        client.delete_collection(tmp_name)
+    fingerprint = f"{args.doc}|sha={sha[:12]}|size={args.size}|overlap={args.overlap}|embed={EMBED_MODEL}"
+    col = client.create_collection(tmp_name, embedding_function=None,
+                                   metadata={"hnsw:space": "cosine", "fingerprint": fingerprint})
 
     for i in range(0, len(docs), args.batch):
         vecs = embed(docs[i : i + args.batch])
         col.add(ids=ids[i : i + args.batch], embeddings=vecs, documents=docs[i : i + args.batch], metadatas=metas[i : i + args.batch])
         print(f"  embedded {min(i + args.batch, len(docs))}/{len(docs)}", end="\r", file=sys.stderr)
 
+    if col.count() != len(docs):
+        raise RuntimeError(f"expected {len(docs)} chunks, stored {col.count()}; old index left intact")
+    if name in existing:
+        client.delete_collection(name)
+    col.modify(name=name)
     print(f"\n{pdf_path.name} sha256={sha[:12]}  pages={len(pages)}  chunks={len(docs)}  "
-          f"collection={name}  {time.time() - t0:.1f}s")
+          f"collection={name}  fingerprint={fingerprint}  {time.time() - t0:.1f}s")
 
 
 if __name__ == "__main__":
