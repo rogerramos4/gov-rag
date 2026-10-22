@@ -1,0 +1,99 @@
+{
+  "id": "e05",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What does the EU AI Act require of deployers of AI systems that generate deep fakes?",
+  "answer": "The EU AI Act requires deployers of AI systems that generate deep fakes to disclose that the content has been artificially generated or manipulated. This obligation shall not apply where the use is authorized by law to detect, prevent, investigate or prosecute criminal offense. Where the content forms part of an evidently artistic, creative, satirical, fictional or analogous work or programme, the transparency obligations set out in this paragraph are limited to disclosure of the existence of such generated or manipulated content in an appropriate manner that does not hamper the display or enjoyment of the work. (doc=eu, page=82)",
+  "raw_answer": "The EU AI Act requires deployers of AI systems that generate deep fakes to disclose that the content has been artificially generated or manipulated. This obligation shall not apply where the use is authorized by law to detect, prevent, investigate or prosecute criminal offense. Where the content forms part of an evidently artistic, creative, satirical, fictional or analogous work or programme, the transparency obligations set out in this paragraph are limited to disclosure of the existence of such generated or manipulated content in an appropriate manner that does not hamper the display or enjoyment of the work. (doc=eu, page=82)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 5.45,
+  "tokens_in": 1146,
+  "tokens_out": 121,
+  "retrieved_ids": [
+    "eu-p034-c04",
+    "eu-p082-c06",
+    "eu-p069-c04",
+    "eu-p082-c02",
+    "eu-p068-c06",
+    "eu-p068-c02"
+  ],
+  "retrieved_pages": [
+    34,
+    82,
+    69,
+    82,
+    68,
+    68
+  ],
+  "evidence_pages": [
+    82
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.5,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p034-c04",
+      "doc": "eu",
+      "page": 34,
+      "text": "ntially altering the input data provided by the deployer or the semantics thereof. (134) Further to the technical solutions employed by the providers of the AI system, deployers who use an AI system to generate or manipulate image, audio or video content that appreciably resembles existing persons, objects, places, entities or events and would falsely appear to a person to be authentic or truthful (deep fakes), should also clearly and distinguishably disclose that the content has been artificially created or manipulated by labelling the AI output accordingly and disclosing its artificial origin. Compliance with this transparency obligation should not be interpreted as indicating that the use of the AI system or its output impedes the right to freedom of expression and the right to freedom ",
+      "distance": 0.21968579292297363,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p082-c06",
+      "doc": "eu",
+      "page": 82,
+      "text": "or the rights and freedoms of third parties, and in accordance with Union law. 4. Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall disclose that the content has been artificially generated or manipulated. This obligation shall not apply where the use is authorised by law to detect, prevent, investigate or prosecute criminal offence. Where the content forms part of an evidently artistic, creative, satirical, fictional or analogous work or programme, the transparency obligations set out in this paragraph are limited to disclosure of the existence of such generated or manipulated content in an appropriate manner that does not hamper the display or enjoyment of the work. Deployers of an AI system that generates or manipulates",
+      "distance": 0.20419496297836304,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p069-c04",
+      "doc": "eu",
+      "page": 69,
+      "text": " law enforcement purposes Article 13 of Directive (EU) 2016/680 shall apply. 12. Deployers shall cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation. Article 27 Fundamental rights impact assessment for high-risk AI systems 1. Prior to deploying a high-risk AI system referred to in Article 6(2), with the exception of high-risk AI systems intended to be used in the area listed in point 2 of Annex III, deployers that are bodies governed by public law, or are private entities providing public services, and deployers of high-risk AI systems referred to in points 5 (b) and (c) of Annex III, shall perform an assessment of the impact on fundamental rights that the use of such system may ",
+      "distance": 0.24596720933914185,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p082-c02",
+      "doc": "eu",
+      "page": 82,
+      "text": "d national authorities referred to in Article 74(8) shall have access to the respective restricted sections of the EU database listed in the first subparagraph of this paragraph. 5. High-risk AI systems referred to in point 2 of Annex III shall be registered at national level. CHAPTER IV TRANSPARENCY OBLIGATIONS FOR PROVIDERS AND DEPLOYERS OF CERTAIN AI SYSTEMS Article 50 Transparency obligations for providers and deployers of certain AI systems 1. Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspec",
+      "distance": 0.24847733974456787,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p068-c06",
+      "doc": "eu",
+      "page": 68,
+      "text": "s, bodies, offices or agencies shall comply with the registration obligations referred to in Article 49. When such deployers find that the high-risk AI system that they envisage using has not been registered in the EU database referred to in Article 71, they shall not use that system and shall inform the provider or the distributor. 9. Where applicable, deployers of high-risk AI systems shall use the information provided under Article 13 of this Regulation to comply with their obligation to carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680. 10. Without prejudice to Directive (EU) 2016/680, in the framework of an investigation for the targeted search of a person suspected or convicted of having committed a cri",
+      "distance": 0.24866074323654175,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p068-c02",
+      "doc": "eu",
+      "page": 68,
+      "text": "w of the intended purpose of the high-risk AI system. 5. Deployers shall monitor the operation of the high-risk AI system on the basis of the instructions for use and, where relevant, inform providers in accordance with Article 72. Where deployers have reason to consider that the use of the high-risk AI system in accordance with the instructions may result in that AI system presenting a risk within the meaning of Article 79(1), they shall, without undue delay, inform the provider or distributor and the relevant market surveillance authority, and shall suspend the use of that system. Where deployers have identified a serious incident, they shall also immediately inform first the provider, and then the importer or distributor and the relevant market surveillance authorities of that incident.",
+      "distance": 0.26340019702911377,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "They must disclose that the content has been artificially generated or manipulated, with exceptions for law-enforcement uses authorised by law and for evidently artistic, creative or satirical works."
+}

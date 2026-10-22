@@ -1,0 +1,99 @@
+{
+  "id": "q03",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "How does the AI RMF define risk?",
+  "answer": "The AI RMF defines risk as the composite measure of an event\u2019s probability of occurring and the magnitude or degree of the consequences of the corresponding event (doc=nist, page=9).",
+  "raw_answer": "The AI RMF defines risk as the composite measure of an event\u2019s probability of occurring and the magnitude or degree of the consequences of the corresponding event (doc=nist, page=9).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.85,
+  "tokens_in": 983,
+  "tokens_out": 39,
+  "retrieved_ids": [
+    "nist-p009-c01",
+    "nist-p038-c03",
+    "nist-p009-c04",
+    "nist-p012-c01",
+    "nist-p001-c01",
+    "nist-p014-c01"
+  ],
+  "retrieved_pages": [
+    9,
+    38,
+    9,
+    12,
+    1,
+    14
+  ],
+  "evidence_pages": [
+    9
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p009-c01",
+      "doc": "nist",
+      "page": 9,
+      "text": "NIST AI 100-1 AI RMF 1.0 Part 1: Foundational Information 1. Framing Risk AI risk management offers a path to minimize potential negative impacts of AI systems, such as threats to civil liberties and rights, while also providing opportunities to maximize positive impacts. Addressing, documenting, and managing AI risks and potential negative impacts effectively can lead to more trustworthy AI systems. 1.1 Understanding and Addressing Risks, Impacts, and Harms In the context of the AI RMF,risk refers to the composite measure of an event\u2019s probability of occurring and the magnitude or degree of the consequences of the corresponding event. The impacts, or consequences, of AI systems can be positive, negative, or both and can result in opportunities or threats (Adapted from: ISO 31000:2018). Wh",
+      "distance": 0.15289795398712158,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p038-c03",
+      "doc": "nist",
+      "page": 38,
+      "text": "sights into how risk can be managed at various stages of the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles assist organizations in deciding how they might best manage AI risk that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. AI RMF temporal profiles are descriptions of either the current state or the desired, target state of specific AI risk management activities within a given sector, industry, organization, or application context. An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. Co",
+      "distance": 0.1599808931350708,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p009-c04",
+      "doc": "nist",
+      "page": 9,
+      "text": " overall system performance and trustworthiness and the likelihood that AI technologies will be used in ways that are beneficial. The AI RMF is designed to address new risks as they emerge. This flexibility is particularly important where impacts are not easily foreseeable and applications are evolving. While some AI risks and benefits are well-known, it can be challenging to assess negative impacts and the degree of harms. Figure 1 provides examples of potential harms that can be related to AI systems. AI risk management efforts should consider that humans may assume that AI systems work \u2013 and work well \u2013 in all settings. For example, whether correct or not, AI systems are often perceived as being more objective than humans or as offering greater capabilities than general software. Page 4",
+      "distance": 0.16497093439102173,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p012-c01",
+      "doc": "nist",
+      "page": 12,
+      "text": "NIST AI 100-1 AI RMF 1.0 1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization\u2019s or AI actor\u2019s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regula- tory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level of risk that is acceptable to organizations or society are highly contextual and application and use-case specific. Risk tolerances can be influenced by policies and norms established by AI sys- tem owners, organizations, industries, communities, or policy makers. Risk tolerances are likely to change over time as AI systems, policies, and norms evolve. Different organiza- tions may have varied ri",
+      "distance": 0.1708974838256836,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p001-c01",
+      "doc": "nist",
+      "page": 1,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "distance": 0.17139297723770142,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p014-c01",
+      "doc": "nist",
+      "page": 14,
+      "text": "NIST AI 100-1 AI RMF 1.0 Organizations need to establish and maintain the appropriate accountability mechanisms, roles and responsibilities, culture, and incentive structures for risk management to be ef- fective. Use of the AI RMF alone will not lead to these changes or provide the appropriate incentives. Effective risk management is realized through organizational commitment at senior levels and may require cultural change within an organization or industry. In addi- tion, small to medium-sized organizations managing AI risks or implementing the AI RMF may face different challenges than large organizations, depending on their capabilities and resources. 2. Audience Identifying and managing AI risks and potential impacts \u2013 both positive and negative \u2013 re- quires a broad set of perspective",
+      "distance": 0.1739824414253235,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "The composite measure of an event's probability of occurring and the magnitude or degree of the consequences of that event."
+}

@@ -1,0 +1,97 @@
+{
+  "id": "e07",
+  "kind": "false_premise",
+  "answerable": false,
+  "question": "What is the maximum fine for violating the NIST AI RMF?",
+  "answer": "The provided documents do not mention any maximum fine for violating the NIST AI RMF. The maximum fines mentioned are related to non-compliance with the prohibition of AI practices under the EU AI Regulation, which can be up to EUR 1 500 000 for Article 5 violations and up to EUR 750 000 for other requirements (doc=eu, page=117). However, there is no information about fines related to the NIST AI RMF in the given passages. Therefore, the answer is NOT IN DOCUMENTS.",
+  "raw_answer": "The provided documents do not mention any maximum fine for violating the NIST AI RMF. The maximum fines mentioned are related to non-compliance with the prohibition of AI practices under the EU AI Regulation, which can be up to EUR 1 500 000 for Article 5 violations and up to EUR 750 000 for other requirements (doc=eu, page=117). However, there is no information about fines related to the NIST AI RMF in the given passages. Therefore, the answer is NOT IN DOCUMENTS.",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.45,
+  "tokens_in": 822,
+  "tokens_out": 119,
+  "retrieved_ids": [
+    "nist-p002-c01",
+    "nist-p013-c01",
+    "nist-p001-c01",
+    "nist-p024-c01",
+    "eu-p117-c03",
+    "nist-p003-c03"
+  ],
+  "retrieved_pages": [
+    2,
+    13,
+    1,
+    24,
+    117,
+    3
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p002-c01",
+      "doc": "nist",
+      "page": 2,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0) This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 January 2023 U.S. Department of Commerce Gina M. Raimondo, Secretary National Institute of Standards and Technology Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology",
+      "distance": 0.25720369815826416,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p013-c01",
+      "doc": "nist",
+      "page": 13,
+      "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present \u2013 development and deployment should cease in a safe manner until risks can be sufficiently managed. If an AI system\u2019s development, deployment, and use cases are found to be low-risk in a specific context, that may suggest potentially lower prioritization. Risk prioritization may differ between AI systems that are designed or deployed to directly interact with ",
+      "distance": 0.2803077697753906,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p001-c01",
+      "doc": "nist",
+      "page": 1,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "distance": 0.28144609928131104,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p024-c01",
+      "doc": "nist",
+      "page": 24,
+      "text": "NIST AI 100-1 AI RMF 1.0 4. Effectiveness of the AI RMF Evaluations of AI RMF effectiveness \u2013 including ways to measure bottom-line improve- ments in the trustworthiness of AI systems \u2013 will be part of future NIST activities, in conjunction with the AI community. Organizations and other users of the Framework are encouraged to periodically evaluate whether the AI RMF has improved their ability to manage AI risks, including but not lim- ited to their policies, processes, practices, implementation plans, indicators, measurements, and expected outcomes. NIST intends to work collaboratively with others to develop met- rics, methodologies, and goals for evaluating the AI RMF\u2019s effectiveness, and to broadly share results and supporting information. Framework users are expected to benefit from: \u2022",
+      "distance": 0.28965985774993896,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p117-c03",
+      "doc": "eu",
+      "page": 117,
+      "text": " Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 1 500 000. 3. The non-compliance of the AI system with any requirements or obligations under this Regulation, other than those laid down in Article 5, shall be subject to administrative fines of up to EUR 750 000. 4. Before taking decisions pursuant to this Article, the European Data Protection Supervisor shall give the Union institution, body, office or agency which is the subject of the proceedings conducted by the European Data Protection Supervisor the opportunity of being heard on the matter regarding the possible infringement. The European Data Protection Supervisor shall base his or her decisions only on elements and circumstances on which the parti",
+      "distance": 0.3050438165664673,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p003-c03",
+      "doc": "nist",
+      "page": 3,
+      "text": "e, and description of change. NIST plans to update the AI RMF Playbook frequently. Comments on the AI RMF Playbook may be sent via email to AIframework@nist.gov at any time and will be reviewed and integrated on a semi-annual basis.",
+      "distance": 0.30753326416015625,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

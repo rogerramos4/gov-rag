@@ -1,0 +1,99 @@
+{
+  "id": "e01",
+  "kind": "detail",
+  "answerable": true,
+  "question": "What is the maximum administrative fine under the EU AI Act for non-compliance with the prohibited AI practices in Article 5?",
+  "answer": "The maximum administrative fine under the EU AI Act for non-compliance with the prohibited AI practices in Article 5 is up to EUR 1 500 000 (doc=eu, page=117).",
+  "raw_answer": "The maximum administrative fine under the EU AI Act for non-compliance with the prohibited AI practices in Article 5 is up to EUR 1 500 000 (doc=eu, page=117).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 5.04,
+  "tokens_in": 1179,
+  "tokens_out": 48,
+  "retrieved_ids": [
+    "eu-p117-c03",
+    "eu-p115-c04",
+    "eu-p117-c02",
+    "eu-p116-c01",
+    "eu-p118-c02",
+    "eu-p117-c05"
+  ],
+  "retrieved_pages": [
+    117,
+    115,
+    117,
+    116,
+    118,
+    117
+  ],
+  "evidence_pages": [
+    115
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.5,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p117-c03",
+      "doc": "eu",
+      "page": 117,
+      "text": " Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 1 500 000. 3. The non-compliance of the AI system with any requirements or obligations under this Regulation, other than those laid down in Article 5, shall be subject to administrative fines of up to EUR 750 000. 4. Before taking decisions pursuant to this Article, the European Data Protection Supervisor shall give the Union institution, body, office or agency which is the subject of the proceedings conducted by the European Data Protection Supervisor the opportunity of being heard on the matter regarding the possible infringement. The European Data Protection Supervisor shall base his or her decisions only on elements and circumstances on which the parti",
+      "distance": 0.13580048084259033,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p115-c04",
+      "doc": "eu",
+      "page": 115,
+      "text": " paragraph 1, and shall notify it, without delay, of any subsequent amendment to them. 3. Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher. 4. Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher: (a) obligations of providers pursuant to Article 16; (b) obligations of aut",
+      "distance": 0.15844136476516724,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p117-c02",
+      "doc": "eu",
+      "page": 117,
+      "text": "gate the possible adverse effects of the infringement, including compliance with any of the measures previously ordered by the European Data Protection Supervisor against the Union institution, body, office or agency concerned with regard to the same subject matter; (e) any similar previous infringements by the Union institution, body, office or agency; (f) the manner in which the infringement became known to the European Data Protection Supervisor, in particular whether, and if so to what extent, the Union institution, body, office or agency notified the infringement; (g) the annual budget of the Union institution, body, office or agency. 2. Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 1 500 000. 3. ",
+      "distance": 0.22771960496902466,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p116-c01",
+      "doc": "eu",
+      "page": 116,
+      "text": "5. The supply of incorrect, incomplete or misleading information to notified bodies or national competent authorities in reply to a request shall be subject to administrative fines of up to EUR 7 500 000 or, if the offender is an undertaking, up to 1 % of its total worldwide annual turnover for the preceding financial year, whichever is higher. 6. In the case of SMEs, including start-ups, each fine referred to in this Article shall be up to the percentages or amount referred to in paragraphs 3, 4 and 5, whichever thereof is lower. 7. When deciding whether to impose an administrative fine and when deciding on the amount of the administrative fine in each individual case, all relevant circumstances of the specific situation shall be taken into account and, as appropriate, regard shall be giv",
+      "distance": 0.2670762538909912,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p118-c02",
+      "doc": "eu",
+      "page": 118,
+      "text": "ommunicate its preliminary findings to the provider of the general-purpose AI model and give it an opportunity to be heard. 3. Fines imposed in accordance with this Article shall be effective, proportionate and dissuasive. 4. Information on fines imposed under this Article shall also be communicated to the Board as appropriate. 5. The Court of Justice of the European Union shall have unlimited jurisdiction to review decisions of the Commission fixing a fine under this Article. It may cancel, reduce or increase the fine imposed. 6. The Commission shall adopt implementing acts containing detailed arrangements and procedural safeguards for proceedings in view of the possible adoption of decisions pursuant to paragraph 1 of this Article. Those implementing acts shall be adopted in accordance w",
+      "distance": 0.26077139377593994,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p117-c05",
+      "doc": "eu",
+      "page": 117,
+      "text": "o the general budget of the Union. The fines shall not affect the effective operation of the Union institution, body, office or agency fined. 7. The European Data Protection Supervisor shall, on an annual basis, notify the Commission of the administrative fines it has imposed pursuant to this Article and of any litigation or judicial proceedings it has initiated. Article 101 Fines for providers of general-purpose AI models 1. The Commission may impose on providers of general-purpose AI models fines not exceeding 3 % of their annual total worldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher., when the Commission finds that the provider intentionally or negligently: (a) infringed the relevant provisions of this Regulation; (b) failed to comply with a requ",
+      "distance": 0.2236834168434143,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "Up to EUR 35,000,000 or, for an undertaking, up to 7% of total worldwide annual turnover for the preceding financial year, whichever is higher."
+}

@@ -1,0 +1,100 @@
+{
+  "id": "q13",
+  "kind": "multi",
+  "answerable": true,
+  "question": "How does the MEASURE function relate to the MAP and MANAGE functions?",
+  "answer": "The MEASURE function relates to the MAP and MANAGE functions by using knowledge relevant to AI risks identified in the MAP function and informing the MANAGE function. The MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts (doc=nist, page=33). Additionally, outcomes in the MAP function are the basis for the MEASURE and MANAGE functions (doc=nist, page=30). The MEASURE function also examines and documents risks associated with transparency and accountability, as identified in the MAP function, and evaluates fairness and bias, as identified in the MAP function (doc=nist, page=35).",
+  "raw_answer": "The MEASURE function relates to the MAP and MANAGE functions by using knowledge relevant to AI risks identified in the MAP function and informing the MANAGE function. The MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts (doc=nist, page=33). Additionally, outcomes in the MAP function are the basis for the MEASURE and MANAGE functions (doc=nist, page=30). The MEASURE function also examines and documents risks associated with transparency and accountability, as identified in the MAP function, and evaluates fairness and bias, as identified in the MAP function (doc=nist, page=35).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.74,
+  "tokens_in": 1144,
+  "tokens_out": 146,
+  "retrieved_ids": [
+    "nist-p033-c01",
+    "nist-p026-c03",
+    "nist-p030-c01",
+    "nist-p030-c02",
+    "nist-p035-c02",
+    "nist-p037-c01"
+  ],
+  "retrieved_pages": [
+    33,
+    26,
+    30,
+    30,
+    35,
+    37
+  ],
+  "evidence_pages": [
+    30,
+    33
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 3,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p033-c01",
+      "doc": "nist",
+      "page": 33,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 2: Categories and subcategories for the MAP function. (Continued) MAP 5.2: Practices and personnel for supporting regular en- gagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented. Categories Subcategories 5.3 Measure The MEASURE function employs quantitative, qualitative, or mixed-method tools, tech- niques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts. It uses knowledge relevant to AI risks identified in the MAP function and informs the MANAGE function. AI systems should be tested before their deployment and regu- larly while in operation. AI risk measurements include documenting aspects of systems\u2019 functionality and trustworthines",
+      "distance": 0.298150897026062,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p026-c03",
+      "doc": "nist",
+      "page": 26,
+      "text": "F would start with the MAP function and con- tinue to MEASURE or MANAGE . However users integrate the functions, the process should be iterative, with cross-referencing between functions as necessary. Simi- larly, there are categories and subcategories with elements that apply to multiple functions, or that logically should take place before certain subcategory decisions. 5.1 Govern The GOVERN function: \u2022 cultivates and implements a culture of risk management within organizations design- ing, developing, deploying, evaluating, or acquiring AI systems; \u2022 outlines processes, documents, and organizational schemes that anticipate, identify, and manage the risks a system can pose, including to users and others across society \u2013 and procedures to achieve those outcomes; \u2022 incorporates processes t",
+      "distance": 0.2984161972999573,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p030-c01",
+      "doc": "nist",
+      "page": 30,
+      "text": "NIST AI 100-1 AI RMF 1.0 This complexity and varying levels of visibility can introduce uncertainty into risk man- agement practices. Anticipating, assessing, and otherwise addressing potential sources of negative risk can mitigate this uncertainty and enhance the integrity of the decision process. The information gathered while carrying out the MAP function enables negative risk pre- vention and informs decisions for processes such as model management, as well as an initial decision about appropriateness or the need for an AI solution. Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions. Without contex- tual knowledge, and awareness of risks within the identified contexts, risk management is difficult to perform. The MAP function is intended to enhance an organ",
+      "distance": 0.31070655584335327,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p030-c02",
+      "doc": "nist",
+      "page": 30,
+      "text": "edge, and awareness of risks within the identified contexts, risk management is difficult to perform. The MAP function is intended to enhance an organization\u2019s ability to identify risks and broader contributing factors. Implementation of this function is enhanced by incorporating perspectives from a diverse internal team and engagement with those external to the team that developed or deployed the AI system. Engagement with external collaborators, end users, potentially impacted communities, and others may vary based on the risk level of a particular AI system, the makeup of the internal team, and organizational policies. Gathering such broad perspec- tives can help organizations proactively prevent negative risks and develop more trustwor- thy AI systems by: \u2022 improving their capacity for",
+      "distance": 0.3121941089630127,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p035-c02",
+      "doc": "nist",
+      "page": 35,
+      "text": " MEASURE 2.8: Risks associated with transparency and account- ability \u2013 as identified in the MAP function \u2013 are examined and documented. MEASURE 2.9: The AI model is explained, validated, and docu- mented, and AI system output is interpreted within its context \u2013 as identified in the MAP function \u2013 to inform responsible use and governance. MEASURE 2.10: Privacy risk of the AI system \u2013 as identified in the MAP function \u2013 is examined and documented. MEASURE 2.11: Fairness and bias \u2013 as identified in the MAP function \u2013 are evaluated and results are documented. MEASURE 2.12: Environmental impact and sustainability of AI model training and management activities \u2013 as identified in the MAP function \u2013 are assessed and documented. MEASURE 2.13: Effectiveness of the employed TEVV met- rics and proces",
+      "distance": 0.31680548191070557,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p037-c01",
+      "doc": "nist",
+      "page": 37,
+      "text": "NIST AI 100-1 AI RMF 1.0 Practices related to managing AI risks are described in the NIST AI RMF Playbook. Table 4 lists the MANAGE function\u2019s categories and subcategories. Table 4: Categories and subcategories for the MANAGE function. MANAGE 1: AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed. MANAGE 1.1: A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed. MANAGE 1.2: Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods. MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned",
+      "distance": 0.32843321561813354,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "MAP outcomes are the basis for MEASURE and MANAGE; MEASURE uses the risks identified in MAP and its results inform MANAGE."
+}

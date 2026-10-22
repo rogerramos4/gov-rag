@@ -67,15 +67,24 @@ def retrieve(question: str, collection: str = "nist_800", k: int = 6, retriever:
     """
     retriever = retriever or RETRIEVER
     client = chromadb.PersistentClient(path="./chroma_db")
-    col = client.get_collection(collection)
-    fingerprint = (col.metadata or {}).get("fingerprint", collection) + f"|retriever={retriever}"
+    # A corpus is several collections joined with '+', e.g. "nist_800+eu_800". Cosine distances
+    # from the same embedding model are comparable, so we query each and merge by distance.
+    # Why not one big collection: each document keeps its own fingerprint and can be rebuilt alone.
+    cols = [client.get_collection(name) for name in collection.split("+")]
+    fingerprint = "+".join((c.metadata or {}).get("fingerprint", c.name) for c in cols) + f"|retriever={retriever}"
     pool = k if retriever == "dense" else 20
     q = embed([question], prefix="search_query: ")[0]
-    res = col.query(query_embeddings=[q], n_results=pool, include=["documents", "metadatas", "distances"])
-    dense = {cid: {"id": cid, "doc": m["doc"], "page": m["page"], "text": t, "distance": d, "fingerprint": fingerprint}
-             for cid, t, m, d in zip(res["ids"][0], res["documents"][0], res["metadatas"][0], res["distances"][0])}
+    dense: dict[str, dict] = {}
+    for col in cols:
+        res = col.query(query_embeddings=[q], n_results=pool, include=["documents", "metadatas", "distances"])
+        for cid, t, m, d in zip(res["ids"][0], res["documents"][0], res["metadatas"][0], res["distances"][0]):
+            dense[cid] = {"id": cid, "doc": m["doc"], "page": m["page"], "text": t, "distance": d, "fingerprint": fingerprint}
+    dense = dict(sorted(dense.items(), key=lambda kv: kv[1]["distance"])[:pool])
     if retriever == "dense":
-        return list(dense.values())
+        return list(dense.values())[:k]
+    if len(cols) > 1:
+        raise NotImplementedError("hybrid retrieval is single-collection only; use --retriever dense for a corpus")
+    col = cols[0]
 
     bm25, ids, text_of, meta_of = _bm25_index(col)
     scores = bm25.get_scores(tokenize(question))

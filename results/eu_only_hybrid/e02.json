@@ -1,0 +1,99 @@
+{
+  "id": "e02",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "Under the EU AI Act, besides safety components of products covered by Annex I, which other AI systems are classified as high-risk?",
+  "answer": "Under the EU AI Act, besides safety components of products covered by Annex I, stand-alone AI systems that are themselves products are also classified as high-risk. This is because the classification of an AI system as high-risk pursuant to this Regulation should not necessarily mean that the product whose safety component is the AI system, or the AI system itself as a product, is considered to be high-risk under the criteria established in the relevant Union harmonisation legislation that applies to the product. (doc=eu, page=14)",
+  "raw_answer": "Under the EU AI Act, besides safety components of products covered by Annex I, stand-alone AI systems that are themselves products are also classified as high-risk. This is because the classification of an AI system as high-risk pursuant to this Regulation should not necessarily mean that the product whose safety component is the AI system, or the AI system itself as a product, is considered to be high-risk under the criteria established in the relevant Union harmonisation legislation that applies to the product. (doc=eu, page=14)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 5.54,
+  "tokens_in": 1270,
+  "tokens_out": 105,
+  "retrieved_ids": [
+    "eu-p067-c04",
+    "eu-p014-c03",
+    "eu-p053-c06",
+    "eu-p045-c03",
+    "eu-p022-c05",
+    "eu-p013-c06"
+  ],
+  "retrieved_pages": [
+    67,
+    14,
+    53,
+    45,
+    22,
+    13
+  ],
+  "evidence_pages": [
+    53
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.3333333333333333,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p067-c04",
+      "doc": "eu",
+      "page": 67,
+      "text": "isk AI systems that are safety components of products covered by the Union harmonisation legislation listed in Section A of Annex I, the product manufacturer shall be considered to be the provider of the high-risk AI system, and shall be subject to the obligations under Article 16 under either of the following circumstances: (a) the high-risk AI system is placed on the market together with the product under the name or trademark of the product manufacturer; (b) the high-risk AI system is put into service under the name or trademark of the product manufacturer after the product has been placed on the market. 4. The provider of a high-risk AI system and the third party that supplies an AI system, tools, services, components, or processes that are used or integrated in a high-risk AI system s",
+      "distance": 0.16422677040100098,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p014-c03",
+      "doc": "eu",
+      "page": 14,
+      "text": "g gaseous fuels, medical devices, in vitro diagnostic medical devices, automotive and aviation. (51) The classification of an AI system as high-risk pursuant to this Regulation should not necessarily mean that the product whose safety component is the AI system, or the AI system itself as a product, is considered to be high-risk under the criteria established in the relevant Union harmonisation legislation that applies to the product. This is, in particular, the case for Regulations (EU) 2017/745 and (EU) 2017/746, where a third-party conformity assessment is provided for medium-risk and high-risk products. (52) As regards stand-alone AI systems, namely high-risk AI systems other than those that are safety components of products, or that are themselves products, it is appropriate to classi",
+      "distance": 0.14992403984069824,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p053-c06",
+      "doc": "eu",
+      "page": 53,
+      "text": "he prohibitions that apply where an AI practice infringes other Union law. CHAPTER III HIGH-RISK AI SYSTEMS SECTION 1 Classification of AI systems as high-risk Article 6 Classification rules for high-risk AI systems 1. Irrespective of whether an AI system is placed on the market or put into service independently of the products referred to in points (a) and (b), that AI system shall be considered to be high-risk where both of the following conditions are fulfilled: (a) the AI system is intended to be used as a safety component of a product, or the AI system is itself a product, covered by the Union harmonisation legislation listed in Annex I; (b) the product whose safety component pursuant to point (a) is the AI system, or the AI system itself as a product, is required to undergo a third-p",
+      "distance": 0.16528606414794922,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p045-c03",
+      "doc": "eu",
+      "page": 45,
+      "text": "on; (g) affected persons that are located in the Union. 2. For AI systems classified as high-risk AI systems in accordance with Article 6(1) related to products covered by the Union harmonisation legislation listed in Section B of Annex I, only Article 6(1), Articles 102 to 109 and Article 112 apply. Article 57 applies only in so far as the requirements for high-risk AI systems under this Regulation have been integrated in that Union harmonisation legislation. 3. This Regulation does not apply to areas outside the scope of Union law, and shall not, in any event, affect the competences of the Member States concerning national security, regardless of the type of entity entrusted by the Member States with carrying out tasks in relation to those competences. This Regulation does not apply to A",
+      "distance": 0.18485867977142334,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p022-c05",
+      "doc": "eu",
+      "page": 22,
+      "text": "s the achievement of those requirements is demonstrated in the EU declaration of conformity or parts thereof issued under that regulation. To that end, the assessment of the cybersecurity risks, associated to a product with digital elements classified as high-risk AI system according to this Regulation, carried out under a regulation of the European Parliament and of the Council on horizontal cybersecurity requirements for products with digital elements, should consider risks to the cyber resilience of an AI system as regards attempts by unauthorised third parties to alter its use, behaviour or performance, including AI specific vulnerabilities such as data poisoning or adversarial attacks, as well as, as relevant, risks to fundamental rights as required by this Regulation. (78) The confor",
+      "distance": 0.19767248630523682,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p013-c06",
+      "doc": "eu",
+      "page": 13,
+      "text": "of persons. (49) As regards high-risk AI systems that are safety components of products or systems, or which are themselves products or systems falling within the scope of Regulation (EC) No 300/2008 of the European Parliament and of the Council (24), Regulation (EU) No 167/2013 of the European Parliament and of the Council (25), Regulation (EU) No 168/2013 of the European Parliament and of the Council (26), Directive 2014/90/EU of the European Parliament and of the Council (27), Directive (EU) 2016/797 of the European Parliament and of the Council (28), Regulation (EU) 2018/858 of the European Parliament and of the Council (29), Regulation (EU) 2018/1139 of the OJ L, 12.7.2024 EN ELI: http://data.europa.eu/eli/reg/2024/1689/oj 13/144 (24) Regulation (EC) No 300/2008 of the European Parlia",
+      "distance": 0.15838956832885742,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "AI systems listed in Annex III are considered high-risk (Article 6(2)), unless they do not pose a significant risk of harm under the Article 6(3) derogation."
+}

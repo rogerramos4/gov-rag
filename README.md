@@ -1,6 +1,6 @@
 # gov-rag
 
-Question answering over the **NIST AI Risk Management Framework** with page citations, honest abstention, and a frozen evaluation set. Runs locally on an 8 GB GPU; no frameworks. Built to show retrieval **plus measurement**, not a chatbot.
+Question answering over the **NIST AI Risk Management Framework** (and, as a second corpus, the **EU AI Act**) with page citations, honest abstention, and a frozen evaluation set. Runs locally on an 8 GB GPU; no frameworks. Built to show retrieval **plus measurement**, not a chatbot.
 
 Full write-up with error analysis: [`docs/writeup.md`](docs/writeup.md). Build log: [`docs/retros.md`](docs/retros.md).
 
@@ -20,6 +20,7 @@ Full write-up with error analysis: [`docs/writeup.md`](docs/writeup.md). Build l
 | Chunk sweep (`--chunk 400` / `1200`) | MRR 0.82 / 0.80 vs **0.90** at 800; 400 splits definitions, 1200 dilutes embeddings |
 | Claude Haiku 5.5 as generator (`--model claude`) | same correctness 19/20, abstentions 6/6 vs 5/6, 3.4 s, $0.005 per 20 answers |
 | Judge vs. 50 labels (incl. 5 deliberately bad no-context answers) | correctness TNR 5/5, groundedness TNR 4/5 |
+| + EU AI Act (144 pp, `--collection nist_800+eu_800`) | EU set MRR **0.40**, recitals outrank articles; NIST set drops to 13/14 from interference; hybrid worse again |
 
 Not called "accuracy" on purpose: each row is one failure mode. Judge vs. 40 labels: 0 disagreements, but the labels were model-written and contain only one negative, so this validates little yet (see limitations in the write-up). `evals\judge_validation.py` computes TPR/TNR from `labels.csv`.
 
@@ -51,6 +52,7 @@ ingest.py           PDF -> page-bounded chunks -> Ollama embeddings -> Chroma
 ask.py              question -> top-6 -> cited answer or NOT IN DOCUMENTS
 evals/questions.jsonl      frozen test set (never edited after first reported run)
 evals/dev_questions.jsonl  5 scratch questions for tuning
+evals/questions_eu.jsonl   7 EU AI Act questions incl. one cross-document and one false premise
 evals/run_evals.py         Recall@6, MRR, citation support, abstention, PASS/FAIL judges
 evals/rubrics.py           judge rubrics, verbatim
 results/frozen/            per-question JSON traces, results.csv, summary.md, labels.csv

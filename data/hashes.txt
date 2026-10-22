@@ -3,3 +3,8 @@ Algorithm       Hash                                                            
 ---------       ----                                                                   ----
 SHA256          7576EDB531D9848825814EE88E28B1795D3A84B435B4B797D3670EAFDC4A89F1       C:\Users\roger\Projects\gov-rag\…
 
+
+Algorithm       Hash                                                                   Path
+---------       ----                                                                   ----
+SHA256          BBA630444B3278E881066774002A1D7824308934F49CCFA203E65BE43692F55E       C:\Users\roger\Projects\gov-rag\…
+

@@ -48,6 +48,26 @@ Answers questions about the NIST AI Risk Management Framework (AI RMF 1.0) from 
 
 "Accuracy" is deliberately absent: each row measures one failure mode.
 
+### Second document: EU AI Act (144 pages, 960 chunks) added to the corpus
+
+Seven new questions in `evals/questions_eu.jsonl` (5 single-document, 1 cross-document on how each text defines "risk", 1 false premise asking for "the fine for violating the NIST RMF"). Retrieval merges both collections by cosine distance. Local generator throughout.
+
+| | NIST set, NIST only (baseline) | NIST set, both docs | EU set, both docs | EU set, EU only, dense | EU set, EU only, hybrid |
+|---|---|---|---|---|---|
+| Recall@6 | 14/14 | 13/14 | 5/6 | 4/6 | 3/6 |
+| MRR | 0.90 | 0.88 | 0.40 | 0.32 | 0.22 |
+| Citation support | 14/14 | 13/14 | 6/6 | 6/6 | 5/5 |
+| Correct abstentions | 5/6 | 4/6* | 0/1 | 1/1 | 1/1 |
+
+\* One of the two "misses" is a stale label: q16 ("What does the EU AI Act say about high-risk systems?") was unanswerable on the NIST-only corpus and is answerable now; the model answered it correctly from the EU text. The frozen set's `answerable` flags are relative to the NIST-only corpus and were not edited.
+
+What the second document taught:
+
+- **Retrieval is the bottleneck at 144 pages, not generation.** e03 ("from what date does the Act apply?") lives in Article 113 on p123; the six retrieved chunks were all recital pages (118–121) that discuss application dates in general terms. e04 (definition of "AI system") came back at rank 6 behind recital paraphrases, and the model cited the recital on p1 rather than Article 3. Legal texts say everything twice, once in recitals and once in articles, and the embedding cannot tell which is normative.
+- **Hybrid retrieval failed again**, MRR 0.22 vs 0.32 on the EU document alone, despite the hypothesis that article numbers and defined terms would favour keyword search. Two negative results on two documents; BM25 is now a settled "no" for this project.
+- **Cross-document leakage.** e07 asked for the maximum fine under the NIST RMF. The model recited the EU Act's fines from p117 ("up to EUR 1 500 000 ... EUR 750 000", which are the Article 100 fines for Union institutions, not even the headline Article 99 figures), then appended `NOT IN DOCUMENTS`. The citation rule correctly scores this as an answer, not an abstention.
+- **Interference.** Adding the EU chunks pushed q07 (GOVERN 1.6) out of the NIST top-6 entirely; five of the six retrieved chunks were EU pages. Recall@6 of 14/14 on one document said nothing about two, which is the point the Chroma context-rot study makes at larger scale.
+
 ### Generator comparison: local 4B vs. Claude Haiku 5.5, identical retrieval and prompt
 
 | | `qwen3:4b-q4_K_M` (local) | `claude-haiku-5-5` (API) |
@@ -121,6 +141,9 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 | Judge shown the normalized `NOT IN DOCUMENTS` instead of the raw guess-then-abstain text | 1 | q01 no-context | judges now receive `raw_answer`; numbers above are as-run, before the fix |
 | Citation parser missed `(nist, page=25; nist, page=8)` | 1 | q01, Claude backend | regex extended; reported both as-run and re-parsed |
 | Same wrong subcategory from two different generators | 2 | q14, local and Claude | flagged for review of retrieval order and of the reference answer |
+| Recital pages outrank the normative article (legal-text structure) | 2 | e03, e04 | candidate fix: metadata filter or boost for pages after the "HAVE ADOPTED THIS REGULATION" line |
+| Cross-document leakage into a false-premise question | 1 | e07 | prompt experiment: name the document in the question or require per-doc citations |
+| Second document displaces first document's evidence | 1 | q07 on corpus | per-document top-k then merge, or a reranker |
 
 ## Limitations
 
@@ -129,11 +152,12 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 - Negatives are still few: 5 for correctness, 5 for groundedness, all from the no-context baseline. TNR 5/5 and 4/5 are a first signal, not a rate.
 - Tables split across pages lose their row label (GOVERN 4 spans physical pages 28–29). Page-bounded chunking is a deliberate trade for verifiable citations.
 - Citations use physical PDF pages; NIST's printed page 1 is physical page 6.
-- One document. Recall@6 of 14/14 says little about corpus-scale retrieval; the full-document baseline (whole PDF in one Haiku prompt) is the honest comparison and is a stretch item.
+- Two documents now, and the second one shows the first one's numbers were flattering: MRR drops to 0.40 on the EU set. The full-document baseline (whole PDF in one Haiku prompt) remains the honest comparison for the NIST document and is still a stretch item.
+- Seven EU questions is a smoke test. Recital-vs-article confusion needs a dedicated question set to measure properly.
 
 ## Next steps
 
-Re-run judges on raw answers (fix is in, numbers above predate it) → human re-grade of the 50 labels → more negatives (perturbed answers) → EU AI Act as a second document with its own question file.
+Re-run judges on raw answers (fix is in, numbers above predate it) → human re-grade of the 50 labels → article-vs-recital page filter for the EU document and re-score the EU set → per-document top-k merge to stop interference → more negatives (perturbed answers) as a second document with its own question file.
 
 ## How this maps to the AI RMF itself
 

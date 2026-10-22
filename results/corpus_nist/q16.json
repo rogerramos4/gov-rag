@@ -1,0 +1,97 @@
+{
+  "id": "q16",
+  "kind": "off_topic",
+  "answerable": false,
+  "question": "What does the EU AI Act say about high-risk AI systems?",
+  "answer": "The EU AI Act addresses high-risk AI systems in several ways. It states that high-risk AI systems that are safety components of products or systems, or which are themselves products or systems falling within the scope of various regulations, are subject to specific rules (doc=eu, page=13). The Act also requires that before using an AI system listed in the high-risk use cases in an annex, deployers of high-risk AI systems that are public authorities, agencies, or bodies should register themselves in an EU database and select the system they envisage to use. Other deployers should be entitled to do so voluntarily (doc=eu, page=33). Additionally, the EU database should be publicly accessible, free of charge, with information that is easily navigable, understandable, and machine-readable (doc=eu, page=33). The Act also mentions that the classification of an AI system as high-risk does not necessarily mean that the product whose safety component is the AI system, or the AI system itself as a product, is considered to be high-risk under the criteria established in relevant Union harmonisation legislation (doc=eu, page=14). Furthermore, the Act requires that the assessment of cybersecurity risks for products with digital elements classified as high-risk AI systems should consider risks to the cyber resilience of an AI system (doc=eu, page=22).",
+  "raw_answer": "The EU AI Act addresses high-risk AI systems in several ways. It states that high-risk AI systems that are safety components of products or systems, or which are themselves products or systems falling within the scope of various regulations, are subject to specific rules (doc=eu, page=13). The Act also requires that before using an AI system listed in the high-risk use cases in an annex, deployers of high-risk AI systems that are public authorities, agencies, or bodies should register themselves in an EU database and select the system they envisage to use. Other deployers should be entitled to do so voluntarily (doc=eu, page=33). Additionally, the EU database should be publicly accessible, free of charge, with information that is easily navigable, understandable, and machine-readable (doc=eu, page=33). The Act also mentions that the classification of an AI system as high-risk does not necessarily mean that the product whose safety component is the AI system, or the AI system itself as a product, is considered to be high-risk under the criteria established in relevant Union harmonisation legislation (doc=eu, page=14). Furthermore, the Act requires that the assessment of cybersecurity risks for products with digital elements classified as high-risk AI systems should consider risks to the cyber resilience of an AI system (doc=eu, page=22).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 6.88,
+  "tokens_in": 1209,
+  "tokens_out": 278,
+  "retrieved_ids": [
+    "eu-p013-c06",
+    "eu-p033-c04",
+    "eu-p033-c03",
+    "eu-p014-c03",
+    "eu-p022-c05",
+    "eu-p081-c06"
+  ],
+  "retrieved_pages": [
+    13,
+    33,
+    33,
+    14,
+    22,
+    81
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 5,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p013-c06",
+      "doc": "eu",
+      "page": 13,
+      "text": "of persons. (49) As regards high-risk AI systems that are safety components of products or systems, or which are themselves products or systems falling within the scope of Regulation (EC) No 300/2008 of the European Parliament and of the Council (24), Regulation (EU) No 167/2013 of the European Parliament and of the Council (25), Regulation (EU) No 168/2013 of the European Parliament and of the Council (26), Directive 2014/90/EU of the European Parliament and of the Council (27), Directive (EU) 2016/797 of the European Parliament and of the Council (28), Regulation (EU) 2018/858 of the European Parliament and of the Council (29), Regulation (EU) 2018/1139 of the OJ L, 12.7.2024 EN ELI: http://data.europa.eu/eli/reg/2024/1689/oj 13/144 (24) Regulation (EC) No 300/2008 of the European Parlia",
+      "distance": 0.16016685962677002,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p033-c04",
+      "doc": "eu",
+      "page": 33,
+      "text": "on is not high-risk on the basis of a derogation, should be required to register themselves and information about their AI system in an EU database, to be established and managed by the Commission. Before using an AI system listed in the high-risk use cases in an annex to this Regulation, deployers of high-risk AI systems that are public authorities, agencies or bodies, should register themselves in such database and select the system that they envisage to use. Other deployers should be entitled to do so voluntarily. This section of the EU database should be publicly accessible, free of charge, the information should be easily navigable, understandable and machine-readable. The EU database should also be user-friendly, for example by providing search functionalities, including through keyw",
+      "distance": 0.16624534130096436,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p033-c03",
+      "doc": "eu",
+      "page": 33,
+      "text": "l protection authorities may put a specific high-risk AI system into service without the authorisation of the market surveillance authority, provided that such authorisation is requested during or after the use without undue delay. (131) In order to facilitate the work of the Commission and the Member States in the AI field as well as to increase the transparency towards the public, providers of high-risk AI systems other than those related to products falling within the scope of relevant existing Union harmonisation legislation, as well as providers who consider that an AI system listed in the high-risk use cases in an annex to this Regulation is not high-risk on the basis of a derogation, should be required to register themselves and information about their AI system in an EU database, t",
+      "distance": 0.17215436697006226,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p014-c03",
+      "doc": "eu",
+      "page": 14,
+      "text": "g gaseous fuels, medical devices, in vitro diagnostic medical devices, automotive and aviation. (51) The classification of an AI system as high-risk pursuant to this Regulation should not necessarily mean that the product whose safety component is the AI system, or the AI system itself as a product, is considered to be high-risk under the criteria established in the relevant Union harmonisation legislation that applies to the product. This is, in particular, the case for Regulations (EU) 2017/745 and (EU) 2017/746, where a third-party conformity assessment is provided for medium-risk and high-risk products. (52) As regards stand-alone AI systems, namely high-risk AI systems other than those that are safety components of products, or that are themselves products, it is appropriate to classi",
+      "distance": 0.1744745969772339,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p022-c05",
+      "doc": "eu",
+      "page": 22,
+      "text": "s the achievement of those requirements is demonstrated in the EU declaration of conformity or parts thereof issued under that regulation. To that end, the assessment of the cybersecurity risks, associated to a product with digital elements classified as high-risk AI system according to this Regulation, carried out under a regulation of the European Parliament and of the Council on horizontal cybersecurity requirements for products with digital elements, should consider risks to the cyber resilience of an AI system as regards attempts by unauthorised third parties to alter its use, behaviour or performance, including AI specific vulnerabilities such as data poisoning or adversarial attacks, as well as, as relevant, risks to fundamental rights as required by this Regulation. (78) The confor",
+      "distance": 0.17513442039489746,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p081-c06",
+      "doc": "eu",
+      "page": 81,
+      "text": "6(3), that provider or, where applicable, the authorised representative shall register themselves and that system in the EU database referred to in Article 71. 3. Before putting into service or using a high-risk AI system listed in Annex III, with the exception of high-risk AI systems listed in point 2 of Annex III, deployers that are public authorities, Union institutions, bodies, offices or agencies or persons acting on their behalf shall register themselves, select the system and register its use in the EU database referred to in Article 71. OJ L, 12.7.2024 EN ELI: http://data.europa.eu/eli/reg/2024/1689/oj 81/144",
+      "distance": 0.1797569990158081,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

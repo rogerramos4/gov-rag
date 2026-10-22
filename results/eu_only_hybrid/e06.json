@@ -1,0 +1,100 @@
+{
+  "id": "e06",
+  "kind": "multi",
+  "answerable": true,
+  "question": "How do the NIST AI RMF and the EU AI Act each define 'risk'?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "The provided documents do not mention the NIST AI RMF or how it defines 'risk'. They also do not provide a definition of 'risk' from the EU AI Act beyond what is mentioned in the passages. Therefore, the answer is: NOT IN DOCUMENTS.",
+  "abstained": true,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 5.01,
+  "tokens_in": 1093,
+  "tokens_out": 55,
+  "retrieved_ids": [
+    "eu-p033-c04",
+    "eu-p014-c05",
+    "eu-p022-c05",
+    "eu-p012-c06",
+    "eu-p106-c06",
+    "eu-p020-c03"
+  ],
+  "retrieved_pages": [
+    33,
+    14,
+    22,
+    12,
+    106,
+    20
+  ],
+  "evidence_pages": [
+    9,
+    46
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "rr": 0.0,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": false,
+  "false_abstention": true,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p033-c04",
+      "doc": "eu",
+      "page": 33,
+      "text": "on is not high-risk on the basis of a derogation, should be required to register themselves and information about their AI system in an EU database, to be established and managed by the Commission. Before using an AI system listed in the high-risk use cases in an annex to this Regulation, deployers of high-risk AI systems that are public authorities, agencies or bodies, should register themselves in such database and select the system that they envisage to use. Other deployers should be entitled to do so voluntarily. This section of the EU database should be publicly accessible, free of charge, the information should be easily navigable, understandable and machine-readable. The EU database should also be user-friendly, for example by providing search functionalities, including through keyw",
+      "distance": 0.2994769215583801,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p014-c05",
+      "doc": "eu",
+      "page": 14,
+      "text": "that the Commission should be empowered to adopt, via delegated acts, to take into account the rapid pace of technological development, as well as the potential changes in the use of AI systems. (53) It is also important to clarify that there may be specific cases in which AI systems referred to in pre-defined areas specified in this Regulation do not lead to a significant risk of harm to the legal interests protected under those areas because they do not materially influence the decision-making or do not harm those interests substantially. For the purposes of this Regulation, an AI system that does not materially influence the outcome of decision-making should be understood to be an AI system that does not have an impact on the substance, and thereby the outcome, of decision-making, wheth",
+      "distance": null,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p022-c05",
+      "doc": "eu",
+      "page": 22,
+      "text": "s the achievement of those requirements is demonstrated in the EU declaration of conformity or parts thereof issued under that regulation. To that end, the assessment of the cybersecurity risks, associated to a product with digital elements classified as high-risk AI system according to this Regulation, carried out under a regulation of the European Parliament and of the Council on horizontal cybersecurity requirements for products with digital elements, should consider risks to the cyber resilience of an AI system as regards attempts by unauthorised third parties to alter its use, behaviour or performance, including AI specific vulnerabilities such as data poisoning or adversarial attacks, as well as, as relevant, risks to fundamental rights as required by this Regulation. (78) The confor",
+      "distance": 0.2851874828338623,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p012-c06",
+      "doc": "eu",
+      "page": 12,
+      "text": "use. (45) Practices that are prohibited by Union law, including data protection law, non-discrimination law, consumer protection law, and competition law, should not be affected by this Regulation. (46) High-risk AI systems should only be placed on the Union market, put into service or used if they comply with certain mandatory requirements. Those requirements should ensure that high-risk AI systems available in the Union or whose output is otherwise used in the Union do not pose unacceptable risks to important Union public interests as recognised and protected by Union law. On the basis of the New Legislative Framework, as clarified in the Commission notice \u2018The \u201cBlue Guide\u201d on the implementation of EU product rules 2022\u2019 (20), the general rule is that more than one legal act of Union har",
+      "distance": null,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p106-c06",
+      "doc": "eu",
+      "page": 106,
+      "text": "guaranteeing an adequate level of confidentiality. Article 79 Procedure at national level for dealing with AI systems presenting a risk 1. AI systems presenting a risk shall be understood as a \u2018product presenting a risk\u2019 as defined in Article 3, point 19 of Regulation (EU) 2019/1020, in so far as they present risks to the health or safety, or to fundamental rights, of persons. 2. Where the market surveillance authority of a Member State has sufficient reason to consider an AI system to present a risk as referred to in paragraph 1 of this Article, it shall carry out an evaluation of the AI system concerned in respect of its compliance with all the requirements and obligations laid down in this Regulation. Particular attention shall be given to AI systems presenting a risk to vulnerable grou",
+      "distance": 0.28929853439331055,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "eu-p020-c03",
+      "doc": "eu",
+      "page": 20,
+      "text": "nsured. (68) For the development and assessment of high-risk AI systems, certain actors, such as providers, notified bodies and other relevant entities, such as European Digital Innovation Hubs, testing experimentation facilities and researchers, should be able to access and use high-quality data sets within the fields of activities of those actors which are related to this Regulation. European common data spaces established by the Commission and the facilitation of data sharing between businesses and with government in the public interest will be instrumental to provide trustful, accountable and non-discriminatory access to high-quality data for the training, validation and testing of AI systems. For example, in health, the European health data space will facilitate non-discriminatory acc",
+      "distance": 0.2897565960884094,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "NIST: the composite measure of an event's probability of occurring and the magnitude or degree of its consequences. EU AI Act: the combination of the probability of an occurrence of harm and the severity of that harm."
+}

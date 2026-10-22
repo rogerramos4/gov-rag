@@ -1,0 +1,99 @@
+{
+  "id": "e01",
+  "kind": "detail",
+  "answerable": true,
+  "question": "What is the maximum administrative fine under the EU AI Act for non-compliance with the prohibited AI practices in Article 5?",
+  "answer": "The maximum administrative fine under the EU AI Act for non-compliance with the prohibited AI practices in Article 5 is up to EUR 1 500 000 (doc=eu, page=117).",
+  "raw_answer": "The maximum administrative fine under the EU AI Act for non-compliance with the prohibited AI practices in Article 5 is up to EUR 1 500 000 (doc=eu, page=117).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 6.43,
+  "tokens_in": 1341,
+  "tokens_out": 48,
+  "retrieved_ids": [
+    "eu-p117-c03",
+    "eu-p115-c04",
+    "eu-p117-c05",
+    "eu-p117-c02",
+    "eu-p108-c03",
+    "eu-p119-c02"
+  ],
+  "retrieved_pages": [
+    117,
+    115,
+    117,
+    117,
+    108,
+    119
+  ],
+  "evidence_pages": [
+    115
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.5,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p117-c03",
+      "doc": "eu",
+      "page": 117,
+      "text": " Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 1 500 000. 3. The non-compliance of the AI system with any requirements or obligations under this Regulation, other than those laid down in Article 5, shall be subject to administrative fines of up to EUR 750 000. 4. Before taking decisions pursuant to this Article, the European Data Protection Supervisor shall give the Union institution, body, office or agency which is the subject of the proceedings conducted by the European Data Protection Supervisor the opportunity of being heard on the matter regarding the possible infringement. The European Data Protection Supervisor shall base his or her decisions only on elements and circumstances on which the parti",
+      "distance": 0.13580048084259033,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p115-c04",
+      "doc": "eu",
+      "page": 115,
+      "text": " paragraph 1, and shall notify it, without delay, of any subsequent amendment to them. 3. Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher. 4. Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher: (a) obligations of providers pursuant to Article 16; (b) obligations of aut",
+      "distance": 0.15844136476516724,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p117-c05",
+      "doc": "eu",
+      "page": 117,
+      "text": "o the general budget of the Union. The fines shall not affect the effective operation of the Union institution, body, office or agency fined. 7. The European Data Protection Supervisor shall, on an annual basis, notify the Commission of the administrative fines it has imposed pursuant to this Article and of any litigation or judicial proceedings it has initiated. Article 101 Fines for providers of general-purpose AI models 1. The Commission may impose on providers of general-purpose AI models fines not exceeding 3 % of their annual total worldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher., when the Commission finds that the provider intentionally or negligently: (a) infringed the relevant provisions of this Regulation; (b) failed to comply with a requ",
+      "distance": 0.2236834168434143,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p117-c02",
+      "doc": "eu",
+      "page": 117,
+      "text": "gate the possible adverse effects of the infringement, including compliance with any of the measures previously ordered by the European Data Protection Supervisor against the Union institution, body, office or agency concerned with regard to the same subject matter; (e) any similar previous infringements by the Union institution, body, office or agency; (f) the manner in which the infringement became known to the European Data Protection Supervisor, in particular whether, and if so to what extent, the Union institution, body, office or agency notified the infringement; (g) the annual budget of the Union institution, body, office or agency. 2. Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 1 500 000. 3. ",
+      "distance": 0.22771960496902466,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p108-c03",
+      "doc": "eu",
+      "page": 108,
+      "text": "that it has made available on the Union market. 6. Where the provider of the AI system concerned does not take adequate corrective action within the period referred to in paragraph 2 of this Article, Article 79(5) to (9) shall apply. 7. Where, in the course of the evaluation pursuant to paragraph 1 of this Article, the market surveillance authority establishes that the AI system was misclassified by the provider as non-high-risk in order to circumvent the application of requirements in Chapter III, Section 2, the provider shall be subject to fines in accordance with Article 99. 8. In exercising their power to monitor the application of this Article, and in accordance with Article 11 of Regulation (EU) 2019/1020, market surveillance authorities may perform appropriate checks, taking into ac",
+      "distance": 0.24425411224365234,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p119-c02",
+      "doc": "eu",
+      "page": 119,
+      "text": ") No 300/2008, (EU) No 167/2013, (EU) No 168/2013, (EU) 2018/858, (EU) 2018/1139 and (EU) 2019/2144 and Directives 2014/90/EU, (EU) 2016/797 and (EU) 2020/1828 (Artificial Intelligence Act) (OJ L, 2024/1689, 12.7.2024, ELI: http://data.europa.eu/eli/reg/ 2024/1689/oj).\u2019. Article 105 Amendment to Directive 2014/90/EU In Article 8 of Directive 2014/90/EU, the following paragraph is added: \u20185. For Artificial Intelligence systems which are safety components within the meaning of Regulation (EU) 2024/1689 of the European Parliament and of the Council (*), when carrying out its activities pursuant to paragraph 1 and when adopting technical specifications and testing standards in accordance with paragraphs 2 and 3, the Commission shall take into account the requirements set out in Chapter III, Se",
+      "distance": 0.2527645230293274,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5+eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "Up to EUR 35,000,000 or, for an undertaking, up to 7% of total worldwide annual turnover for the preceding financial year, whichever is higher."
+}

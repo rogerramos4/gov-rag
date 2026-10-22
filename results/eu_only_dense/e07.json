@@ -1,0 +1,97 @@
+{
+  "id": "e07",
+  "kind": "false_premise",
+  "answerable": false,
+  "question": "What is the maximum fine for violating the NIST AI RMF?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "The question is NOT IN DOCUMENTS.",
+  "abstained": true,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.41,
+  "tokens_in": 1142,
+  "tokens_out": 9,
+  "retrieved_ids": [
+    "eu-p117-c03",
+    "eu-p115-c04",
+    "eu-p117-c05",
+    "eu-p118-c01",
+    "eu-p010-c01",
+    "eu-p089-c04"
+  ],
+  "retrieved_pages": [
+    117,
+    115,
+    117,
+    118,
+    10,
+    89
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": true,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "eu-p117-c03",
+      "doc": "eu",
+      "page": 117,
+      "text": " Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 1 500 000. 3. The non-compliance of the AI system with any requirements or obligations under this Regulation, other than those laid down in Article 5, shall be subject to administrative fines of up to EUR 750 000. 4. Before taking decisions pursuant to this Article, the European Data Protection Supervisor shall give the Union institution, body, office or agency which is the subject of the proceedings conducted by the European Data Protection Supervisor the opportunity of being heard on the matter regarding the possible infringement. The European Data Protection Supervisor shall base his or her decisions only on elements and circumstances on which the parti",
+      "distance": 0.3050438165664673,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p115-c04",
+      "doc": "eu",
+      "page": 115,
+      "text": " paragraph 1, and shall notify it, without delay, of any subsequent amendment to them. 3. Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher. 4. Non-compliance with any of the following provisions related to operators or notified bodies, other than those laid down in Articles 5, shall be subject to administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher: (a) obligations of providers pursuant to Article 16; (b) obligations of aut",
+      "distance": 0.32670116424560547,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p117-c05",
+      "doc": "eu",
+      "page": 117,
+      "text": "o the general budget of the Union. The fines shall not affect the effective operation of the Union institution, body, office or agency fined. 7. The European Data Protection Supervisor shall, on an annual basis, notify the Commission of the administrative fines it has imposed pursuant to this Article and of any litigation or judicial proceedings it has initiated. Article 101 Fines for providers of general-purpose AI models 1. The Commission may impose on providers of general-purpose AI models fines not exceeding 3 % of their annual total worldwide turnover in the preceding financial year or EUR 15 000 000, whichever is higher., when the Commission finds that the provider intentionally or negligently: (a) infringed the relevant provisions of this Regulation; (b) failed to comply with a requ",
+      "distance": 0.333438515663147,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p118-c01",
+      "doc": "eu",
+      "page": 118,
+      "text": "(d) failed to make available to the Commission access to the general-purpose AI model or general-purpose AI model with systemic risk with a view to conducting an evaluation pursuant to Article 92. In fixing the amount of the fine or periodic penalty payment, regard shall be had to the nature, gravity and duration of the infringement, taking due account of the principles of proportionality and appropriateness. The Commission shall also into account commitments made in accordance with Article 93(3) or made in relevant codes of practice in accordance with Article 56. 2. Before adopting the decision pursuant to paragraph 1, the Commission shall communicate its preliminary findings to the provider of the general-purpose AI model and give it an opportunity to be heard. 3. Fines imposed in accord",
+      "distance": 0.3376414179801941,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p010-c01",
+      "doc": "eu",
+      "page": 10,
+      "text": "order for a maximum period of at least four years and as they are defined in the law of that Member State. Such a threshold for the custodial sentence or detention order in accordance with national law contributes to ensuring that the offence should be serious enough to potentially justify the use of \u2018real-time\u2019 remote biometric identification systems. Moreover, the list of criminal offences provided in an annex to this Regulation is based on the 32 criminal offences listed in the Council Framework Decision 2002/584/JHA (18), taking into account that some of those offences are, in practice, likely to be more relevant than others, in that the recourse to \u2018real-time\u2019 remote biometric identification could, foreseeably, be necessary and proportionate to highly varying degrees for the practical",
+      "distance": 0.34240520000457764,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "eu-p089-c04",
+      "doc": "eu",
+      "page": 89,
+      "text": "nion and national liability law for any damage inflicted on third parties as a result of the experimentation taking place in the sandbox. However, provided that the prospective providers observe the specific plan and the terms and conditions for their participation and follow in good faith the guidance given by the national competent authority, no administrative fines shall be imposed by the authorities for infringements of this Regulation. Where other competent authorities responsible for other Union and national law were actively involved in the supervision of the AI system in the sandbox and provided guidance for compliance, no administrative fines shall be imposed regarding that law. 13. The AI regulatory sandboxes shall be designed and implemented in such a way that, where relevant, t",
+      "distance": 0.34286606311798096,
+      "fingerprint": "eu|sha=bba630444b32|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

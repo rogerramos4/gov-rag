@@ -59,3 +59,10 @@
 - Parser bug: `(nist, page=25; nist, page=8)` not matched. Regex extended, test added, Claude's citation support reported both ways (13/14 as run, 14/14 re-parsed).
 - Labels extended to 25 rows (5 no-context negatives, Claude-written). judge_validation: correctness TPR 20/20 TNR 5/5; groundedness TPR 20/20 TNR 4/5.
 - diag_api.py printed the key inside the httpx error text; removed. Roger must rotate the key again.
+
+## 2026-10-22 Stretch 4: EU AI Act as second document
+- Roger downloaded OJ_L_202401689_EN_TXT.pdf by hand (EUR-Lex blocks scripts). 144 pages, 960 chunks, hashed, ingested as doc "eu". retrieve() now takes "nist_800+eu_800" and merges by cosine distance; run_evals gained --collection. Hybrid stays single-collection.
+- 7 EU questions (quotes verified by the existing test, now per-document). Results on the corpus: Recall 5/6, MRR 0.40, abstention 0/1. NIST set on the corpus: 13/14, MRR 0.88, q07 displaced by EU chunks, q16 label now stale (answerable on the corpus; left frozen, footnoted).
+- Hybrid on the EU doc alone: MRR 0.22 vs dense 0.32. Second negative result for BM25; closing that line of work.
+- Three new failure classes: recitals outrank articles (e03, e04); cross-document leakage on a false premise (e07 recited EU fines for a NIST question); interference (q07). All in the error-analysis table with candidate fixes.
+- Lesson: one document hides retrieval problems. The honest corpus-scale number is MRR 0.40, not 0.90.

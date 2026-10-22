@@ -173,13 +173,14 @@ def main() -> None:
     ap.add_argument("--retriever", choices=["dense", "hybrid"], default=None, help="override RETRIEVER env (dense | hybrid)")
     ap.add_argument("--chunk", type=int, default=800, help="chunk size; selects collection nist_<size>")
     ap.add_argument("--model", choices=["local", "claude"], default=None, help="generator backend (default: BACKEND env or local)")
+    ap.add_argument("--collection", default=None, help="explicit collection(s), '+'-joined for a corpus, e.g. nist_800+eu_800 (overrides --chunk)")
     args = ap.parse_args()
     import ask
     if args.retriever:
         ask.RETRIEVER = args.retriever
     if args.model:
         ask.BACKEND = args.model
-    collection = f"nist_{args.chunk}"
+    collection = args.collection or f"nist_{args.chunk}"
 
     qs = [json.loads(l) for l in (ROOT / args.file).read_text(encoding="utf-8").splitlines() if l.strip()]
     out_dir = ROOT / "results" / args.tag
