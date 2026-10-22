@@ -1,0 +1,97 @@
+{
+  "id": "q19",
+  "kind": "false_premise",
+  "answerable": false,
+  "question": "Why does the AI RMF require annual third-party audits of AI systems?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "NOT IN DOCUMENTS",
+  "abstained": true,
+  "backend": "claude-haiku-5-5",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 3.19,
+  "tokens_in": 1588,
+  "tokens_out": 102,
+  "retrieved_ids": [
+    "nist-p003-c01",
+    "nist-p007-c04",
+    "nist-p047-c04",
+    "nist-p042-c01",
+    "nist-p047-c02",
+    "nist-p006-c02"
+  ],
+  "retrieved_pages": [
+    3,
+    7,
+    47,
+    42,
+    47,
+    6
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": true,
+  "false_abstention": false,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - Both answers are \"NOT IN DOCUMENTS,\" so the system matches the reference's abstention.",
+  "judge_reason_grounded": "PASS - The system answer is an abstention (\"NOT IN DOCUMENTS\"), which always passes this check.",
+  "judge_tokens_in": 2090,
+  "judge_tokens_out": 78,
+  "passages": [
+    {
+      "id": "nist-p003-c01",
+      "doc": "nist",
+      "page": 3,
+      "text": "Certain commercial entities, equipment, or materials may be identified in this document in order to describe an experimental procedure or concept adequately. Such identification is not intended to imply recommenda- tion or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that the entities, materials, or equipment are necessarily the best available for the purpose. This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 Update Schedule and Versions The Artificial Intelligence Risk Management Framework (AI RMF) is intended to be a living document. NIST will review the content and usefulness of the Framework regularly to determine if an update is appro- priate; a review with formal input from the AI community is ex",
+      "distance": 0.23389816284179688,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p007-c04",
+      "doc": "nist",
+      "page": 7,
+      "text": "system lifecycle, including organiza- tions and individuals that deploy or operate AI\u201d [OECD (2019) Artificial Intelligence in Society\u2014OECD iLibrary] (See Appendix A). The AI RMF is intended to be practical, to adapt to the AI landscape as AI technologies continue to develop, and to be operationalized by organizations in varying degrees and capacities so society can benefit from AI while also being protected from its potential harms. The Framework and supporting resources will be updated, expanded, and improved based on evolving technology, the standards landscape around the world, and AI community ex- perience and feedback. NIST will continue to align the AI RMF and related guidance with applicable international standards, guidelines, and practices. As the AI RMF is put into use, addition",
+      "distance": 0.23484504222869873,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p047-c04",
+      "doc": "nist",
+      "page": 47,
+      "text": "as illustrate the need for additional, improved resources. 9. Be law- and regulation-agnostic. The Framework should support organizations\u2019 abilities to operate under applicable domestic and international legal or regulatory regimes. 10. Be a living document. The AI RMF should be readily updated as technology, under- standing, and approaches to AI trustworthiness and uses of AI change and as stake- holders learn from implementing AI risk management generally and this framework in particular. Page 42",
+      "distance": 0.2525491714477539,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p042-c01",
+      "doc": "nist",
+      "page": 42,
+      "text": "NIST AI 100-1 AI RMF 1.0 signed, developed, and/or deployed. Key AI actors responsible for AI governance include organizational management, senior leadership, and the Board of Directors. These actors are parties that are concerned with the impact and sustainability of the organization as a whole. Additional AI Actors Third-party entities include providers, developers, vendors, and evaluators of data, al- gorithms, models, and/or systems and related services for another organization or the or- ganization\u2019s customers or clients. Third-party entities are responsible for AI design and development tasks, in whole or in part. By definition, they are external to the design, devel- opment, or deployment team of the organization that acquires its technologies or services. The technologies acquired ",
+      "distance": 0.25324898958206177,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p047-c02",
+      "doc": "nist",
+      "page": 47,
+      "text": "ior executives, government officials, non-governmental organization leadership, and those who are not AI professionals \u2013 while still of sufficient technical depth to be useful to practitioners. The AI RMF should allow for communication of AI risks across an organization, between organizations, with customers, and to the public at large. 4. Provide common language and understanding to manage AI risks. The AI RMF should offer taxonomy, terminology, definitions, metrics, and characterizations for AI risk. 5. Be easily usable and fit well with other aspects of risk management. Use of the Framework should be intuitive and readily adaptable as part of an organization\u2019s broader risk management strategy and processes. It should be consistent or aligned with other approaches to managing AI risks. 6",
+      "distance": 0.25684940814971924,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p006-c02",
+      "doc": "nist",
+      "page": 6,
+      "text": "zed as long- or short-term, high- or low-probability, systemic or localized, and high- or low-impact. The AI RMF refers to an AI system as an engineered or machine-based system that can, for a given set of objectives, generate outputs such as predictions, recommenda- tions, or decisions influencing real or virtual environments. AI systems are designed to operate with varying levels of autonomy (Adapted from: OECD Recommendation on AI:2019; ISO /IEC 22989:2022). While there are myriad standards and best practices to help organizations mitigate the risks of traditional software or information-based systems, the risks posed by AI systems are in many ways unique (See Appendix B). AI systems, for example, may be trained on data that can change over time, sometimes significantly and unexpectedly",
+      "distance": 0.25750666856765747,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

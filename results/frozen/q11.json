@@ -7,8 +7,8 @@
   "raw_answer": "The risk response options listed for MANAGE 1.3 are mitigating, transferring, avoiding, or accepting. (doc=nist, page=37)",
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
-  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.55,
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.66,
   "tokens_in": 1164,
   "tokens_out": 34,
   "retrieved_ids": [
@@ -42,9 +42,9 @@
   "judge_correct": "PASS",
   "judge_grounded": "PASS",
   "judge_reason_correct": "PASS - The system answer lists mitigating, transferring, avoiding, and accepting, exactly matching the reference answer.",
-  "judge_reason_grounded": "PASS - Passage [1] states that \"Risk response options can include mitigating, transferring, avoiding, or accepting\" in the MANAGE 1.3 context, and the answer cites page 37, which matches.",
+  "judge_reason_grounded": "PASS - Passage [1] states \"Risk response options can include mitigating, transferring, avoiding, or accepting\" in the MANAGE 1.3 context, and the cited page (37) matches.",
   "judge_tokens_in": 2397,
-  "judge_tokens_out": 111,
+  "judge_tokens_out": 107,
   "passages": [
     {
       "id": "nist-p037-c02",
@@ -52,7 +52,7 @@
       "page": 37,
       "text": " available resources or methods. MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and doc- umented. Risk response options can include mitigating, transfer- ring, avoiding, or accepting. MANAGE 1.4: Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. MANAGE 2: Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors. MANAGE 2.1: Resources required to manage AI risks are taken into account \u2013 along with viable non-AI alternative systems, ap- proaches, or methods \u2013 to reduce the magnitude or likelihood of potential impacts. MANAGE 2.2:",
       "distance": 0.26643919944763184,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p037-c01",
@@ -60,7 +60,7 @@
       "page": 37,
       "text": "NIST AI 100-1 AI RMF 1.0 Practices related to managing AI risks are described in the NIST AI RMF Playbook. Table 4 lists the MANAGE function\u2019s categories and subcategories. Table 4: Categories and subcategories for the MANAGE function. MANAGE 1: AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed. MANAGE 1.1: A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed. MANAGE 1.2: Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods. MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned",
       "distance": 0.27715861797332764,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p038-c01",
@@ -68,7 +68,7 @@
       "page": 38,
       "text": "NIST AI 100-1 AI RMF 1.0 Table 4: Categories and subcategories for the MANAGE function. (Continued) MANAGE 4: Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly. MANAGE 4.1: Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and eval- uating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management. MANAGE 4.2: Measurable activities for continual improvements are integrated into AI system updates and include regular engage- ment with interested parties, including relevant AI actors. MANAGE 4.3: Incidents and errors are communicated to relevant AI actors, including affe",
       "distance": 0.2828506827354431,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p013-c01",
@@ -76,7 +76,7 @@
       "page": 13,
       "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present \u2013 development and deployment should cease in a safe manner until risks can be sufficiently managed. If an AI system\u2019s development, deployment, and use cases are found to be low-risk in a specific context, that may suggest potentially lower prioritization. Risk prioritization may differ between AI systems that are designed or deployed to directly interact with ",
       "distance": 0.3151332139968872,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p037-c03",
@@ -84,7 +84,7 @@
       "page": 37,
       "text": "unt \u2013 along with viable non-AI alternative systems, ap- proaches, or methods \u2013 to reduce the magnitude or likelihood of potential impacts. MANAGE 2.2: Mechanisms are in place and applied to sustain the value of deployed AI systems. MANAGE 2.3: Procedures are followed to respond to and recover from a previously unknown risk when it is identified. MANAGE 2.4: Mechanisms are in place and applied, and respon- sibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use. MANAGE 3: AI risks and benefits from third-party entities are managed. MANAGE 3.1: AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented. MANAGE 3.2: Pre-trained m",
       "distance": 0.3156691789627075,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p036-c03",
@@ -92,7 +92,7 @@
       "page": 36,
       "text": "omprises plans to respond to, recover from, and communicate about incidents or events. Contextual information gleaned from expert consultation and input from relevant AI actors \u2013 established in GOVERN and carried out in MAP \u2013 is utilized in this function to decrease the likelihood of system failures and negative impacts. Systematic documentation practices established in GOVERN and utilized in MAP and MEASURE bolster AI risk management efforts and increase transparency and accountability. Processes for assessing emergent risks are in place, along with mechanisms for continual improvement. After completing the MANAGE function, plans for prioritizing risk and regular monitoring and improvement will be in place. Framework users will have enhanced capacity to man- age the risks of deployed AI s",
       "distance": 0.3249533176422119,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     }
   ],
   "reference_answer": "Mitigating, transferring, avoiding, or accepting."

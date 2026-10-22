@@ -7,8 +7,8 @@
   "raw_answer": "After GOVERN is in place, most users of the AI RMF would start with the MAP function. This is indicated in the passage (doc=nist, page=26) where it states that after instituting the outcomes in GOVERN, most users of the AI RMF would start with the MAP function and continue to MEASURE or MANAGE.",
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
-  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.93,
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.26,
   "tokens_in": 1092,
   "tokens_out": 73,
   "retrieved_ids": [
@@ -41,10 +41,10 @@
   "false_abstention": false,
   "judge_correct": "PASS",
   "judge_grounded": "PASS",
-  "judge_reason_correct": "PASS - The system answer identifies MAP as the starting function after GOVERN and notes continuing to MEASURE or MANAGE, matching the reference answer.",
-  "judge_reason_grounded": "PASS - The answer's claim that after GOVERN, most users start with MAP and continue to MEASURE or MANAGE is directly stated in passage [1] (page 26), and the citation matches.",
+  "judge_reason_correct": "PASS - The system answer names MAP as the starting function after GOVERN, then continuing to MEASURE or MANAGE, matching the reference answer.",
+  "judge_reason_grounded": "PASS - The answer's claim that after GOVERN most users start with MAP and continue to MEASURE or MANAGE is directly stated in passage [1] (page 26), and the answer accurately cites that source.",
   "judge_tokens_in": 2380,
-  "judge_tokens_out": 119,
+  "judge_tokens_out": 120,
   "passages": [
     {
       "id": "nist-p026-c02",
@@ -52,7 +52,7 @@
       "page": 26,
       "text": "oader community. Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center. Framework users may apply these functions as best suits their needs for managing AI risks based on their resources and capabilities. Some organizations may choose to select from among the categories and subcategories; others may choose and have the capacity to apply all categories and subcategories. Assuming a governance struc- ture is in place, functions may be performed in any order across the AI lifecycle as deemed to add value by a user of the framework. After instituting the outcomes in GOVERN , most users of the AI RMF would start with the MAP function and con- tinue to MEASURE or MANAGE . However users integrate the functions, the process should be iterative, with",
       "distance": 0.21298372745513916,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p027-c01",
@@ -60,7 +60,7 @@
       "page": 27,
       "text": "NIST AI 100-1 AI RMF 1.0 GOVERN is a cross-cutting function that is infused throughout AI risk management and enables the other functions of the process. Aspects of GOVERN , especially those related to compliance or evaluation, should be integrated into each of the other functions. Attention to governance is a continual and intrinsic requirement for effective AI risk management over an AI system\u2019s lifespan and the organization\u2019s hierarchy. Strong governance can drive and enhance internal practices and norms to facilitate orga- nizational risk culture. Governing authorities can determine the overarching policies that direct an organization\u2019s mission, goals, values, culture, and risk tolerance. Senior leader- ship sets the tone for risk management within an organization, and with it, organiz",
       "distance": 0.22004693746566772,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p046-c01",
@@ -68,7 +68,7 @@
       "page": 46,
       "text": "NIST AI 100-1 AI RMF 1.0 4. Presenting AI system information to humans is complex. Humans perceive and derive meaning from AI system output and explanations in different ways, reflecting different individual preferences, traits, and skills. The GOVERN function provides organizations with the opportunity to clarify and define the roles and responsibilities for the humans in the Human-AI team configurations and those who are overseeing the AI system performance. The GOVERN function also creates mechanisms for organizations to make their decision-making processes more explicit, to help counter systemic biases. The MAP function suggests opportunities to define and document processes for operator and practitioner proficiency with AI system performance and trustworthiness concepts, and to define",
       "distance": 0.22018742561340332,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p028-c01",
@@ -76,7 +76,7 @@
       "page": 28,
       "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) GOVERN 1.5: Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review. GOVERN 1.6: Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. GOVERN 1.7: Processes and procedures are in place for decom- missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 2: Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mappi",
       "distance": 0.24064481258392334,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p025-c02",
@@ -84,7 +84,7 @@
       "page": 25,
       "text": " at their highest level to govern, map, measure, and manage AI risks. Governance is designed to be a cross-cutting function to inform and be infused throughout the other three functions. Risk management should be continuous, timely, and performed throughout the AI system lifecycle dimensions. AI RMF Core functions should be carried out in a way that reflects diverse and multidisciplinary perspectives, potentially including the views of AI actors out- side the organization. Having a diverse team contributes to more open sharing of ideas and assumptions about purposes and functions of the technology being designed, developed, Page 20",
       "distance": 0.2427356243133545,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p027-c03",
@@ -92,7 +92,7 @@
       "page": 27,
       "text": "GOVERN function as knowledge, cultures, and needs or expectations from AI actors evolve over time. Practices related to governing AI risks are described in the NIST AI RMF Playbook. Table 1 lists the GOVERN function\u2019s categories and subcategories. Table 1: Categories and subcategories for the GOVERN function. GOVERN 1: Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively. GOVERN 1.1: Legal and regulatory requirements involving AI are understood, managed, and documented. GOVERN 1.2: The characteristics of trustworthy AI are inte- grated into organizational policies, processes, procedures, and practices. GOVERN 1.3: Processes, procedures, and practices are in p",
       "distance": 0.2430165410041809,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     }
   ],
   "reference_answer": "The MAP function, then continue to MEASURE or MANAGE."

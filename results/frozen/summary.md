@@ -1,6 +1,6 @@
 # Eval summary (frozen)
 
-run: 2026-10-21 22:54 · file: evals/questions.jsonl · backend: qwen3:4b-q4_K_M · fingerprint: nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5 · 202s total
+run: 2026-10-22 00:28 · file: evals/questions.jsonl · backend: qwen3:4b-q4_K_M · fingerprint: nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense · 207s total
 
 | Metric | Value |
 |---|---|
@@ -14,7 +14,9 @@ run: 2026-10-21 22:54 · file: evals/questions.jsonl · backend: qwen3:4b-q4_K_M
 | Correctness PASS (judge) | 19/20 |
 | Groundedness PASS (judge) | 20/20 |
 | Judge calls unparsed or errored | 0 of 40 |
-| Judge cost (total, claude-haiku-5-5) | $0.0062 for 48834 tokens |
-| Mean warm latency | 5.3s |
+| Judge cost (total, claude-haiku-5-5) | $0.0062 for 48892 tokens |
+| Mean warm latency | 5.0s |
 | Generation cost | $0 (local qwen3:4b-q4_K_M) |
 | No-context baseline: answered without abstaining | 4/5 of 5 |
+| No-context baseline: judge FAILED groundedness (the negatives we want it to catch) | 4/5 |
+| No-context baseline: judge FAILED correctness | 4/5 |

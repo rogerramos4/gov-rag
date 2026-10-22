@@ -12,6 +12,10 @@ def test_parse_citation_formats():
     assert parse_citations(text) == [("nist", 25), ("nist", 12), ("nist", 7), ("nist", 3), ("nist", 9)]
 
 
+def test_parse_multiple_citations_in_one_parenthesis():
+    assert parse_citations("Four functions (nist, page=25; nist, page=8).") == [("nist", 25), ("nist", 8)]
+
+
 def test_parse_ignores_non_citations():
     assert parse_citations("See section (3.2) and Figure (5) and (2022)") == []
 

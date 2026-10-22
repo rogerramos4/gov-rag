@@ -19,3 +19,8 @@ q17,yes,yes,abstained in substance but without the exact sentinel; labelled corr
 q18,yes,yes,abstained
 q19,yes,yes,abstained
 q20,yes,yes,abstained and correctly rejected the false premise (four functions not five)
+q01_noctx,no,no,invented four fake functions then said NOT IN DOCUMENTS; the fabrication is still in the text
+q02_noctx,no,no,wrong list of characteristics with no passages; cites a non-existent (doc 1)
+q03_noctx,no,no,generic definition not the RMF's; no passages
+q04_noctx,no,no,invented bias categories; no passages
+q05_noctx,yes,no,happens to be right (RMF does not prescribe tolerance) but stated with no passages and a fake citation

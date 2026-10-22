@@ -51,3 +51,11 @@
 - Built nist_400 (343 chunks) and nist_1200 (120 chunks); run_evals.py gained --chunk. 800 wins: MRR 0.90 vs 0.82 (400) and 0.80 (1200); 400 broke one citation (q08 definition split across a boundary -> uncited "not defined" answer), 1200 lost one page.
 - Lesson: chunk size is a two-sided trade. Too small splits the sentence you need; too large buries it in the embedding. Measure, do not guess.
 - Remaining stretches need an API key in Roger's terminal: Claude backend row, no-context negatives for judge TNR. EU AI Act needs a manual browser download.
+
+## 2026-10-22 Stretch 1 + judge negatives (Roger ran these in his own terminal with his key)
+- Key setup hit two snags: a pasted key with leading/trailing spaces (SDK reports it as APIConnectionError, the real cause was LocalProtocolError: Illegal header value). Fix: `$env:ANTHROPIC_API_KEY = $env:ANTHROPIC_API_KEY.Trim()`. Lesson: a connection error from the SDK can be a malformed header; print __cause__.
+- Claude Haiku 5.5 as generator: correctness 19/20 (same q14 miss as local), groundedness 20/20, abstentions 6/6 (local 5/6), 3.4 s, $0.005/20 answers, 3x longer answers. Retrieval shared, so recall identical. Verdict: the hosted model buys format discipline, not content, at n=20.
+- No-context baseline judged: correctness FAIL 4/5, groundedness FAIL 4/5. The groundedness miss (q01_noctx) is a pipeline bug: the judge was handed the normalized sentinel, not the raw text with the fabricated list. Fixed (judges now get raw_answer); as-run numbers kept in the write-up with the bug named.
+- Parser bug: `(nist, page=25; nist, page=8)` not matched. Regex extended, test added, Claude's citation support reported both ways (13/14 as run, 14/14 re-parsed).
+- Labels extended to 25 rows (5 no-context negatives, Claude-written). judge_validation: correctness TPR 20/20 TNR 5/5; groundedness TPR 20/20 TNR 4/5.
+- diag_api.py printed the key inside the httpx error text; removed. Roger must rotate the key again.

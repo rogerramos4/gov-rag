@@ -18,6 +18,8 @@ Full write-up with error analysis: [`docs/writeup.md`](docs/writeup.md). Build l
 | Mean warm latency | ~5 s · generation $0 · judge $0.006 per run |
 | Hybrid BM25 + RRF (ablation, `--retriever hybrid`) | Recall 13/14, MRR 0.81: **worse** than dense on this document; see write-up |
 | Chunk sweep (`--chunk 400` / `1200`) | MRR 0.82 / 0.80 vs **0.90** at 800; 400 splits definitions, 1200 dilutes embeddings |
+| Claude Haiku 5.5 as generator (`--model claude`) | same correctness 19/20, abstentions 6/6 vs 5/6, 3.4 s, $0.005 per 20 answers |
+| Judge vs. 50 labels (incl. 5 deliberately bad no-context answers) | correctness TNR 5/5, groundedness TNR 4/5 |
 
 Not called "accuracy" on purpose: each row is one failure mode. Judge vs. 40 labels: 0 disagreements, but the labels were model-written and contain only one negative, so this validates little yet (see limitations in the write-up). `evals\judge_validation.py` computes TPR/TNR from `labels.csv`.
 

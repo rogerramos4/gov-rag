@@ -1,0 +1,99 @@
+{
+  "id": "q05",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "Does the AI RMF prescribe a risk tolerance for organizations?",
+  "answer": "No. The AI RMF does not prescribe risk tolerance. It states that while the framework can be used to prioritize risk, it \"does not prescribe risk tolerance\" (nist, 12). Risk tolerance refers to an organization's or AI actor's readiness to bear risk to achieve its objectives, and it is highly contextual and use-case specific (nist, 12). Where established guidelines do not exist, organizations should define reasonable risk tolerance themselves; once defined, the AI RMF can be used to manage risks and document those processes (nist, 12).",
+  "raw_answer": "No. The AI RMF does not prescribe risk tolerance. It states that while the framework can be used to prioritize risk, it \"does not prescribe risk tolerance\" (nist, 12). Risk tolerance refers to an organization's or AI actor's readiness to bear risk to achieve its objectives, and it is highly contextual and use-case specific (nist, 12). Where established guidelines do not exist, organizations should define reasonable risk tolerance themselves; once defined, the AI RMF can be used to manage risks and document those processes (nist, 12).",
+  "abstained": false,
+  "backend": "claude-haiku-5-5",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 3.51,
+  "tokens_in": 1612,
+  "tokens_out": 182,
+  "retrieved_ids": [
+    "nist-p012-c01",
+    "nist-p014-c01",
+    "nist-p012-c04",
+    "nist-p047-c02",
+    "nist-p012-c03",
+    "nist-p002-c01"
+  ],
+  "retrieved_pages": [
+    12,
+    14,
+    12,
+    47,
+    12,
+    2
+  ],
+  "evidence_pages": [
+    12
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 3,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer says \"No,\" that the AI RMF does not prescribe risk tolerance and that it is contextual and set by organizations, matching the reference's essential facts.",
+  "judge_reason_grounded": "PASS - Every claim in the answer (AI RMF does not prescribe risk tolerance, the definition of risk tolerance, its contextual nature, and organizations defining reasonable tolerance where no guidelines exist) is directly stated in the page 12 passages.",
+  "judge_tokens_in": 2487,
+  "judge_tokens_out": 146,
+  "passages": [
+    {
+      "id": "nist-p012-c01",
+      "doc": "nist",
+      "page": 12,
+      "text": "NIST AI 100-1 AI RMF 1.0 1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization\u2019s or AI actor\u2019s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regula- tory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level of risk that is acceptable to organizations or society are highly contextual and application and use-case specific. Risk tolerances can be influenced by policies and norms established by AI sys- tem owners, organizations, industries, communities, or policy makers. Risk tolerances are likely to change over time as AI systems, policies, and norms evolve. Different organiza- tions may have varied ri",
+      "distance": 0.10863566398620605,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p014-c01",
+      "doc": "nist",
+      "page": 14,
+      "text": "NIST AI 100-1 AI RMF 1.0 Organizations need to establish and maintain the appropriate accountability mechanisms, roles and responsibilities, culture, and incentive structures for risk management to be ef- fective. Use of the AI RMF alone will not lead to these changes or provide the appropriate incentives. Effective risk management is realized through organizational commitment at senior levels and may require cultural change within an organization or industry. In addi- tion, small to medium-sized organizations managing AI risks or implementing the AI RMF may face different challenges than large organizations, depending on their capabilities and resources. 2. Audience Identifying and managing AI risks and potential impacts \u2013 both positive and negative \u2013 re- quires a broad set of perspective",
+      "distance": 0.16110855340957642,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p012-c04",
+      "doc": "nist",
+      "page": 12,
+      "text": "isk tolerance. Once tolerance is defined, this AI RMF can be used to manage risks and to document risk management processes. 1.2.3 Risk Prioritization Attempting to eliminate negative risk entirely can be counterproductive in practice because not all incidents and failures can be eliminated. Unrealistic expectations about risk may lead organizations to allocate resources in a manner that makes risk triage inefficient or impractical or wastes scarce resources. A risk management culture can help organizations recognize that not all AI risks are the same, and resources can be allocated purposefully. Actionable risk management efforts lay out clear guidelines for assessing trustworthiness of each AI system an organization develops or deploys. Policies and resources should be prioritized based ",
+      "distance": 0.16835469007492065,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p047-c02",
+      "doc": "nist",
+      "page": 47,
+      "text": "ior executives, government officials, non-governmental organization leadership, and those who are not AI professionals \u2013 while still of sufficient technical depth to be useful to practitioners. The AI RMF should allow for communication of AI risks across an organization, between organizations, with customers, and to the public at large. 4. Provide common language and understanding to manage AI risks. The AI RMF should offer taxonomy, terminology, definitions, metrics, and characterizations for AI risk. 5. Be easily usable and fit well with other aspects of risk management. Use of the Framework should be intuitive and readily adaptable as part of an organization\u2019s broader risk management strategy and processes. It should be consistent or aligned with other approaches to managing AI risks. 6",
+      "distance": 0.1848316788673401,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p012-c03",
+      "doc": "nist",
+      "page": 12,
+      "text": "o be flexible and to augment existing risk practices which should align with applicable laws, regulations, and norms. Organizations should follow existing regulations and guidelines for risk criteria, tolerance, and response established by organizational, domain, discipline, sector, or professional requirements. Some sectors or industries may have established definitions of harm or established documentation, reporting, and disclosure requirements. Within sectors, risk management may depend on existing guidelines for specific applications and use case settings. Where established guidelines do not exist, organizations should define reasonable risk tolerance. Once tolerance is defined, this AI RMF can be used to manage risks and to document risk management processes. 1.2.3 Risk Prioritization",
+      "distance": 0.19054949283599854,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p002-c01",
+      "doc": "nist",
+      "page": 2,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0) This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 January 2023 U.S. Department of Commerce Gina M. Raimondo, Secretary National Institute of Standards and Technology Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology",
+      "distance": 0.19906675815582275,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "No. The RMF can be used to prioritize risk but does not prescribe risk tolerance; tolerance is contextual and set by the organization, laws, or sector."
+}

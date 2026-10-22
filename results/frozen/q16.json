@@ -4,13 +4,13 @@
   "answerable": false,
   "question": "What does the EU AI Act say about high-risk AI systems?",
   "answer": "NOT IN DOCUMENTS",
-  "raw_answer": "The provided documents do not contain information about what the EU AI Act says about high-risk AI systems. Therefore, the answer is NOT IN DOCUMENTS.",
+  "raw_answer": "The provided documents do not contain information about what the EU AI Act says about high-risk AI systems. Therefore, the answer is: NOT IN DOCUMENTS.",
   "abstained": true,
   "backend": "qwen3:4b-q4_K_M",
-  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.52,
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.73,
   "tokens_in": 1121,
-  "tokens_out": 31,
+  "tokens_out": 32,
   "retrieved_ids": [
     "nist-p013-c01",
     "nist-p044-c01",
@@ -39,10 +39,10 @@
   "false_abstention": false,
   "judge_correct": "PASS",
   "judge_grounded": "PASS",
-  "judge_reason_correct": "PASS - Both the reference and the system answer are the abstention \"NOT IN DOCUMENTS,\" so the system answer matches the reference.",
+  "judge_reason_correct": "PASS - Both answers are \"NOT IN DOCUMENTS,\" so the system matches the reference exactly.",
   "judge_reason_grounded": "PASS - The system answer is an abstention (\"NOT IN DOCUMENTS\"), which always passes this check.",
   "judge_tokens_in": 2195,
-  "judge_tokens_out": 86,
+  "judge_tokens_out": 77,
   "passages": [
     {
       "id": "nist-p013-c01",
@@ -50,7 +50,7 @@
       "page": 13,
       "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present \u2013 development and deployment should cease in a safe manner until risks can be sufficiently managed. If an AI system\u2019s development, deployment, and use cases are found to be low-risk in a specific context, that may suggest potentially lower prioritization. Risk prioritization may differ between AI systems that are designed or deployed to directly interact with ",
       "distance": 0.2490689754486084,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p044-c01",
@@ -58,7 +58,7 @@
       "page": 44,
       "text": "NIST AI 100-1 AI RMF 1.0 \u2022 Computational costs for developing AI systems and their impact on the environment and planet. \u2022 Inability to predict or detect the side effects of AI-based systems beyond statistical measures. Privacy and cybersecurity risk management considerations and approaches are applicable in the design, development, deployment, evaluation, and use of AI systems. Privacy and cybersecurity risks are also considered as part of broader enterprise risk management con- siderations, which may incorporate AI risks. As part of the effort to address AI trustworthi- ness characteristics such as \u201cSecure and Resilient\u201d and \u201cPrivacy-Enhanced,\u201d organizations may consider leveraging available standards and guidance that provide broad guidance to organizations to reduce security and privac",
       "distance": 0.25388073921203613,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p019-c04",
@@ -66,7 +66,7 @@
       "page": 19,
       "text": "detect or correct errors. 3.2 Safe AI systems should \u201cnot under defined conditions, lead to a state in which human life, health, property, or the environment is endangered\u201d (Source: ISO /IEC TS 5723:2022). Safe operation of AI systems is improved through: \u2022 responsible design, development, and deployment practices; \u2022 clear information to deployers on responsible use of the system; \u2022 responsible decision-making by deployers and end users; and \u2022 explanations and documentation of risks based on empirical evidence of incidents. Different types of safety risks may require tailored AI risk management approaches based on context and the severity of potential risks presented. Safety risks that pose a potential risk of serious injury or death call for the most urgent prioritization and most thoroug",
       "distance": 0.25499963760375977,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p021-c01",
@@ -74,7 +74,7 @@
       "page": 21,
       "text": "NIST AI 100-1 AI RMF 1.0 ple, how a human operator or user is notified when a potential or actual adverse outcome caused by an AI system is detected. A transparent system is not necessarily an accurate, privacy-enhanced, secure, or fair system. However, it is difficult to determine whether an opaque system possesses such characteristics, and to do so over time as complex systems evolve. The role of AI actors should be considered when seeking accountability for the outcomes of AI systems. The relationship between risk and accountability associated with AI and tech- nological systems more broadly differs across cultural, legal, sectoral, and societal contexts. When consequences are severe, such as when life and liberty are at stake, AI developers and deployers should consider proportionally ",
       "distance": 0.2572252154350281,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p020-c02",
@@ -82,7 +82,7 @@
       "page": 20,
       "text": "on-specific guidelines or standards. 3.3 Secure and Resilient AI systems, as well as the ecosystems in which they are deployed, may be said to be re- silient if they can withstand unexpected adverse events or unexpected changes in their envi- ronment or use \u2013 or if they can maintain their functions and structure in the face of internal and external change and degrade safely and gracefully when this is necessary (Adapted from: ISO /IEC TS 5723:2022). Common security concerns relate to adversarial examples, data poisoning, and the exfiltration of models, training data, or other intellectual property through AI system endpoints. AI systems that can maintain confidentiality, integrity, and availability through protection mechanisms that prevent unauthorized access and use may be said to be sec",
       "distance": 0.26173239946365356,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p006-c01",
@@ -90,7 +90,7 @@
       "page": 6,
       "text": "NIST AI 100-1 AI RMF 1.0 Executive Summary Artificial intelligence (AI) technologies have significant potential to transform society and people\u2019s lives \u2013 from commerce and health to transportation and cybersecurity to the envi- ronment and our planet. AI technologies can drive inclusive economic growth and support scientific advancements that improve the conditions of our world. AI technologies, how- ever, also pose risks that can negatively impact individuals, groups, organizations, commu- nities, society, the environment, and the planet. Like risks for other types of technology, AI risks can emerge in a variety of ways and can be characterized as long- or short-term, high- or low-probability, systemic or localized, and high- or low-impact. The AI RMF refers to an AI system as an engineer",
       "distance": 0.2617887258529663,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     }
   ],
   "reference_answer": "NOT IN DOCUMENTS"

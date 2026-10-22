@@ -1,0 +1,97 @@
+{
+  "id": "q15",
+  "kind": "off_topic",
+  "answerable": false,
+  "question": "What is the capital of France?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "NOT IN DOCUMENTS",
+  "abstained": true,
+  "backend": "claude-haiku-5-5",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 2.66,
+  "tokens_in": 1367,
+  "tokens_out": 15,
+  "retrieved_ids": [
+    "nist-p014-c05",
+    "nist-p007-c04",
+    "nist-p005-c03",
+    "nist-p015-c01",
+    "nist-p002-c01",
+    "nist-p026-c02"
+  ],
+  "retrieved_pages": [
+    14,
+    7,
+    5,
+    15,
+    2,
+    26
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": true,
+  "false_abstention": false,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer matches the reference answer exactly by abstaining with \"NOT IN DOCUMENTS.\"",
+  "judge_reason_grounded": "PASS - The system answer is an abstention (\"NOT IN DOCUMENTS\"), which always passes this check.",
+  "judge_tokens_in": 1869,
+  "judge_tokens_out": 80,
+  "passages": [
+    {
+      "id": "nist-p014-c05",
+      "doc": "nist",
+      "page": 14,
+      "text": "s within an AI lifecycle, TEVV allows for both mid-course remediation and post-hoc risk management. The People & Planet dimension at the center of Figure 2 represents human rights and the broader well-being of society and the planet. The AI actors in this dimension comprise a separate AI RMF audience who informs the primary audience. These AI actors may in- clude trade associations, standards developing organizations, researchers, advocacy groups, Page 9",
+      "distance": 0.5025297403335571,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p007-c04",
+      "doc": "nist",
+      "page": 7,
+      "text": "system lifecycle, including organiza- tions and individuals that deploy or operate AI\u201d [OECD (2019) Artificial Intelligence in Society\u2014OECD iLibrary] (See Appendix A). The AI RMF is intended to be practical, to adapt to the AI landscape as AI technologies continue to develop, and to be operationalized by organizations in varying degrees and capacities so society can benefit from AI while also being protected from its potential harms. The Framework and supporting resources will be updated, expanded, and improved based on evolving technology, the standards landscape around the world, and AI community ex- perience and feedback. NIST will continue to align the AI RMF and related guidance with applicable international standards, guidelines, and practices. As the AI RMF is put into use, addition",
+      "distance": 0.5109841227531433,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p005-c03",
+      "doc": "nist",
+      "page": 5,
+      "text": "sparent is shown as a vertical box because it relates to all other characteristics. 12 Fig. 5 Functions organize AI risk management activities at their highest level to govern, map, measure, and manage AI risks. Governance is designed to be a cross-cutting function to inform and be infused throughout the other three functions. 20 Page ii",
+      "distance": 0.5122923851013184,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p015-c01",
+      "doc": "nist",
+      "page": 15,
+      "text": "NIST AI 100-1 AI RMF 1.0 Fig. 2. Lifecycle and Key Dimensions of an AI System. Modified from OECD (2022) OECD Framework for the Classification of AI systems \u2014 OECD Digital Economy Papers. The two inner circles show AI systems\u2019 key dimensions and the outer circle shows AI lifecycle stages. Ideally, risk management efforts start with the Plan and Design function in the application context and are performed throughout the AI system lifecycle. See Figure 3 for representative AI actors. environmental groups, civil society organizations, end users, and potentially impacted in- dividuals and communities. These actors can: \u2022 assist in providing context and understanding potential and actual impacts; \u2022 be a source of formal or quasi-formal norms and guidance for AI risk management; \u2022 designate boun",
+      "distance": 0.5132735967636108,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p002-c01",
+      "doc": "nist",
+      "page": 2,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0) This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 January 2023 U.S. Department of Commerce Gina M. Raimondo, Secretary National Institute of Standards and Technology Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology",
+      "distance": 0.5138986706733704,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p026-c02",
+      "doc": "nist",
+      "page": 26,
+      "text": "oader community. Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center. Framework users may apply these functions as best suits their needs for managing AI risks based on their resources and capabilities. Some organizations may choose to select from among the categories and subcategories; others may choose and have the capacity to apply all categories and subcategories. Assuming a governance struc- ture is in place, functions may be performed in any order across the AI lifecycle as deemed to add value by a user of the framework. After instituting the outcomes in GOVERN , most users of the AI RMF would start with the MAP function and con- tinue to MEASURE or MANAGE . However users integrate the functions, the process should be iterative, with",
+      "distance": 0.5160053968429565,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

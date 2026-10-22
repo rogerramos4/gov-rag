@@ -7,8 +7,8 @@
   "raw_answer": "The difference between a Current Profile and a Target Profile in the AI RMF is that a Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes, while a Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. (doc=nist, page=38)",
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
-  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.89,
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.16,
   "tokens_in": 1044,
   "tokens_out": 67,
   "retrieved_ids": [
@@ -41,10 +41,10 @@
   "false_abstention": false,
   "judge_correct": "PASS",
   "judge_grounded": "PASS",
-  "judge_reason_correct": "PASS - The system answer correctly states that a Current Profile reflects how AI is currently managed and its risks, while a Target Profile reflects the outcomes needed to achieve desired risk management goals, matching the reference.",
-  "judge_reason_grounded": "PASS - Passage [1] states that a Current Profile indicates how AI is currently managed and related risks in terms of current outcomes, and a Target Profile indicates the outcomes needed to achieve desired AI risk management goals, matching the answer.",
+  "judge_reason_correct": "PASS - The system answer correctly states that a Current Profile describes how AI is currently managed with current outcomes, and a Target Profile describes the outcomes needed to achieve desired risk management goals, matching the reference (it omits the gap-comparison point, a minor detail).",
+  "judge_reason_grounded": "PASS - Passage [1] states that a Current Profile indicates how AI is currently being managed and related risks in terms of current outcomes, and a Target Profile indicates the outcomes needed to achieve desired AI risk management goals.",
   "judge_tokens_in": 2338,
-  "judge_tokens_out": 154,
+  "judge_tokens_out": 167,
   "passages": [
     {
       "id": "nist-p038-c03",
@@ -52,7 +52,7 @@
       "page": 38,
       "text": "sights into how risk can be managed at various stages of the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles assist organizations in deciding how they might best manage AI risk that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. AI RMF temporal profiles are descriptions of either the current state or the desired, target state of specific AI risk management activities within a given sector, industry, organization, or application context. An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. Co",
       "distance": 0.19968044757843018,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p038-c04",
@@ -60,7 +60,7 @@
       "page": 38,
       "text": "lated risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. Comparing Current and Target Profiles likely reveals gaps to be addressed to meet AI risk management objectives. Action plans can be developed to address these gaps to fulfill outcomes in a given category or subcategory. Prioritization of gap mitigation is driven by the user\u2019s needs and risk management processes. This risk-based approach also enables Framework users to compare their approaches with other approaches and to gauge the resources needed (e.g., staffing, funding) to achieve AI risk management goals in a cost- effective, prioritized manner. Page 33",
       "distance": 0.26619499921798706,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p038-c02",
@@ -68,7 +68,7 @@
       "page": 38,
       "text": "e- ment with interested parties, including relevant AI actors. MANAGE 4.3: Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for track- ing, responding to, and recovering from incidents and errors are followed and documented. Categories Subcategories 6. AI RMF Profiles AI RMF use-case profiles are implementations of the AI RMF functions, categories, and subcategories for a specific setting or application based on the requirements, risk tolerance, and resources of the Framework user: for example, an AI RMF hiring profile or an AI RMF fair housing profile. Profiles may illustrate and offer insights into how risk can be managed at various stages of the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles ",
       "distance": 0.2693527936935425,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p039-c01",
@@ -76,7 +76,7 @@
       "page": 39,
       "text": "NIST AI 100-1 AI RMF 1.0 AI RMF cross-sectoral profilescover risks of models or applications that can be used across use cases or sectors. Cross-sectoral profiles can also cover how to govern, map, measure, and manage risks for activities or business processes common across sectors such as the use of large language models, cloud-based services or acquisition. This Framework does not prescribe profile templates, allowing for flexibility in implemen- tation. Page 34",
       "distance": 0.29931777715682983,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p007-c04",
@@ -84,7 +84,7 @@
       "page": 7,
       "text": "system lifecycle, including organiza- tions and individuals that deploy or operate AI\u201d [OECD (2019) Artificial Intelligence in Society\u2014OECD iLibrary] (See Appendix A). The AI RMF is intended to be practical, to adapt to the AI landscape as AI technologies continue to develop, and to be operationalized by organizations in varying degrees and capacities so society can benefit from AI while also being protected from its potential harms. The Framework and supporting resources will be updated, expanded, and improved based on evolving technology, the standards landscape around the world, and AI community ex- perience and feedback. NIST will continue to align the AI RMF and related guidance with applicable international standards, guidelines, and practices. As the AI RMF is put into use, addition",
       "distance": 0.301896333694458,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p047-c01",
@@ -92,7 +92,7 @@
       "page": 47,
       "text": "NIST AI 100-1 AI RMF 1.0 Appendix D: Attributes of the AI RMF NIST described several key attributes of the AI RMF when work on the Framework first began. These attributes have remained intact and were used to guide the AI RMF\u2019s devel- opment. They are provided here as a reference. The AI RMF strives to: 1. Be risk-based, resource-efficient, pro-innovation, and voluntary. 2. Be consensus-driven and developed and regularly updated through an open, trans- parent process. All stakeholders should have the opportunity to contribute to the AI RMF\u2019s development. 3. Use clear and plain language that is understandable by a broad audience, including senior executives, government officials, non-governmental organization leadership, and those who are not AI professionals \u2013 while still of sufficient tec",
       "distance": 0.3030608296394348,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     }
   ],
   "reference_answer": "A Current Profile describes how AI risk is currently being managed; a Target Profile describes the outcomes needed to reach desired risk management goals. Comparing them reveals gaps."

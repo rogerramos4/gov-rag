@@ -38,14 +38,31 @@ Answers questions about the NIST AI Risk Management Framework (AI RMF 1.0) from 
 | Correctness PASS (judge) | 19/20 | the FAIL is bad answer 3 below; the abstention miss on q17 still PASSED correctness, which is right: content, not format |
 | Groundedness PASS (judge) | 20/20 | nothing stated beyond the passages, including on q14 where the content was wrong but traceable |
 | Judge calls unparsed or errored | 0 of 40 | first judge run had 1 unparsed; see error analysis |
-| Judge vs. 40 labels, correctness | TPR 19/19, TNR 1/1 | 0 disagreements; the single negative is q14 |
-| Judge vs. 40 labels, groundedness | TPR 20/20, TNR n/a | no answer was labelled ungrounded, so the judge's ability to catch an ungrounded answer is **untested** here |
+| No-context baseline, judged | correctness FAIL 4/5, groundedness FAIL 4/5 | the 5 deliberately bad answers; the one groundedness miss is a pipeline bug, see error analysis |
+| Judge vs. 50 labels, correctness | TPR 20/20, TNR 5/5 | negatives: q14 plus 4 no-context fabrications |
+| Judge vs. 50 labels, groundedness | TPR 20/20, TNR 4/5 | the miss is q01 no-context: the judge was shown the normalized sentinel instead of the raw fabrication |
 | No-context baseline (5 answerable Qs, no passages) | 4/5 answered anyway | without retrieval the model invents answers; see bad answer 2 |
 | Mean warm latency | ~5 s | first call after model load ~8 s |
 | Generation cost | $0 | local |
 | Judge cost | $0.0062 per full run | 40 Haiku calls, ~49k tokens, effort low |
 
 "Accuracy" is deliberately absent: each row measures one failure mode.
+
+### Generator comparison: local 4B vs. Claude Haiku 5.5, identical retrieval and prompt
+
+| | `qwen3:4b-q4_K_M` (local) | `claude-haiku-5-5` (API) |
+|---|---|---|
+| Recall@6 / MRR | 14/14 / 0.90 | same (retrieval is shared) |
+| Citation support | 14/14 | 13/14 as run; 14/14 after the parser learned `(nist, page=25; nist, page=8)` |
+| Correct abstentions | 5/6 | **6/6** (used the sentinel on the near-miss q17 where the local model abstained in prose) |
+| False abstentions | 0/14 | 0/14 |
+| Correctness PASS (judge) | 19/20 | 19/20, **same failure**: both chose MANAGE 4.1 over 2.4 on q14 |
+| Groundedness PASS (judge) | 20/20 | 20/20 |
+| Mean warm latency | 5.0 s | 3.4 s |
+| Mean answer length | 57 tokens | 169 tokens |
+| Generation cost, 20 answers | $0 | $0.005 |
+
+On this document the hosted model buys one thing: reliable instruction-following on the abstention format. Content quality is indistinguishable at n=20, and both models made the identical subcategory error, which points at the retrieval order (p38 ranked above p37) or the reference answer rather than at either generator. The local model answers in a third of the tokens.
 
 ### Chunk-size sweep: dense retrieval, same generator, overlap held at ~19%
 
@@ -101,19 +118,22 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 | Plausible neighbouring subcategory (MANAGE 4.1 for 2.4) | 1 | q14 | none yet; candidate for the Claude-backend comparison |
 | Judge returned no text (256-token cap consumed by Haiku's thinking) | 1 of 40 calls | q14 groundedness, first run | cap raised to 2048, stop_reason checked, unparsed calls now reported as their own row |
 | Definition split across chunk boundary → "not defined" answer with no citation | 1 | q08 at 400-char chunks | evidence that 400 is too small here; 800 kept |
+| Judge shown the normalized `NOT IN DOCUMENTS` instead of the raw guess-then-abstain text | 1 | q01 no-context | judges now receive `raw_answer`; numbers above are as-run, before the fix |
+| Citation parser missed `(nist, page=25; nist, page=8)` | 1 | q01, Claude backend | regex extended; reported both as-run and re-parsed |
+| Same wrong subcategory from two different generators | 2 | q14, local and Claude | flagged for review of retrieval order and of the reference answer |
 
 ## Limitations
 
 - 20 questions is far below the 100–200 per failure mode that judge validation properly needs. Treat every rate above as a smoke test, not an estimate.
 - **The 40 labels in `results/frozen/labels.csv` were written by Claude (Fable 5.1, reading the passages), not by a human.** The author reviewed the approach but did not grade independently. So "judge validation" here means a stronger model agreeing with a cheaper one, which is weaker evidence than human labels. Two labels are marked DEBATABLE in the file (q14 correctness, q17 format).
-- With one negative for correctness and zero for groundedness, the TNR numbers say nothing about whether the judge catches bad answers. Fixing that needs deliberately bad answers (e.g. the no-context baseline outputs) labelled and judged, which is the first item in next steps.
+- Negatives are still few: 5 for correctness, 5 for groundedness, all from the no-context baseline. TNR 5/5 and 4/5 are a first signal, not a rate.
 - Tables split across pages lose their row label (GOVERN 4 spans physical pages 28–29). Page-bounded chunking is a deliberate trade for verifiable citations.
 - Citations use physical PDF pages; NIST's printed page 1 is physical page 6.
 - One document. Recall@6 of 14/14 says little about corpus-scale retrieval; the full-document baseline (whole PDF in one Haiku prompt) is the honest comparison and is a stretch item.
 
 ## Next steps
 
-Judge the 5 no-context answers and label them, to get real negatives for TNR → human re-grade of the 20 labels → Claude backend row → EU AI Act as a second document with its own question file.
+Re-run judges on raw answers (fix is in, numbers above predate it) → human re-grade of the 50 labels → more negatives (perturbed answers) → EU AI Act as a second document with its own question file.
 
 ## How this maps to the AI RMF itself
 

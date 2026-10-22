@@ -7,8 +7,8 @@
   "raw_answer": "The three major categories of AI bias identified by NIST are systemic, computational and statistical, and human-cognitive. (doc=nist, page=23)",
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
-  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.53,
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.86,
   "tokens_in": 1127,
   "tokens_out": 34,
   "retrieved_ids": [
@@ -41,10 +41,10 @@
   "false_abstention": false,
   "judge_correct": "PASS",
   "judge_grounded": "PASS",
-  "judge_reason_correct": "PASS - The system answer lists systemic, computational and statistical, and human-cognitive, exactly matching the reference answer.",
+  "judge_reason_correct": "PASS - The system answer lists the same three categories (systemic, computational and statistical, human-cognitive) as the reference, with only a citation difference that is to be ignored.",
   "judge_reason_grounded": "PASS - Passage [1] explicitly states NIST identified three major categories of AI bias: systemic, computational and statistical, and human-cognitive, citing page 23.",
   "judge_tokens_in": 2332,
-  "judge_tokens_out": 99,
+  "judge_tokens_out": 113,
   "passages": [
     {
       "id": "nist-p023-c01",
@@ -52,7 +52,7 @@
       "page": 23,
       "text": "NIST AI 100-1 AI RMF 1.0 Bias is broader than demographic balance and data representativeness. NIST has identified three major categories of AI bias to be considered and managed: systemic, computational and statistical, and human-cognitive. Each of these can occur in the absence of prejudice, partiality, or discriminatory intent. Systemic bias can be present in AI datasets, the orga- nizational norms, practices, and processes across the AI lifecycle, and the broader society that uses AI systems. Computational and statistical biases can be present in AI datasets and algorithmic processes, and often stem from systematic errors due to non-representative samples. Human-cognitive biases relate to how an individual or group perceives AI sys- tem information to make a decision or fill in missing ",
       "distance": 0.10861378908157349,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p023-c02",
@@ -60,7 +60,7 @@
       "page": 23,
       "text": "entative samples. Human-cognitive biases relate to how an individual or group perceives AI sys- tem information to make a decision or fill in missing information, or how humans think about purposes and functions of an AI system. Human-cognitive biases are omnipresent in decision-making processes across the AI lifecycle and system use, including the design, implementation, operation, and maintenance of AI. Bias exists in many forms and can become ingrained in the automated systems that help make decisions about our lives. While bias is not always a negative phenomenon, AI sys- tems can potentially increase the speed and scale of biases and perpetuate and amplify harms to individuals, groups, communities, organizations, and society. Bias is tightly asso- ciated with the concepts of transpare",
       "distance": 0.25220340490341187,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p032-c01",
@@ -68,7 +68,7 @@
       "page": 32,
       "text": "NIST AI 100-1 AI RMF 1.0 Table 2: Categories and subcategories for the MAP function. (Continued) MAP 2.3: Scientific integrity and TEVV considerations are iden- tified and documented, including those related to experimental design, data collection and selection (e.g., availability, repre- sentativeness, suitability), system trustworthiness, and construct validation. MAP 3: AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood. MAP 3.1: Potential benefits of intended AI system functionality and performance are examined and documented. MAP 3.2: Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness \u2013 as connected to organizational risk tol",
       "distance": 0.2577856779098511,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p034-c01",
@@ -76,7 +76,7 @@
       "page": 34,
       "text": "NIST AI 100-1 AI RMF 1.0 Practices related to measuring AI risks are described in the NIST AI RMF Playbook. Table 3 lists the MEASURE function\u2019s categories and subcategories. Table 3: Categories and subcategories for the MEASURE function. MEASURE 1: Appropriate methods and metrics are identified and applied. MEASURE 1.1: Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for imple- mentation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not \u2013 or cannot \u2013 be measured are properly documented. MEASURE 1.2: Appropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities. MEASURE 1",
       "distance": 0.2617027163505554,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p045-c03",
@@ -84,7 +84,7 @@
       "page": 45,
       "text": " systems may not require human oversight, such as models used to improve video compression. Other systems may specifically require human oversight. 2. Decisions that go into the design, development, deployment, evaluation, and use of AI systems reflect systemic and human cognitive biases. AI actors bring their cognitive biases, both individual and group, into the process. Biases can stem from end-user decision-making tasks and be introduced across the AI lifecycle via human assumptions, expectations, and decisions during design and modeling tasks. These biases, which are not necessarily always harmful, may be exacerbated by AI system opacity and the resulting lack of transparency. Systemic biases at the organizational level can influence how teams are structured and who controls the decisi",
       "distance": 0.26296257972717285,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p014-c03",
@@ -92,7 +92,7 @@
       "page": 14,
       "text": "22) OECD Framework for the Classification of AI systems \u2014 OECD Digital Economy Papers]. Figure 2 shows these dimensions, slightly modified by NIST for purposes of this framework. The NIST modification high- lights the importance of test, evaluation, verification, and validation (TEVV) processes throughout an AI lifecycle and generalizes the operational context of an AI system. AI dimensions displayed in Figure 2 are the Application Context, Data and Input, AI Model, and Task and Output. AI actors involved in these dimensions who perform or manage the design, development, deployment, evaluation, and use of AI systems and drive AI risk management efforts are the primary AI RMF audience. Representative AI actors across the lifecycle dimensions are listed in Figure 3 and described in detail in",
       "distance": 0.2671349048614502,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     }
   ],
   "reference_answer": "Systemic, computational and statistical, and human-cognitive bias."

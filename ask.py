@@ -141,8 +141,10 @@ def backend_name() -> str:
     return CLAUDE_MODEL if BACKEND == "claude" else GEN_MODEL
 
 
-# Matches "(nist, 25)", "(doc=nist, page=25)", "(nist, page 25)", "(nist, p. 25)".
-CITE_RE = re.compile(r"\(\s*(?:doc\s*=\s*)?([A-Za-z_]+)\s*,\s*(?:page\s*=?\s*|p\.?\s*)?(\d+)\s*\)", re.I)
+# Matches "(nist, 25)", "(doc=nist, page=25)", "(nist, page 25)", "(nist, p. 25)", and
+# several inside one parenthesis: "(nist, page=25; nist, page=8)". Extended 2026-10-22 after the
+# Claude-backend run used the semicolon form; disclosed in docs/retros.md.
+CITE_RE = re.compile(r"[(;]\s*(?:doc\s*=\s*)?([A-Za-z_]+)\s*,\s*(?:page\s*=?\s*|p\.?\s*)?(\d+)\s*(?=[);])", re.I)
 
 
 def parse_citations(text: str) -> list[tuple[str, int]]:

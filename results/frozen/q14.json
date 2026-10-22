@@ -7,8 +7,8 @@
   "raw_answer": "When an AI system presents unacceptable risk, the AI RMF states that development and deployment should cease in a safe manner until risks can be sufficiently managed (doc=nist, page=13). The MANAGE subcategory that covers deactivating such systems is MANAGE 4.1, which involves post-deployment AI system monitoring plans, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management (doc=nist, page=38).",
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
-  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 5.35,
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.49,
   "tokens_in": 1114,
   "tokens_out": 111,
   "retrieved_ids": [
@@ -42,10 +42,10 @@
   "false_abstention": false,
   "judge_correct": "FAIL",
   "judge_grounded": "PASS",
-  "judge_reason_correct": "FAIL - The system answer correctly states that development and deployment should cease, but it names MANAGE 4.1 (post-deployment monitoring) rather than MANAGE 2.4, which covers superseding, disengaging, or deactivating systems.",
-  "judge_reason_grounded": "PASS - The cessation claim matches passage [1], and passage [3] lists \"decommissioning\" under MANAGE 4.1, so the answer's mapping of deactivation to that subcategory is a reasonable paraphrase of the source text.",
+  "judge_reason_correct": "FAIL - The system correctly states that development and deployment should cease safely, but it names MANAGE 4.1 instead of MANAGE 2.4, which is the subcategory covering mechanisms to supersede, disengage, or deactivate systems.",
+  "judge_reason_grounded": "PASS - The cessation claim is on page 13, and MANAGE 4.1 on page 38 does list decommissioning among its post-deployment items, though the passages never explicitly tie it to unacceptable-risk systems.",
   "judge_tokens_in": 2602,
-  "judge_tokens_out": 685,
+  "judge_tokens_out": 579,
   "passages": [
     {
       "id": "nist-p013-c01",
@@ -53,7 +53,7 @@
       "page": 13,
       "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present \u2013 development and deployment should cease in a safe manner until risks can be sufficiently managed. If an AI system\u2019s development, deployment, and use cases are found to be low-risk in a specific context, that may suggest potentially lower prioritization. Risk prioritization may differ between AI systems that are designed or deployed to directly interact with ",
       "distance": 0.14919084310531616,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p037-c01",
@@ -61,7 +61,7 @@
       "page": 37,
       "text": "NIST AI 100-1 AI RMF 1.0 Practices related to managing AI risks are described in the NIST AI RMF Playbook. Table 4 lists the MANAGE function\u2019s categories and subcategories. Table 4: Categories and subcategories for the MANAGE function. MANAGE 1: AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed. MANAGE 1.1: A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed. MANAGE 1.2: Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods. MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned",
       "distance": 0.1732940673828125,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p038-c01",
@@ -69,7 +69,7 @@
       "page": 38,
       "text": "NIST AI 100-1 AI RMF 1.0 Table 4: Categories and subcategories for the MANAGE function. (Continued) MANAGE 4: Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly. MANAGE 4.1: Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and eval- uating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management. MANAGE 4.2: Measurable activities for continual improvements are integrated into AI system updates and include regular engage- ment with interested parties, including relevant AI actors. MANAGE 4.3: Incidents and errors are communicated to relevant AI actors, including affe",
       "distance": 0.18509960174560547,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p013-c04",
@@ -77,7 +77,7 @@
       "page": 13,
       "text": "considered in isolation. Different AI actors have different responsi- bilities and awareness depending on their roles in the lifecycle. For example, organizations developing an AI system often will not have information about how the system may be used. AI risk management should be integrated and incorporated into broader enterprise risk management strategies and processes. Treating AI risks along with other critical risks, such as cybersecurity and privacy, will yield a more integrated outcome and organizational efficiencies. The AI RMF may be utilized along with related guidance and frameworks for managing AI system risks or broader enterprise risks. Some risks related to AI systems are common across other types of software development and deployment. Examples of overlapping risks include",
       "distance": 0.1880057454109192,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p009-c04",
@@ -85,7 +85,7 @@
       "page": 9,
       "text": " overall system performance and trustworthiness and the likelihood that AI technologies will be used in ways that are beneficial. The AI RMF is designed to address new risks as they emerge. This flexibility is particularly important where impacts are not easily foreseeable and applications are evolving. While some AI risks and benefits are well-known, it can be challenging to assess negative impacts and the degree of harms. Figure 1 provides examples of potential harms that can be related to AI systems. AI risk management efforts should consider that humans may assume that AI systems work \u2013 and work well \u2013 in all settings. For example, whether correct or not, AI systems are often perceived as being more objective than humans or as offering greater capabilities than general software. Page 4",
       "distance": 0.19488739967346191,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     },
     {
       "id": "nist-p045-c01",
@@ -93,7 +93,7 @@
       "page": 45,
       "text": "NIST AI 100-1 AI RMF 1.0 Appendix C: AI Risk Management and Human-AI Interaction Organizations that design, develop, or deploy AI systems for use in operational settings may enhance their AI risk management by understanding current limitations of human- AI interaction. The AI RMF provides opportunities to clearly define and differentiate the various human roles and responsibilities when using, interacting with, or managing AI systems. Many of the data-driven approaches that AI systems rely on attempt to convert or represent individual and social observational and decision-making practices into measurable quanti- ties. Representing complex human phenomena with mathematical models can come at the cost of removing necessary context. This loss of context may in turn make it difficult to unders",
       "distance": 0.2021028995513916,
-      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
     }
   ],
   "reference_answer": "Development and deployment should cease in a safe manner until risks can be managed; MANAGE 2.4 covers mechanisms to supersede, disengage, or deactivate AI systems whose outcomes are inconsistent with intended use."

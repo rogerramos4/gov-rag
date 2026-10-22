@@ -103,10 +103,13 @@ def run_one(q: dict, client, out_dir: Path, no_context: bool = False, collection
     }
 
     if client is not None:
+        # Judges see the RAW answer, not the normalized sentinel. Found 2026-10-22: a no-context
+        # answer that hallucinated four fake functions and then said NOT IN DOCUMENTS was
+        # normalized before judging, so the groundedness judge passed it.
         c = judge(client, CORRECTNESS,
-                  f"QUESTION: {q['question']}\n\nREFERENCE ANSWER: {q['reference_answer']}\n\nSYSTEM ANSWER: {rec['answer']}")
+                  f"QUESTION: {q['question']}\n\nREFERENCE ANSWER: {q['reference_answer']}\n\nSYSTEM ANSWER: {rec['raw_answer']}")
         g = judge(client, GROUNDEDNESS,
-                  f"PASSAGES:\n{fmt_passages(passages)}\n\nSYSTEM ANSWER: {rec['answer']}")
+                  f"PASSAGES:\n{fmt_passages(passages)}\n\nSYSTEM ANSWER: {rec['raw_answer']}")
         row.update(judge_correct=c["verdict"], judge_grounded=g["verdict"],
                    judge_reason_correct=c["reason"], judge_reason_grounded=g["reason"],
                    judge_tokens_in=c["tokens_in"] + g["tokens_in"], judge_tokens_out=c["tokens_out"] + g["tokens_out"])

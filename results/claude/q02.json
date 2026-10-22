@@ -1,0 +1,99 @@
+{
+  "id": "q02",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What characteristics of trustworthy AI does the framework list?",
+  "answer": "The framework lists these characteristics of trustworthy AI systems: valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed (nist, 17).",
+  "raw_answer": "The framework lists these characteristics of trustworthy AI systems: valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed (nist, 17).",
+  "abstained": false,
+  "backend": "claude-haiku-5-5",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 3.27,
+  "tokens_in": 1732,
+  "tokens_out": 170,
+  "retrieved_ids": [
+    "nist-p017-c01",
+    "nist-p017-c02",
+    "nist-p005-c02",
+    "nist-p018-c03",
+    "nist-p017-c03",
+    "nist-p018-c02"
+  ],
+  "retrieved_pages": [
+    17,
+    17,
+    5,
+    18,
+    17,
+    18
+  ],
+  "evidence_pages": [
+    17
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer lists exactly the same seven characteristics as the reference answer, with equivalent wording.",
+  "judge_reason_grounded": "PASS - The passages list exactly these seven characteristics (valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, fair with harmful bias managed) on page 17 of the NIST document, so the citation is supported.",
+  "judge_tokens_in": 2414,
+  "judge_tokens_out": 133,
+  "passages": [
+    {
+      "id": "nist-p017-c01",
+      "doc": "nist",
+      "page": 17,
+      "text": "NIST AI 100-1 AI RMF 1.0 3. AI Risks and Trustworthiness For AI systems to be trustworthy, they often need to be responsive to a multiplicity of cri- teria that are of value to interested parties. Approaches which enhance AI trustworthiness can reduce negative AI risks. This Framework articulates the following characteristics of trustworthy AI and offers guidance for addressing them. Characteristics of trustworthy AI systems include: valid and reliable, safe, secure and resilient, accountable and trans- parent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. Creating trustworthy AI requires balancing each of these characteristics based on the AI system\u2019s context of use. While all characteristics are socio-technical system at- tributes, accountability an",
+      "distance": 0.1537390947341919,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p017-c02",
+      "doc": "nist",
+      "page": 17,
+      "text": "of these characteristics based on the AI system\u2019s context of use. While all characteristics are socio-technical system at- tributes, accountability and transparency also relate to the processes and activities internal to an AI system and its external setting. Neglecting these characteristics can increase the probability and magnitude of negative consequences. Fig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable & Transparent is shown as a vertical box because it relates to all other characteristics. Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and orga- nizational behavior, the datasets used by AI systems, selectio",
+      "distance": 0.18141674995422363,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p005-c02",
+      "doc": "nist",
+      "page": 5,
+      "text": " AI system lifecycle. See Figure 3 for representative AI actors. 10 Fig. 3 AI actors across AI lifecycle stages. See Appendix A for detailed descrip- tions of AI actor tasks, including details about testing, evaluation, verifica- tion, and validation tasks. Note that AI actors in the AI Model dimension (Figure 2) are separated as a best practice, with those building and using the models separated from those verifying and validating the models. 11 Fig. 4 Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthi- ness characteristics. Accountable & Transparent is shown as a vertical box because it relates to all other characteristics. 12 Fig. 5 Functions organize AI risk management activities at thei",
+      "distance": 0.187669038772583,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p018-c03",
+      "doc": "nist",
+      "page": 18,
+      "text": ", an AI designer or developer may have a different perception of the characteristics than the deployer. Trustworthiness characteristics explained in this document influence each other. Highly secure but unfair systems, accurate but opaque and uninterpretable systems, and inaccurate but secure, privacy-enhanced, and transparent systems are all unde- sirable. A comprehensive approach to risk management calls for balancing tradeoffs among the trustworthiness characteristics. It is the joint responsibility of all AI ac- tors to determine whether AI technology is an appropriate or necessary tool for a given context or purpose, and how to use it responsibly. The decision to commission or deploy an AI system should be based on a contextual assessment of trustworthi- ness characteristics and the r",
+      "distance": 0.2118842601776123,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p017-c03",
+      "doc": "nist",
+      "page": 17,
+      "text": "orthiness characteristics (shown in Figure 4) are inextricably tied to social and orga- nizational behavior, the datasets used by AI systems, selection of AI models and algorithms and the decisions made by those who build them, and the interactions with the humans who provide insight from and oversight of such systems. Human judgment should be employed when deciding on the specific metrics related to AI trustworthiness characteristics and the precise threshold values for those metrics. Addressing AI trustworthiness characteristics individually will not ensure AI system trust- worthiness; tradeoffs are usually involved, rarely do all characteristics apply in every set- ting, and some will be more or less important in any given situation. Ultimately, trustwor- thiness is a social concept tha",
+      "distance": 0.23233270645141602,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p018-c02",
+      "doc": "nist",
+      "page": 18,
+      "text": "with product and deployment teams to align TEVV parameters to requirements and de- ployment conditions. When properly resourced, increasing the breadth and diversity of input from interested parties and relevant AI actors throughout the AI lifecycle can en- hance opportunities for informing contextually sensitive evaluations, and for identifying AI system benefits and positive impacts. These practices can increase the likelihood that risks arising in social contexts are managed appropriately. Understanding and treatment of trustworthiness characteristics depends on an AI actor\u2019s particular role within the AI lifecycle. For any given AI system, an AI designer or developer may have a different perception of the characteristics than the deployer. Trustworthiness characteristics explained in t",
+      "distance": 0.23369431495666504,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "Valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; fair with harmful bias managed."
+}

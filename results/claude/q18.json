@@ -1,0 +1,97 @@
+{
+  "id": "q18",
+  "kind": "near_miss",
+  "answerable": false,
+  "question": "What certification does NIST issue to organizations that adopt the AI RMF?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "NOT IN DOCUMENTS",
+  "abstained": true,
+  "backend": "claude-haiku-5-5",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 2.86,
+  "tokens_in": 1270,
+  "tokens_out": 48,
+  "retrieved_ids": [
+    "nist-p002-c01",
+    "nist-p024-c01",
+    "nist-p008-c02",
+    "nist-p003-c03",
+    "nist-p001-c01",
+    "nist-p026-c01"
+  ],
+  "retrieved_pages": [
+    2,
+    24,
+    8,
+    3,
+    1,
+    26
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": true,
+  "false_abstention": false,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - Both answers are \"NOT IN DOCUMENTS,\" so the system answer matches the reference exactly.",
+  "judge_reason_grounded": "PASS - The system answer is an abstention (\"NOT IN DOCUMENTS\"), which always passes the check.",
+  "judge_tokens_in": 1772,
+  "judge_tokens_out": 79,
+  "passages": [
+    {
+      "id": "nist-p002-c01",
+      "doc": "nist",
+      "page": 2,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0) This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 January 2023 U.S. Department of Commerce Gina M. Raimondo, Secretary National Institute of Standards and Technology Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology",
+      "distance": 0.1890779733657837,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p024-c01",
+      "doc": "nist",
+      "page": 24,
+      "text": "NIST AI 100-1 AI RMF 1.0 4. Effectiveness of the AI RMF Evaluations of AI RMF effectiveness \u2013 including ways to measure bottom-line improve- ments in the trustworthiness of AI systems \u2013 will be part of future NIST activities, in conjunction with the AI community. Organizations and other users of the Framework are encouraged to periodically evaluate whether the AI RMF has improved their ability to manage AI risks, including but not lim- ited to their policies, processes, practices, implementation plans, indicators, measurements, and expected outcomes. NIST intends to work collaboratively with others to develop met- rics, methodologies, and goals for evaluating the AI RMF\u2019s effectiveness, and to broadly share results and supporting information. Framework users are expected to benefit from: \u2022",
+      "distance": 0.18926215171813965,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p008-c02",
+      "doc": "nist",
+      "page": 8,
+      "text": " at specific stages of the AI lifecycle. Additional resources related to the Framework are included in the AI RMF Playbook, which is available via the NIST AI RMF website: https://www.nist.gov/itl/ai-risk-management-framework. Development of the AI RMF by NIST in collaboration with the private and public sec- tors is directed and consistent with its broader AI efforts called for by the National AI Initiative Act of 2020, the National Security Commission on Artificial Intelligence recom- mendations, and the Plan for Federal Engagement in Developing Technical Standards and Related Tools. Engagement with the AI community during this Framework\u2019s development \u2013 via responses to a formal Request for Information, three widely attended workshops, public comments on a concept paper and two drafts of",
+      "distance": 0.2077040672302246,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p003-c03",
+      "doc": "nist",
+      "page": 3,
+      "text": "e, and description of change. NIST plans to update the AI RMF Playbook frequently. Comments on the AI RMF Playbook may be sent via email to AIframework@nist.gov at any time and will be reviewed and integrated on a semi-annual basis.",
+      "distance": 0.20936954021453857,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p001-c01",
+      "doc": "nist",
+      "page": 1,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "distance": 0.20969712734222412,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p026-c01",
+      "doc": "nist",
+      "page": 26,
+      "text": "NIST AI 100-1 AI RMF 1.0 deployed, or evaluated \u2013 which can create opportunities to surface problems and identify existing and emergent risks. An online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. Like the AI RMF, the Playbook is voluntary and organizations can utilize the suggestions according to their needs and interests. Playbook users can create tailored guidance selected from suggested material for their own use and contribute their suggestions for sharing with the broader community. Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center. Framework users may apply the",
+      "distance": 0.21225857734680176,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}
