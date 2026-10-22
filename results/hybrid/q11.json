@@ -1,0 +1,99 @@
+{
+  "id": "q11",
+  "kind": "detail",
+  "answerable": true,
+  "question": "What risk response options does MANAGE 1.3 list?",
+  "answer": "The risk response options listed for MANAGE 1.3 are mitigating, transferring, avoiding, or accepting. (doc=nist, page=37)",
+  "raw_answer": "The risk response options listed for MANAGE 1.3 are mitigating, transferring, avoiding, or accepting. (doc=nist, page=37)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 4.78,
+  "tokens_in": 1182,
+  "tokens_out": 34,
+  "retrieved_ids": [
+    "nist-p037-c02",
+    "nist-p038-c01",
+    "nist-p037-c01",
+    "nist-p012-c03",
+    "nist-p037-c03",
+    "nist-p028-c01"
+  ],
+  "retrieved_pages": [
+    37,
+    38,
+    37,
+    12,
+    37,
+    28
+  ],
+  "evidence_pages": [
+    37
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p037-c02",
+      "doc": "nist",
+      "page": 37,
+      "text": " available resources or methods. MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and doc- umented. Risk response options can include mitigating, transfer- ring, avoiding, or accepting. MANAGE 1.4: Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented. MANAGE 2: Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors. MANAGE 2.1: Resources required to manage AI risks are taken into account \u2013 along with viable non-AI alternative systems, ap- proaches, or methods \u2013 to reduce the magnitude or likelihood of potential impacts. MANAGE 2.2:",
+      "distance": 0.26643919944763184,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p038-c01",
+      "doc": "nist",
+      "page": 38,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 4: Categories and subcategories for the MANAGE function. (Continued) MANAGE 4: Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly. MANAGE 4.1: Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and eval- uating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management. MANAGE 4.2: Measurable activities for continual improvements are integrated into AI system updates and include regular engage- ment with interested parties, including relevant AI actors. MANAGE 4.3: Incidents and errors are communicated to relevant AI actors, including affe",
+      "distance": 0.2828506827354431,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p037-c01",
+      "doc": "nist",
+      "page": 37,
+      "text": "NIST AI 100-1 AI RMF 1.0 Practices related to managing AI risks are described in the NIST AI RMF Playbook. Table 4 lists the MANAGE function\u2019s categories and subcategories. Table 4: Categories and subcategories for the MANAGE function. MANAGE 1: AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed. MANAGE 1.1: A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed. MANAGE 1.2: Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods. MANAGE 1.3: Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned",
+      "distance": 0.27715861797332764,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p012-c03",
+      "doc": "nist",
+      "page": 12,
+      "text": "o be flexible and to augment existing risk practices which should align with applicable laws, regulations, and norms. Organizations should follow existing regulations and guidelines for risk criteria, tolerance, and response established by organizational, domain, discipline, sector, or professional requirements. Some sectors or industries may have established definitions of harm or established documentation, reporting, and disclosure requirements. Within sectors, risk management may depend on existing guidelines for specific applications and use case settings. Where established guidelines do not exist, organizations should define reasonable risk tolerance. Once tolerance is defined, this AI RMF can be used to manage risks and to document risk management processes. 1.2.3 Risk Prioritization",
+      "distance": 0.3474433422088623,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p037-c03",
+      "doc": "nist",
+      "page": 37,
+      "text": "unt \u2013 along with viable non-AI alternative systems, ap- proaches, or methods \u2013 to reduce the magnitude or likelihood of potential impacts. MANAGE 2.2: Mechanisms are in place and applied to sustain the value of deployed AI systems. MANAGE 2.3: Procedures are followed to respond to and recover from a previously unknown risk when it is identified. MANAGE 2.4: Mechanisms are in place and applied, and respon- sibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use. MANAGE 3: AI risks and benefits from third-party entities are managed. MANAGE 3.1: AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented. MANAGE 3.2: Pre-trained m",
+      "distance": 0.3156691789627075,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p028-c01",
+      "doc": "nist",
+      "page": 28,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) GOVERN 1.5: Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review. GOVERN 1.6: Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. GOVERN 1.7: Processes and procedures are in place for decom- missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 2: Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mappi",
+      "distance": 0.3370242118835449,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "Mitigating, transferring, avoiding, or accepting."
+}

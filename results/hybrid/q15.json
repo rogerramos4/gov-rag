@@ -1,0 +1,97 @@
+{
+  "id": "q15",
+  "kind": "off_topic",
+  "answerable": false,
+  "question": "What is the capital of France?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "NOT IN DOCUMENTS",
+  "abstained": true,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 4.42,
+  "tokens_in": 1074,
+  "tokens_out": 5,
+  "retrieved_ids": [
+    "nist-p003-c02",
+    "nist-p007-c01",
+    "nist-p014-c03",
+    "nist-p014-c05",
+    "nist-p022-c01",
+    "nist-p007-c04"
+  ],
+  "retrieved_pages": [
+    3,
+    7,
+    14,
+    14,
+    22,
+    7
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": true,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p003-c02",
+      "doc": "nist",
+      "page": 3,
+      "text": "e content and usefulness of the Framework regularly to determine if an update is appro- priate; a review with formal input from the AI community is expected to take place no later than 2028. The Framework will employ a two-number versioning system to track and identify major and minor changes. The first number will represent the generation of the AI RMF and its companion documents (e.g., 1.0) and will change only with major revisions. Minor revisions will be tracked using \u201c.n\u201d after the generation number (e.g., 1.1). All changes will be tracked using a Version Control Table which identifies the history, including version number, date of change, and description of change. NIST plans to update the AI RMF Playbook frequently. Comments on the AI RMF Playbook may be sent via email to AIframewor",
+      "distance": 0.5222640037536621,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p007-c01",
+      "doc": "nist",
+      "page": 7,
+      "text": "NIST AI 100-1 AI RMF 1.0 Social responsibility can refer to the organization\u2019s responsibility \u201cfor the impacts of its decisions and activities on society and the environment through transparent and ethical behavior\u201d ( ISO 26000:2010). Sustainability refers to the \u201cstate of the global system, including environmental, social, and economic aspects, in which the needs of the present are met without compromising the ability of future generations to meet their own needs\u201d ( ISO /IEC TR 24368:2022). Responsible AI is meant to result in technology that is also equitable and accountable. The expectation is that organizational practices are carried out in accord with \u201cprofessional responsibility,\u201d defined by ISO as an approach that \u201caims to ensure that professionals who design, develop, or deploy AI ",
+      "distance": 0.526836633682251,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p014-c03",
+      "doc": "nist",
+      "page": 14,
+      "text": "22) OECD Framework for the Classification of AI systems \u2014 OECD Digital Economy Papers]. Figure 2 shows these dimensions, slightly modified by NIST for purposes of this framework. The NIST modification high- lights the importance of test, evaluation, verification, and validation (TEVV) processes throughout an AI lifecycle and generalizes the operational context of an AI system. AI dimensions displayed in Figure 2 are the Application Context, Data and Input, AI Model, and Task and Output. AI actors involved in these dimensions who perform or manage the design, development, deployment, evaluation, and use of AI systems and drive AI risk management efforts are the primary AI RMF audience. Representative AI actors across the lifecycle dimensions are listed in Figure 3 and described in detail in",
+      "distance": 0.5238765478134155,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p014-c05",
+      "doc": "nist",
+      "page": 14,
+      "text": "s within an AI lifecycle, TEVV allows for both mid-course remediation and post-hoc risk management. The People & Planet dimension at the center of Figure 2 represents human rights and the broader well-being of society and the planet. The AI actors in this dimension comprise a separate AI RMF audience who informs the primary audience. These AI actors may in- clude trade associations, standards developing organizations, researchers, advocacy groups, Page 9",
+      "distance": 0.5025297403335571,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p022-c01",
+      "doc": "nist",
+      "page": 22,
+      "text": "NIST AI 100-1 AI RMF 1.0 Risks to interpretability often can be addressed by communicating a description of why an AI system made a particular prediction or recommendation. (See \u201cFour Principles of Explainable Artificial Intelligence\u201d and \u201cPsychological Foundations of Explainability and Interpretability in Artificial Intelligence\u201d found here.) Transparency, explainability, and interpretability are distinct characteristics that support each other. Transparency can answer the question of \u201cwhat happened\u201d in the system. Ex- plainability can answer the question of \u201chow\u201d a decision was made in the system. Inter- pretability can answer the question of \u201cwhy\u201d a decision was made by the system and its meaning or context to the user. 3.6 Privacy-Enhanced Privacy refers generally to the norms and prac",
+      "distance": null,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p007-c04",
+      "doc": "nist",
+      "page": 7,
+      "text": "system lifecycle, including organiza- tions and individuals that deploy or operate AI\u201d [OECD (2019) Artificial Intelligence in Society\u2014OECD iLibrary] (See Appendix A). The AI RMF is intended to be practical, to adapt to the AI landscape as AI technologies continue to develop, and to be operationalized by organizations in varying degrees and capacities so society can benefit from AI while also being protected from its potential harms. The Framework and supporting resources will be updated, expanded, and improved based on evolving technology, the standards landscape around the world, and AI community ex- perience and feedback. NIST will continue to align the AI RMF and related guidance with applicable international standards, guidelines, and practices. As the AI RMF is put into use, addition",
+      "distance": 0.5109841227531433,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

@@ -69,6 +69,7 @@ pytest==9.1.1
 python-dateutil==3.0.0
 python-dotenv==1.2.4
 PyYAML==6.0.3
+rank-bm25==0.2.2
 referencing==0.37.0
 requests==2.34.2
 requests-oauthlib==2.0.0

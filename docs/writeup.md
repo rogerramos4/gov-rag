@@ -47,6 +47,18 @@ Answers questions about the NIST AI Risk Management Framework (AI RMF 1.0) from 
 
 "Accuracy" is deliberately absent: each row measures one failure mode.
 
+### Retrieval ablation: dense vs. hybrid (BM25 + RRF), same chunks, same generator
+
+| | Dense (nomic) | Hybrid (dense top-20 ∪ BM25 top-20, RRF k=60) |
+|---|---|---|
+| Recall@6 | 14/14 | 13/14 |
+| Recall@6, all evidence pages | 14/14 | 12/14 |
+| MRR | 0.90 | 0.81 |
+| Citation support | 14/14 | 13/14 |
+| Correct abstentions | 5/6 | 5/6 |
+
+Hybrid **helped** the two subcategory-id questions (q07 GOVERN 1.6, q08 residual risk: rank 3 → 2) and **hurt** three semantic ones: q03 "how does the RMF define risk?" lost its page entirely because "risk" appears on every page and BM25 floods the fusion with high-frequency matches; both two-passage questions (q13, q14) lost their second evidence page to BM25 noise. On one document with this uniform a vocabulary, keyword search adds more noise than signal. Dense stays the default; hybrid is kept behind `--retriever hybrid` for the EU AI Act stretch, where article numbers and defined terms should favour it. Full traces in `results/hybrid/`.
+
 ## Two bad answers
 
 **1. q17, near-miss: "What monetary penalty does the AI RMF impose on organizations that fail to comply?"**
@@ -87,7 +99,7 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 
 ## Next steps
 
-Judge the 5 no-context answers and label them, to get real negatives for TNR → human re-grade of the 20 labels → Claude backend row → hybrid BM25 + RRF row → chunk-size sweep (400 / 1200) → EU AI Act as a second document with its own question file.
+Judge the 5 no-context answers and label them, to get real negatives for TNR → human re-grade of the 20 labels → Claude backend row → chunk-size sweep (400 / 1200) → EU AI Act as a second document with its own question file.
 
 ## How this maps to the AI RMF itself
 

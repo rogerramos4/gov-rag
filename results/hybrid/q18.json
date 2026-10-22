@@ -1,0 +1,97 @@
+{
+  "id": "q18",
+  "kind": "near_miss",
+  "answerable": false,
+  "question": "What certification does NIST issue to organizations that adopt the AI RMF?",
+  "answer": "NOT IN DOCUMENTS",
+  "raw_answer": "The provided documents do not mention any specific certification that NIST issues to organizations that adopt the AI RMF. Therefore, the answer is NOT IN DOCUMENTS.",
+  "abstained": true,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 4.67,
+  "tokens_in": 1154,
+  "tokens_out": 33,
+  "retrieved_ids": [
+    "nist-p024-c01",
+    "nist-p026-c01",
+    "nist-p008-c01",
+    "nist-p028-c01",
+    "nist-p014-c01",
+    "nist-p007-c04"
+  ],
+  "retrieved_pages": [
+    24,
+    26,
+    8,
+    28,
+    14,
+    7
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": true,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p024-c01",
+      "doc": "nist",
+      "page": 24,
+      "text": "NIST AI 100-1 AI RMF 1.0 4. Effectiveness of the AI RMF Evaluations of AI RMF effectiveness \u2013 including ways to measure bottom-line improve- ments in the trustworthiness of AI systems \u2013 will be part of future NIST activities, in conjunction with the AI community. Organizations and other users of the Framework are encouraged to periodically evaluate whether the AI RMF has improved their ability to manage AI risks, including but not lim- ited to their policies, processes, practices, implementation plans, indicators, measurements, and expected outcomes. NIST intends to work collaboratively with others to develop met- rics, methodologies, and goals for evaluating the AI RMF\u2019s effectiveness, and to broadly share results and supporting information. Framework users are expected to benefit from: \u2022",
+      "distance": 0.18926215171813965,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p026-c01",
+      "doc": "nist",
+      "page": 26,
+      "text": "NIST AI 100-1 AI RMF 1.0 deployed, or evaluated \u2013 which can create opportunities to surface problems and identify existing and emergent risks. An online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. Like the AI RMF, the Playbook is voluntary and organizations can utilize the suggestions according to their needs and interests. Playbook users can create tailored guidance selected from suggested material for their own use and contribute their suggestions for sharing with the broader community. Along with the AI RMF, the Playbook is part of the NIST Trustworthy and Responsible AI Resource Center. Framework users may apply the",
+      "distance": 0.21225857734680176,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p008-c01",
+      "doc": "nist",
+      "page": 8,
+      "text": "NIST AI 100-1 AI RMF 1.0 valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy enhanced, and fair with their harmful biases managed. Part 2 comprises the \u201cCore\u201d of the Framework. It describes four specific functions to help organizations address the risks of AI systems in practice. These functions \u2013 GOVERN , MAP, MEASURE , and MANAGE \u2013 are broken down further into categories and subcate- gories. While GOVERN applies to all stages of organizations\u2019 AI risk management pro- cesses and procedures, the MAP, MEASURE , and MANAGE functions can be applied in AI system-specific contexts and at specific stages of the AI lifecycle. Additional resources related to the Framework are included in the AI RMF Playbook, which is available via the",
+      "distance": 0.2189875841140747,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p028-c01",
+      "doc": "nist",
+      "page": 28,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) GOVERN 1.5: Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review. GOVERN 1.6: Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. GOVERN 1.7: Processes and procedures are in place for decom- missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 2: Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mappi",
+      "distance": 0.25007277727127075,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p014-c01",
+      "doc": "nist",
+      "page": 14,
+      "text": "NIST AI 100-1 AI RMF 1.0 Organizations need to establish and maintain the appropriate accountability mechanisms, roles and responsibilities, culture, and incentive structures for risk management to be ef- fective. Use of the AI RMF alone will not lead to these changes or provide the appropriate incentives. Effective risk management is realized through organizational commitment at senior levels and may require cultural change within an organization or industry. In addi- tion, small to medium-sized organizations managing AI risks or implementing the AI RMF may face different challenges than large organizations, depending on their capabilities and resources. 2. Audience Identifying and managing AI risks and potential impacts \u2013 both positive and negative \u2013 re- quires a broad set of perspective",
+      "distance": 0.23822444677352905,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p007-c04",
+      "doc": "nist",
+      "page": 7,
+      "text": "system lifecycle, including organiza- tions and individuals that deploy or operate AI\u201d [OECD (2019) Artificial Intelligence in Society\u2014OECD iLibrary] (See Appendix A). The AI RMF is intended to be practical, to adapt to the AI landscape as AI technologies continue to develop, and to be operationalized by organizations in varying degrees and capacities so society can benefit from AI while also being protected from its potential harms. The Framework and supporting resources will be updated, expanded, and improved based on evolving technology, the standards landscape around the world, and AI community ex- perience and feedback. NIST will continue to align the AI RMF and related guidance with applicable international standards, guidelines, and practices. As the AI RMF is put into use, addition",
+      "distance": 0.23958253860473633,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}

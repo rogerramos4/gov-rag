@@ -157,7 +157,11 @@ def main() -> None:
     ap.add_argument("--tag", default="frozen", help="results subfolder name")
     ap.add_argument("--judge", action="store_true", help="run Claude Haiku Pass/Fail judges (needs ANTHROPIC_API_KEY)")
     ap.add_argument("--no-context-baseline", type=int, default=5, help="answerable Qs to run with no passages (0 to skip)")
+    ap.add_argument("--retriever", choices=["dense", "hybrid"], default=None, help="override RETRIEVER env (dense | hybrid)")
     args = ap.parse_args()
+    if args.retriever:
+        import ask
+        ask.RETRIEVER = args.retriever
 
     qs = [json.loads(l) for l in (ROOT / args.file).read_text(encoding="utf-8").splitlines() if l.strip()]
     out_dir = ROOT / "results" / args.tag

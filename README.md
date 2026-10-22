@@ -16,6 +16,7 @@ Full write-up with error analysis: [`docs/writeup.md`](docs/writeup.md). Build l
 | Correctness PASS (Claude Haiku 5.5 judge) | 19/20 |
 | Groundedness PASS (Claude Haiku 5.5 judge) | 20/20 |
 | Mean warm latency | ~5 s · generation $0 · judge $0.006 per run |
+| Hybrid BM25 + RRF (ablation, `--retriever hybrid`) | Recall 13/14, MRR 0.81: **worse** than dense on this document; see write-up |
 
 Not called "accuracy" on purpose: each row is one failure mode. Judge vs. 40 labels: 0 disagreements, but the labels were model-written and contain only one negative, so this validates little yet (see limitations in the write-up). `evals\judge_validation.py` computes TPR/TNR from `labels.csv`.
 
@@ -59,6 +60,7 @@ tests/                     chunking, scoring, and quote-on-page checks (pytest)
 - **Deterministic chunk ids and an index fingerprint** (`doc|sha|size|overlap|embed`) logged with every answer, so results from different builds cannot be confused.
 - **Build-then-swap ingest**: a crashed run never destroys the previous index.
 - **Binary PASS/FAIL judges, one per failure mode**, rubric text in the repo, backend hidden from the judge.
+- **Hybrid retrieval measured, then not adopted**: BM25 fused with dense via reciprocal rank fusion helped questions with exact identifiers and hurt semantic ones; net negative on a single document with uniform vocabulary. Kept as an option, reported as a negative result.
 - **Quotes verified by test**: every evidence quote in the question set must appear on its cited page, so a labelling slip cannot masquerade as a retrieval miss.
 
 ## Where this sits in the AI RMF

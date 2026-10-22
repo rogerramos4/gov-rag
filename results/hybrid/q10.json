@@ -1,0 +1,99 @@
+{
+  "id": "q10",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What questions do transparency, explainability, and interpretability each answer about an AI system?",
+  "answer": "Transparency answers the question of \"what happened\" in the system, explainability answers the question of \"how\" a decision was made in the system, and interpretability answers the question of \"why\" a decision was made by the system and its meaning or context to the user (doc=nist, page=22).",
+  "raw_answer": "Transparency answers the question of \"what happened\" in the system, explainability answers the question of \"how\" a decision was made in the system, and interpretability answers the question of \"why\" a decision was made by the system and its meaning or context to the user (doc=nist, page=22).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 4.95,
+  "tokens_in": 1025,
+  "tokens_out": 67,
+  "retrieved_ids": [
+    "nist-p022-c01",
+    "nist-p021-c03",
+    "nist-p020-c04",
+    "nist-p021-c04",
+    "nist-p020-c05",
+    "nist-p021-c01"
+  ],
+  "retrieved_pages": [
+    22,
+    21,
+    20,
+    21,
+    20,
+    21
+  ],
+  "evidence_pages": [
+    22
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p022-c01",
+      "doc": "nist",
+      "page": 22,
+      "text": "NIST AI 100-1 AI RMF 1.0 Risks to interpretability often can be addressed by communicating a description of why an AI system made a particular prediction or recommendation. (See \u201cFour Principles of Explainable Artificial Intelligence\u201d and \u201cPsychological Foundations of Explainability and Interpretability in Artificial Intelligence\u201d found here.) Transparency, explainability, and interpretability are distinct characteristics that support each other. Transparency can answer the question of \u201cwhat happened\u201d in the system. Ex- plainability can answer the question of \u201chow\u201d a decision was made in the system. Inter- pretability can answer the question of \u201cwhy\u201d a decision was made by the system and its meaning or context to the user. 3.6 Privacy-Enhanced Privacy refers generally to the norms and prac",
+      "distance": 0.10827100276947021,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p021-c03",
+      "doc": "nist",
+      "page": 21,
+      "text": "ing attribution of the AI system\u2019s decisions to subsets of training data can assist with both transparency and accountability. Training data may also be subject to copyright and should follow applicable intellectual property rights laws. As transparency tools for AI systems and related documentation continue to evolve, devel- opers of AI systems are encouraged to test different types of transparency tools in cooper- ation with AI deployers to ensure that AI systems are used as intended. 3.5 Explainable and Interpretable Explainability refers to a representation of the mechanisms underlying AI systems\u2019 oper- ation, whereas interpretability refers to the meaning of AI systems\u2019 output in the context of their designed functional purposes. Together, explainability and interpretability assist th",
+      "distance": 0.11337965726852417,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p020-c04",
+      "doc": "nist",
+      "page": 20,
+      "text": "mpass unexpected or adversarial use (or abuse or misuse) of the model or data. 3.4 Accountable and Transparent Trustworthy AI depends upon accountability. Accountability presupposes transparency. Transparencyreflects the extent to which information about an AI system and its outputs is available to individuals interacting with such a system \u2013 regardless of whether they are even aware that they are doing so. Meaningful transparency provides access to appropriate levels of information based on the stage of the AI lifecycle and tailored to the role or knowledge of AI actors or individuals interacting with or using the AI system. By promoting higher levels of understanding, transparency increases confidence in the AI system. This characteristic\u2019s scope spans from design decisions and training ",
+      "distance": 0.16108030080795288,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p021-c04",
+      "doc": "nist",
+      "page": 21,
+      "text": "ers to the meaning of AI systems\u2019 output in the context of their designed functional purposes. Together, explainability and interpretability assist those operating or overseeing an AI system, as well as users of an AI system, to gain deeper insights into the functionality and trustworthiness of the system, including its out- puts. The underlying assumption is that perceptions of negative risk stem from a lack of ability to make sense of, or contextualize, system output appropriately. Explainable and interpretable AI systems offer information that will help end users understand the purposes and potential impact of an AI system. Risk from lack of explainability may be managed by describing how AI systems function, with descriptions tailored to individual differences such as the user\u2019s role, ",
+      "distance": 0.2168128490447998,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p020-c05",
+      "doc": "nist",
+      "page": 20,
+      "text": "her levels of understanding, transparency increases confidence in the AI system. This characteristic\u2019s scope spans from design decisions and training data to model train- ing, the structure of the model, its intended use cases, and how and when deployment, post-deployment, or end user decisions were made and by whom. Transparency is often necessary for actionable redress related to AI system outputs that are incorrect or otherwise lead to negative impacts. Transparency should consider human-AI interaction: for exam- Page 15",
+      "distance": 0.14676594734191895,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p021-c01",
+      "doc": "nist",
+      "page": 21,
+      "text": "NIST AI 100-1 AI RMF 1.0 ple, how a human operator or user is notified when a potential or actual adverse outcome caused by an AI system is detected. A transparent system is not necessarily an accurate, privacy-enhanced, secure, or fair system. However, it is difficult to determine whether an opaque system possesses such characteristics, and to do so over time as complex systems evolve. The role of AI actors should be considered when seeking accountability for the outcomes of AI systems. The relationship between risk and accountability associated with AI and tech- nological systems more broadly differs across cultural, legal, sectoral, and societal contexts. When consequences are severe, such as when life and liberty are at stake, AI developers and deployers should consider proportionally ",
+      "distance": 0.1977088451385498,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "Transparency answers what happened; explainability answers how a decision was made; interpretability answers why it was made and what it means to the user."
+}

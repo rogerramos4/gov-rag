@@ -25,20 +25,68 @@ SYSTEM = (
 )
 
 
-def retrieve(question: str, collection: str = "nist_800", k: int = 6) -> list[dict]:
-    """Return the k nearest chunks as dicts with id, doc, page, text.
+RETRIEVER = os.environ.get("RETRIEVER", "dense")  # dense | hybrid
+_BM25_CACHE: dict[str, tuple] = {}
 
-    Why a plain list of dicts: evals need the ids and pages, the prompt needs the text,
-    and neither should have to know Chroma's return shape.
+
+def tokenize(text: str) -> list[str]:
+    """Lowercase word tokens for BM25. Why so simple: the doc is English prose and we
+    want keyword matches like 'GOVERN 1.6' to survive; no stemming keeps it explainable."""
+    return re.findall(r"[a-z0-9][a-z0-9.\-]*", text.lower())
+
+
+def rrf(rankings: list[list[str]], k: int = 60) -> list[str]:
+    """Reciprocal rank fusion: score(id) = sum over lists of 1 / (k + rank).
+
+    Why RRF over score mixing: BM25 scores and cosine distances live on different
+    scales; ranks are comparable, scores are not. k=60 is the standard constant.
     """
+    scores: dict[str, float] = {}
+    for ranking in rankings:
+        for rank, cid in enumerate(ranking, start=1):
+            scores[cid] = scores.get(cid, 0.0) + 1.0 / (k + rank)
+    return sorted(scores, key=lambda c: (-scores[c], c))
+
+
+def _bm25_index(col):
+    """Build (or reuse) a BM25 index over every chunk in the collection."""
+    from rank_bm25 import BM25Okapi
+    if col.name not in _BM25_CACHE:
+        allrows = col.get(include=["documents", "metadatas"])
+        ids, docs, metas = allrows["ids"], allrows["documents"], allrows["metadatas"]
+        _BM25_CACHE[col.name] = (BM25Okapi([tokenize(d) for d in docs]), ids, dict(zip(ids, docs)), dict(zip(ids, metas)))
+    return _BM25_CACHE[col.name]
+
+
+def retrieve(question: str, collection: str = "nist_800", k: int = 6, retriever: str | None = None) -> list[dict]:
+    """Return the top-k chunks as dicts with id, doc, page, text.
+
+    retriever='dense' queries Chroma only. 'hybrid' takes the top-20 from dense and the
+    top-20 from BM25 and fuses them with RRF. Why a plain list of dicts: evals need the
+    ids and pages, the prompt needs the text, and neither should know Chroma's shape.
+    """
+    retriever = retriever or RETRIEVER
     client = chromadb.PersistentClient(path="./chroma_db")
     col = client.get_collection(collection)
-    fingerprint = (col.metadata or {}).get("fingerprint", collection)
+    fingerprint = (col.metadata or {}).get("fingerprint", collection) + f"|retriever={retriever}"
+    pool = k if retriever == "dense" else 20
     q = embed([question], prefix="search_query: ")[0]
-    res = col.query(query_embeddings=[q], n_results=k, include=["documents", "metadatas", "distances"])
+    res = col.query(query_embeddings=[q], n_results=pool, include=["documents", "metadatas", "distances"])
+    dense = {cid: {"id": cid, "doc": m["doc"], "page": m["page"], "text": t, "distance": d, "fingerprint": fingerprint}
+             for cid, t, m, d in zip(res["ids"][0], res["documents"][0], res["metadatas"][0], res["distances"][0])}
+    if retriever == "dense":
+        return list(dense.values())
+
+    bm25, ids, text_of, meta_of = _bm25_index(col)
+    scores = bm25.get_scores(tokenize(question))
+    bm_rank = [ids[i] for i in sorted(range(len(ids)), key=lambda i: -scores[i])[:pool]]
     out = []
-    for cid, text, meta, dist in zip(res["ids"][0], res["documents"][0], res["metadatas"][0], res["distances"][0]):
-        out.append({"id": cid, "doc": meta["doc"], "page": meta["page"], "text": text, "distance": dist, "fingerprint": fingerprint})
+    for cid in rrf([list(dense), bm_rank])[:k]:
+        if cid in dense:
+            out.append(dense[cid])
+        else:
+            m = meta_of[cid]
+            out.append({"id": cid, "doc": m["doc"], "page": m["page"], "text": text_of[cid], "distance": None, "fingerprint": fingerprint})
     return out
 
 

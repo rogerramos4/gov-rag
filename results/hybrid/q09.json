@@ -1,0 +1,99 @@
+{
+  "id": "q09",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "According to the AI RMF, how do security and resilience differ?",
+  "answer": "According to the AI RMF, security and resilience differ in that security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks. Resilience relates to robustness and goes beyond the provenance of the data to encompass unexpected or adversarial use (or abuse or misuse) of the model or data. (doc=nist, page=20)",
+  "raw_answer": "According to the AI RMF, security and resilience differ in that security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks. Resilience relates to robustness and goes beyond the provenance of the data to encompass unexpected or adversarial use (or abuse or misuse) of the model or data. (doc=nist, page=20)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid",
+  "seconds": 5.08,
+  "tokens_in": 1079,
+  "tokens_out": 80,
+  "retrieved_ids": [
+    "nist-p020-c03",
+    "nist-p035-c01",
+    "nist-p044-c03",
+    "nist-p007-c05",
+    "nist-p025-c01",
+    "nist-p013-c01"
+  ],
+  "retrieved_pages": [
+    20,
+    35,
+    44,
+    7,
+    25,
+    13
+  ],
+  "evidence_pages": [
+    20
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p020-c03",
+      "doc": "nist",
+      "page": 20,
+      "text": "can maintain confidentiality, integrity, and availability through protection mechanisms that prevent unauthorized access and use may be said to be secure. Guidelines in the NIST Cybersecurity Framework and Risk Manage- ment Framework are among those which are applicable here. Security and resilience are related but distinct characteristics. While resilience is the abil- ity to return to normal function after an unexpected adverse event, security includes re- silience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks. Resilience relates to robustness and goes beyond the provenance of the data to encompass unexpected or adversarial use (or abuse or misuse) of the model or data. 3.4 Accountable and Transparent Trustworthy AI depends upon accountabil",
+      "distance": 0.17436403036117554,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p035-c01",
+      "doc": "nist",
+      "page": 35,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 3: Categories and subcategories for the MEASURE function. (Continued) MEASURE 2.6: The AI system is evaluated regularly for safety risks \u2013 as identified in theMAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics re- flect system reliability and robustness, real-time monitoring, and response times for AI system failures. MEASURE 2.7: AI system security and resilience \u2013 as identified in the MAP function \u2013 are evaluated and documented. MEASURE 2.8: Risks associated with transparency and account- ability \u2013 as identified in the MAP function \u2013 are examined and documented. MEASURE 2.9: ",
+      "distance": 0.26535511016845703,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p044-c03",
+      "doc": "nist",
+      "page": 44,
+      "text": "the domain addressed \u2013 and because AI risk management calls for addressing many other types of risks \u2013 frameworks like those mentioned above may inform security and privacy considerations in the MAP, MEASURE , and MANAGE functions of the AI RMF. At the same time, guidance available before publication of this AI RMF does not compre- hensively address many AI system risks. For example, existing frameworks and guidance are unable to: \u2022 adequately manage the problem of harmful bias in AI systems; \u2022 confront the challenging risks related to generative AI; \u2022 comprehensively address security concerns related to evasion, model extraction, mem- bership inference, availability, or other machine learning attacks; \u2022 account for the complex attack surface of AI systems or other security abuses enabled ",
+      "distance": 0.27196043729782104,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p007-c05",
+      "doc": "nist",
+      "page": 7,
+      "text": "e to align the AI RMF and related guidance with applicable international standards, guidelines, and practices. As the AI RMF is put into use, additional lessons will be learned to inform future updates and additional resources. The Framework is divided into two parts. Part 1 discusses how organizations can frame the risks related to AI and describes the intended audience. Next, AI risks and trustworthi- ness are analyzed, outlining the characteristics of trustworthy AI systems, which include Page 2",
+      "distance": 0.26847290992736816,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p025-c01",
+      "doc": "nist",
+      "page": 25,
+      "text": "NIST AI 100-1 AI RMF 1.0 Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illus- trated in Figure 5, the Core is composed of four functions: GOVERN , MAP, MEASURE , and MANAGE . Each of these high-level functions is broken down into categories and sub- categories. Categories and subcategories are subdivided into specific actions and outcomes. Actions do not constitute a checklist, nor are they necessarily an ordered set of steps. Fig. 5. Functions organize AI risk management activities at their highest level to govern, map, measure, and manage AI risks. Governance is designed to be a cross-cutting function to inform and be infused t",
+      "distance": 0.2729165554046631,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    },
+    {
+      "id": "nist-p013-c01",
+      "doc": "nist",
+      "page": 13,
+      "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present \u2013 development and deployment should cease in a safe manner until risks can be sufficiently managed. If an AI system\u2019s development, deployment, and use cases are found to be low-risk in a specific context, that may suggest potentially lower prioritization. Risk prioritization may differ between AI systems that are designed or deployed to directly interact with ",
+      "distance": 0.27752894163131714,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5|retriever=hybrid"
+    }
+  ],
+  "reference_answer": "Resilience is the ability to return to normal function after an unexpected adverse event; security includes resilience but also covers protocols to avoid, protect against, respond to, or recover from attacks."
+}

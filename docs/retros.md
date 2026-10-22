@@ -40,3 +40,9 @@
 - Roger could not grade the 20 answers tonight (dense material, late). Claude Fable 5.1 wrote all 40 labels from the passages; disclosed in writeup limitations and in labels.csv notes. Two marked DEBATABLE (q14 correctness, q17 format).
 - judge_validation.py: correctness TPR 19/19, TNR 1/1; groundedness TPR 20/20, TNR n/a. Zero disagreements. Honest reading: the judge was never tested on an ungrounded answer. Next: label and judge the 5 no-context outputs, which are real negatives.
 - Lesson: a test set with no negatives for a failure mode cannot validate a judge for that mode, no matter how good the agreement looks.
+
+## 2026-10-21 Stretch 2: hybrid retrieval (done before stretch 1 because it needs no API key)
+- rank_bm25 over the same 177 chunks, RRF (k=60) over dense top-20 and BM25 top-20. Fingerprint now includes retriever.
+- Result: WORSE. Recall@6 13/14 (vs 14/14), full-recall 12/14, MRR 0.81 (vs 0.90). Helped q07/q08 (exact ids), hurt q03/q13/q14 (semantic; "risk" is on every page).
+- Decision: dense stays default; hybrid kept behind a flag for a multi-document corpus. Reported as a negative result in the write-up; a measured "no" is a stronger portfolio signal than an unmeasured "yes".
+- Lesson: BM25 needs discriminative vocabulary. One document about one topic has almost none.
