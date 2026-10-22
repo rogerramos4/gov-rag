@@ -1,21 +1,21 @@
 id,human_correct,human_grounded,note
-q01,,,
-q02,,,
-q03,,,
-q04,,,
-q05,,,
-q06,,,
-q07,,,
-q08,,,
-q09,,,
-q10,,,
-q11,,,
-q12,,,
-q13,,,
-q14,,,
-q15,,,
-q16,,,
-q17,,,
-q18,,,
-q19,,,
-q20,,,
+q01,yes,yes,
+q02,yes,yes,
+q03,yes,yes,
+q04,yes,yes,
+q05,yes,yes,
+q06,yes,yes,
+q07,yes,yes,
+q08,yes,yes,extra context about documenting residual risk is on p13
+q09,yes,yes,extra sentence about robustness/provenance is on p20
+q10,yes,yes,
+q11,yes,yes,
+q12,yes,yes,
+q13,yes,yes,third citation (p35 MEASURE 2.8/2.11) is accurate and retrieved
+q14,no,yes,names MANAGE 4.1 (decommissioning) instead of MANAGE 2.4; p38 does say decommissioning so it is grounded but wrong. DEBATABLE: some would call this partially correct
+q15,yes,yes,abstained
+q16,yes,yes,abstained
+q17,yes,yes,abstained in substance but without the exact sentinel; labelled correct because the content is right. DEBATABLE: strict graders would fail it for format
+q18,yes,yes,abstained
+q19,yes,yes,abstained
+q20,yes,yes,abstained and correctly rejected the false premise (four functions not five)

@@ -17,7 +17,7 @@ Full write-up with error analysis: [`docs/writeup.md`](docs/writeup.md). Build l
 | Groundedness PASS (Claude Haiku 5.5 judge) | 20/20 |
 | Mean warm latency | ~5 s · generation $0 · judge $0.006 per run |
 
-Not called "accuracy" on purpose: each row is one failure mode. Judge TPR/TNR against 40 hand labels is the number that matters and is still pending.
+Not called "accuracy" on purpose: each row is one failure mode. Judge vs. 40 labels: 0 disagreements, but the labels were model-written and contain only one negative, so this validates little yet (see limitations in the write-up). `evals\judge_validation.py` computes TPR/TNR from `labels.csv`.
 
 ## Run it (Windows, PowerShell)
 

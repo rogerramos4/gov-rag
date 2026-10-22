@@ -38,7 +38,8 @@ Answers questions about the NIST AI Risk Management Framework (AI RMF 1.0) from 
 | Correctness PASS (judge) | 19/20 | the FAIL is bad answer 3 below; the abstention miss on q17 still PASSED correctness, which is right: content, not format |
 | Groundedness PASS (judge) | 20/20 | nothing stated beyond the passages, including on q14 where the content was wrong but traceable |
 | Judge calls unparsed or errored | 0 of 40 | first judge run had 1 unparsed; see error analysis |
-| Judge TPR / TNR vs. 40 hand labels | pending | `results/frozen/labels.csv`, sheet in `results/frozen/labels_sheet.md` |
+| Judge vs. 40 labels, correctness | TPR 19/19, TNR 1/1 | 0 disagreements; the single negative is q14 |
+| Judge vs. 40 labels, groundedness | TPR 20/20, TNR n/a | no answer was labelled ungrounded, so the judge's ability to catch an ungrounded answer is **untested** here |
 | No-context baseline (5 answerable Qs, no passages) | 4/5 answered anyway | without retrieval the model invents answers; see bad answer 2 |
 | Mean warm latency | ~5 s | first call after model load ~8 s |
 | Generation cost | $0 | local |
@@ -78,14 +79,15 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 ## Limitations
 
 - 20 questions is far below the 100–200 per failure mode that judge validation properly needs. Treat every rate above as a smoke test, not an estimate.
-- One judge model, one run; TPR/TNR against hand labels is the number that matters and is pending. Judge agreement with the code checks is encouraging (it failed the one wrong answer and passed the one soft abstention) but is not validation.
+- **The 40 labels in `results/frozen/labels.csv` were written by Claude (Fable 5.1, reading the passages), not by a human.** The author reviewed the approach but did not grade independently. So "judge validation" here means a stronger model agreeing with a cheaper one, which is weaker evidence than human labels. Two labels are marked DEBATABLE in the file (q14 correctness, q17 format).
+- With one negative for correctness and zero for groundedness, the TNR numbers say nothing about whether the judge catches bad answers. Fixing that needs deliberately bad answers (e.g. the no-context baseline outputs) labelled and judged, which is the first item in next steps.
 - Tables split across pages lose their row label (GOVERN 4 spans physical pages 28–29). Page-bounded chunking is a deliberate trade for verifiable citations.
 - Citations use physical PDF pages; NIST's printed page 1 is physical page 6.
 - One document. Recall@6 of 14/14 says little about corpus-scale retrieval; the full-document baseline (whole PDF in one Haiku prompt) is the honest comparison and is a stretch item.
 
 ## Next steps
 
-Run the judges and label 40 answers → Claude backend row → hybrid BM25 + RRF row → chunk-size sweep (400 / 1200) → EU AI Act as a second document with its own question file.
+Judge the 5 no-context answers and label them, to get real negatives for TNR → human re-grade of the 20 labels → Claude backend row → hybrid BM25 + RRF row → chunk-size sweep (400 / 1200) → EU AI Act as a second document with its own question file.
 
 ## How this maps to the AI RMF itself
 

@@ -35,3 +35,8 @@
 - First judge run had 1 UNPARSED of 40: max_tokens=256 was consumed by Haiku 5.5's default thinking, leaving no text block. Fixed: max_tokens 2048, stop_reason checked, and unparsed/errored calls are now a reported row instead of silently shrinking the denominator. Lesson: when a model thinks by default, budget output tokens for the thinking, not just the answer.
 - labels_sheet.md generated with judge verdicts hidden so Roger's 40 labels are independent.
 - Roger pasted the API key into chat twice; told him to rotate it.
+
+## 2026-10-21 Labels and judge validation
+- Roger could not grade the 20 answers tonight (dense material, late). Claude Fable 5.1 wrote all 40 labels from the passages; disclosed in writeup limitations and in labels.csv notes. Two marked DEBATABLE (q14 correctness, q17 format).
+- judge_validation.py: correctness TPR 19/19, TNR 1/1; groundedness TPR 20/20, TNR n/a. Zero disagreements. Honest reading: the judge was never tested on an ungrounded answer. Next: label and judge the 5 no-context outputs, which are real negatives.
+- Lesson: a test set with no negatives for a failure mode cannot validate a judge for that mode, no matter how good the agreement looks.
