@@ -8,7 +8,7 @@
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
   "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 5.19,
+  "seconds": 5.26,
   "tokens_in": 1103,
   "tokens_out": 102,
   "retrieved_ids": [
@@ -39,12 +39,12 @@
   "supported": true,
   "correct_abstention": false,
   "false_abstention": false,
-  "judge_correct": null,
-  "judge_grounded": null,
-  "judge_reason_correct": "",
-  "judge_reason_grounded": "",
-  "judge_tokens_in": 0,
-  "judge_tokens_out": 0,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer states the same core distinction as the reference: security includes resilience plus protocols to avoid, protect against, respond to, or recover from attacks, while resilience is the ability to return to normal function after an unexpected adverse event; the extra detail about robustness and adversarial use is consistent with the AI RMF.",
+  "judge_reason_grounded": "PASS - Every claim in the answer (security includes resilience plus protocols to avoid/protect/respond/recover from attacks; resilience is returning to normal function after an unexpected adverse event and relates to robustness, extending to adversarial use or misuse) is stated in passage [1] on page 20.",
+  "judge_tokens_in": 2515,
+  "judge_tokens_out": 205,
   "passages": [
     {
       "id": "nist-p020-c03",

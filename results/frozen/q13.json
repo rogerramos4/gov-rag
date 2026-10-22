@@ -8,7 +8,7 @@
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
   "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 5.63,
+  "seconds": 5.69,
   "tokens_in": 1144,
   "tokens_out": 146,
   "retrieved_ids": [
@@ -40,12 +40,12 @@
   "supported": true,
   "correct_abstention": false,
   "false_abstention": false,
-  "judge_correct": null,
-  "judge_grounded": null,
-  "judge_reason_correct": "",
-  "judge_reason_grounded": "",
-  "judge_tokens_in": 0,
-  "judge_tokens_out": 0,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer captures the reference's core points: MEASURE uses risks identified in MAP, MAP outcomes are the basis for MEASURE and MANAGE, and MEASURE informs MANAGE. The extra details about MEASURE's tools and specific risk examples are consistent with the NIST framework and don't contradict the reference.",
+  "judge_reason_grounded": "PASS - Each claim (MEASURE uses MAP knowledge and informs MANAGE, its tools/techniques description, MAP outcomes being the basis for MEASURE and MANAGE, and MEASURE 2.8 and 2.11 on transparency/accountability and fairness/bias as identified in MAP) is directly supported by the cited passages.",
+  "judge_tokens_in": 2755,
+  "judge_tokens_out": 233,
   "passages": [
     {
       "id": "nist-p033-c01",

@@ -8,7 +8,7 @@
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
   "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.57,
+  "seconds": 4.55,
   "tokens_in": 1164,
   "tokens_out": 34,
   "retrieved_ids": [
@@ -39,12 +39,12 @@
   "supported": true,
   "correct_abstention": false,
   "false_abstention": false,
-  "judge_correct": null,
-  "judge_grounded": null,
-  "judge_reason_correct": "",
-  "judge_reason_grounded": "",
-  "judge_tokens_in": 0,
-  "judge_tokens_out": 0,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer lists mitigating, transferring, avoiding, and accepting, exactly matching the reference answer.",
+  "judge_reason_grounded": "PASS - Passage [1] states that \"Risk response options can include mitigating, transferring, avoiding, or accepting\" in the MANAGE 1.3 context, and the answer cites page 37, which matches.",
+  "judge_tokens_in": 2397,
+  "judge_tokens_out": 111,
   "passages": [
     {
       "id": "nist-p037-c02",

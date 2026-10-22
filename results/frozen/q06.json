@@ -39,12 +39,12 @@
   "supported": true,
   "correct_abstention": false,
   "false_abstention": false,
-  "judge_correct": null,
-  "judge_grounded": null,
-  "judge_reason_correct": "",
-  "judge_reason_grounded": "",
-  "judge_tokens_in": 0,
-  "judge_tokens_out": 0,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer identifies MAP as the starting function after GOVERN and notes continuing to MEASURE or MANAGE, matching the reference answer.",
+  "judge_reason_grounded": "PASS - The answer's claim that after GOVERN, most users start with MAP and continue to MEASURE or MANAGE is directly stated in passage [1] (page 26), and the citation matches.",
+  "judge_tokens_in": 2380,
+  "judge_tokens_out": 119,
   "passages": [
     {
       "id": "nist-p026-c02",

@@ -29,3 +29,9 @@
 ## 2026-10-21 Milestones 6-7: write-up, README, clean-run
 - Clean-run check passed: fresh clone into a scratch folder, new venv from requirements.txt, 19 tests pass, ingest gives the identical fingerprint, eval reproduces every number (14/14, 0.90, 14/14, 0, 5/6, 0/14). Latency 4.9 s vs 4.8 s.
 - Still pending, blocked on an Anthropic API key: judge run (`--judge`), 40 hand labels in results/frozen/labels.csv, TPR/TNR row. Not yet pushed to GitHub (no remote; Roger's call, and check KPMG outside-activities policy first).
+
+## 2026-10-21 Judge run
+- Haiku 5.5 judges: correctness 19/20, groundedness 20/20, $0.006 for 40 calls. The one FAIL (q14, MANAGE 4.1 vs 2.4) is a genuine wrong answer that is nonetheless grounded in a retrieved page; the two judges disagreeing on it is the whole argument for separate failure modes.
+- First judge run had 1 UNPARSED of 40: max_tokens=256 was consumed by Haiku 5.5's default thinking, leaving no text block. Fixed: max_tokens 2048, stop_reason checked, and unparsed/errored calls are now a reported row instead of silently shrinking the denominator. Lesson: when a model thinks by default, budget output tokens for the thinking, not just the answer.
+- labels_sheet.md generated with judge verdicts hidden so Roger's 40 labels are independent.
+- Roger pasted the API key into chat twice; told him to rotate it.

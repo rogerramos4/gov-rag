@@ -35,13 +35,14 @@ Answers questions about the NIST AI Risk Management Framework (AI RMF 1.0) from 
 | Hallucinated citations | 0 | |
 | Correct abstentions | 5/6 | the miss is described below |
 | False abstentions on answerable questions | 0/14 | |
-| Correctness PASS (judge) | pending | needs an API key; see below |
-| Groundedness PASS (judge) | pending | |
-| Judge TPR / TNR vs. 40 hand labels | pending | `results/frozen/labels.csv` |
+| Correctness PASS (judge) | 19/20 | the FAIL is bad answer 3 below; the abstention miss on q17 still PASSED correctness, which is right: content, not format |
+| Groundedness PASS (judge) | 20/20 | nothing stated beyond the passages, including on q14 where the content was wrong but traceable |
+| Judge calls unparsed or errored | 0 of 40 | first judge run had 1 unparsed; see error analysis |
+| Judge TPR / TNR vs. 40 hand labels | pending | `results/frozen/labels.csv`, sheet in `results/frozen/labels_sheet.md` |
 | No-context baseline (5 answerable Qs, no passages) | 4/5 answered anyway | without retrieval the model invents answers; see bad answer 2 |
 | Mean warm latency | ~5 s | first call after model load ~8 s |
 | Generation cost | $0 | local |
-| Judge cost | ~$0.02 per full run (est.) | 40 Haiku calls |
+| Judge cost | $0.0062 per full run | 40 Haiku calls, ~49k tokens, effort low |
 
 "Accuracy" is deliberately absent: each row measures one failure mode.
 
@@ -57,6 +58,11 @@ Substantively right, formally wrong: the model abstained in its own words and sk
 
 With no passages the model fabricates four plausible-sounding functions (the real ones are GOVERN, MAP, MEASURE, MANAGE), then abstains anyway. This is exactly the behaviour retrieval plus citation checks exist to prevent, and the reason the groundedness judge is needed as a backstop: code alone sees the sentinel and calls this an abstention.
 
+**3. q14, two-passage: "...which MANAGE subcategory covers deactivating such systems?"**
+> The MANAGE subcategory that covers deactivating such systems is MANAGE 4.1, which involves post-deployment AI system monitoring plans, including … decommissioning … (doc=nist, page=38).
+
+Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The model chose a neighbouring subcategory that mentions "decommissioning", cited the page it actually read, and the groundedness judge correctly passed it while the correctness judge correctly failed it. This is why the two judges are separate: the answer is faithful to its source and still wrong.
+
 ## Error analysis (before any tuning)
 
 | Failure | Count | Where | Drove |
@@ -66,11 +72,13 @@ With no passages the model fabricates four plausible-sounding functions (the rea
 | Evidence page at rank 3 | 2 | q07, q08 | none yet; MRR 0.90 is acceptable |
 | Guess-then-abstain counted as abstention | 1 | q01 no-context | groundedness judge is the backstop |
 | Extra supported citation beyond the labelled evidence | 1 | q13 cited p35 too | none; it was retrieved and relevant |
+| Plausible neighbouring subcategory (MANAGE 4.1 for 2.4) | 1 | q14 | none yet; candidate for the Claude-backend comparison |
+| Judge returned no text (256-token cap consumed by Haiku's thinking) | 1 of 40 calls | q14 groundedness, first run | cap raised to 2048, stop_reason checked, unparsed calls now reported as their own row |
 
 ## Limitations
 
 - 20 questions is far below the 100–200 per failure mode that judge validation properly needs. Treat every rate above as a smoke test, not an estimate.
-- One judge model, not yet run; TPR/TNR against hand labels is the number that matters and is pending.
+- One judge model, one run; TPR/TNR against hand labels is the number that matters and is pending. Judge agreement with the code checks is encouraging (it failed the one wrong answer and passed the one soft abstention) but is not validation.
 - Tables split across pages lose their row label (GOVERN 4 spans physical pages 28–29). Page-bounded chunking is a deliberate trade for verifiable citations.
 - Citations use physical PDF pages; NIST's printed page 1 is physical page 6.
 - One document. Recall@6 of 14/14 says little about corpus-scale retrieval; the full-document baseline (whole PDF in one Haiku prompt) is the honest comparison and is a stretch item.

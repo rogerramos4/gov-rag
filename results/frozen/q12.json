@@ -8,7 +8,7 @@
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
   "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.87,
+  "seconds": 4.89,
   "tokens_in": 1044,
   "tokens_out": 67,
   "retrieved_ids": [
@@ -39,12 +39,12 @@
   "supported": true,
   "correct_abstention": false,
   "false_abstention": false,
-  "judge_correct": null,
-  "judge_grounded": null,
-  "judge_reason_correct": "",
-  "judge_reason_grounded": "",
-  "judge_tokens_in": 0,
-  "judge_tokens_out": 0,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer correctly states that a Current Profile reflects how AI is currently managed and its risks, while a Target Profile reflects the outcomes needed to achieve desired risk management goals, matching the reference.",
+  "judge_reason_grounded": "PASS - Passage [1] states that a Current Profile indicates how AI is currently managed and related risks in terms of current outcomes, and a Target Profile indicates the outcomes needed to achieve desired AI risk management goals, matching the answer.",
+  "judge_tokens_in": 2338,
+  "judge_tokens_out": 154,
   "passages": [
     {
       "id": "nist-p038-c03",

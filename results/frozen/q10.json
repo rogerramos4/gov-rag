@@ -8,7 +8,7 @@
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
   "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
-  "seconds": 4.85,
+  "seconds": 4.81,
   "tokens_in": 941,
   "tokens_out": 67,
   "retrieved_ids": [
@@ -39,12 +39,12 @@
   "supported": true,
   "correct_abstention": false,
   "false_abstention": false,
-  "judge_correct": null,
-  "judge_grounded": null,
-  "judge_reason_correct": "",
-  "judge_reason_grounded": "",
-  "judge_tokens_in": 0,
-  "judge_tokens_out": 0,
+  "judge_correct": "PASS",
+  "judge_grounded": "PASS",
+  "judge_reason_correct": "PASS - The system answer matches the reference on all three: transparency addresses \"what happened,\" explainability addresses \"how\" a decision was made, and interpretability addresses \"why\" and its meaning to the user.",
+  "judge_reason_grounded": "PASS - The passage on page 22 states that transparency answers \"what happened,\" explainability answers \"how\" a decision was made, and interpretability answers \"why\" a decision was made and its meaning or context to the user.",
+  "judge_tokens_in": 2115,
+  "judge_tokens_out": 131,
   "passages": [
     {
       "id": "nist-p022-c01",

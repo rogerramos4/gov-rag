@@ -64,12 +64,14 @@ def judge(client, rubric: str, user_block: str) -> dict:
     import anthropic  # local import so code-only runs never need the SDK configured
     try:
         resp = client.messages.create(
-            model=JUDGE_MODEL, max_tokens=256, output_config={"effort": "low"},
+            model=JUDGE_MODEL, max_tokens=2048, output_config={"effort": "low"},  # Haiku 5.5 thinks first; 256 starved the text block once
             system=rubric, messages=[{"role": "user", "content": user_block}],
         )
     except anthropic.APIStatusError as e:
         return {"verdict": "ERROR", "reason": f"{e.status_code}: {e.message}", "tokens_in": 0, "tokens_out": 0}
     text = "".join(b.text for b in resp.content if b.type == "text").strip()
+    if resp.stop_reason == "max_tokens" and not text:
+        text = f"(no text: stop_reason=max_tokens after {resp.usage.output_tokens} output tokens)"
     verdict = "PASS" if text.upper().startswith("PASS") else "FAIL" if text.upper().startswith("FAIL") else "UNPARSED"
     return {"verdict": verdict, "reason": text, "tokens_in": resp.usage.input_tokens, "tokens_out": resp.usage.output_tokens}
 
@@ -121,6 +123,7 @@ def summarize(rows: list[dict], noctx_rows: list[dict]) -> str:
     n_a, n_u = len(ans), len(una)
     rate = lambda xs: f"{sum(xs)}/{len(xs)}" if xs else "n/a"
     judged = [r for r in rows if r["judge_correct"] in ("PASS", "FAIL")]
+    unparsed = sum(1 for r in rows for k in ("judge_correct", "judge_grounded") if r[k] in ("UNPARSED", "ERROR"))
     lines = [
         "| Metric | Value |", "|---|---|",
         f"| Recall@6 (any evidence page retrieved) | {rate([r['recall_any'] for r in ans])} |",
@@ -134,7 +137,8 @@ def summarize(rows: list[dict], noctx_rows: list[dict]) -> str:
     if judged:
         lines += [
             f"| Correctness PASS (judge) | {rate([r['judge_correct'] == 'PASS' for r in judged])} |",
-            f"| Groundedness PASS (judge) | {rate([r['judge_grounded'] == 'PASS' for r in judged])} |",
+            f"| Groundedness PASS (judge) | {rate([r['judge_grounded'] == 'PASS' for r in rows if r['judge_grounded'] in ('PASS', 'FAIL')])} |",
+            f"| Judge calls unparsed or errored | {unparsed} of {2 * len(rows)} |",
         ]
         jin = sum(r["judge_tokens_in"] for r in rows); jout = sum(r["judge_tokens_out"] for r in rows)
         cost = jin / 1e6 * JUDGE_PRICE_IN + jout / 1e6 * JUDGE_PRICE_OUT

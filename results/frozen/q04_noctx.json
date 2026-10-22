@@ -8,7 +8,7 @@
   "abstained": false,
   "backend": "qwen3:4b-q4_K_M",
   "fingerprint": null,
-  "seconds": 2.63,
+  "seconds": 2.62,
   "tokens_in": 86,
   "tokens_out": 66,
   "retrieved_ids": [],

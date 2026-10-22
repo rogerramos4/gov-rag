@@ -13,8 +13,9 @@ Full write-up with error analysis: [`docs/writeup.md`](docs/writeup.md). Build l
 | Citation support (cited pages were retrieved) | 14/14, 0 hallucinated citations |
 | Correct abstentions on unanswerable questions | 5/6 |
 | False abstentions on answerable questions | 0/14 |
-| Correctness / groundedness (Claude Haiku 5.5 judge) | pending API key |
-| Mean warm latency | ~5 s · generation cost $0 |
+| Correctness PASS (Claude Haiku 5.5 judge) | 19/20 |
+| Groundedness PASS (Claude Haiku 5.5 judge) | 20/20 |
+| Mean warm latency | ~5 s · generation $0 · judge $0.006 per run |
 
 Not called "accuracy" on purpose: each row is one failure mode. Judge TPR/TNR against 40 hand labels is the number that matters and is still pending.
 
@@ -35,7 +36,7 @@ Ask one question:
 .\.venv\Scripts\python.exe ask.py "What are the four core functions of the NIST AI RMF?"
 ```
 
-Judges (optional, ~$0.02 per run): set `$env:ANTHROPIC_API_KEY` in the same terminal and add `--judge`.
+Judges (optional, under $0.01 per run): set `$env:ANTHROPIC_API_KEY` in the same terminal and add `--judge`.
 
 The PDF ships in `data/` with its SHA-256 in `data/hashes.txt`, so a clean clone reproduces the index fingerprint printed by `ingest.py`.
 
