@@ -13,3 +13,8 @@
 - Deferred to run_evals.py by design: citation validation against retrieved pages (plan's "citation support" metric).
 - Deferred to limitations: tables spanning pages (GOVERN 4 on p28-29) lose their label when split; page-bounded chunking is a deliberate trade for verifiable citations.
 - Lesson: a second model reviewing finds process bugs (destructive-before-success) that a passing test suite hides.
+
+## 2026-10-21 Milestone 4: frozen test set
+- Roger asked me to write the questions rather than write them himself; trade-off noted (less content learning, faster to evals). 14 answerable (10 single-page lookups/details, 2 two-passage), 6 unanswerable (2 off-topic, 2 near-miss, 2 false-premise). 5 dev questions separate.
+- Every evidence quote is checked by pytest against the actual page text, so a mislabelled page can never masquerade as a retrieval miss.
+- Frozen at this commit. Do not edit evals/questions.jsonl after run_evals.py reports numbers.

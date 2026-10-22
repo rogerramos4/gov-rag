@@ -1,0 +1,18 @@
+p04: Part 1: Foundational Information 4 | Part 2: Core and Profiles 20 | Appendix A: Descriptions of AI Actor Tasks
+p09: Part 1: Foundational Information
+p25: Part 2: Core and Profiles
+p27: GOVERN 1: | GOVERN 1.1: Legal and regulatory requirements involving AI | GOVERN 1.2: The characteristics of tr
+p28: GOVERN 1.5: Ongoing monitoring and periodic review of the | GOVERN 1.6: Mechanisms are in place to inventory A
+p29: GOVERN 4.2: Organizational teams document the risks and po- | GOVERN 4.3: Organizational practices are in plac
+p31: MAP 1: Context is | MAP 1.1: Intended purposes, potentially beneficial uses, context- | MAP 1.2: Interdiscipli
+p32: MAP 2.3: Scientific integrity and TEVV considerations are iden- | MAP 3: AI | MAP 3.1: Potential benefits of i
+p33: MAP 5.2: Practices and personnel for supporting regular en-
+p34: MEASURE 1: | MEASURE 1.1: Approaches and metrics for measurement of AI | MEASURE 1.2: Appropriateness of AI me
+p35: MEASURE 2.6: The AI system is evaluated regularly for safety | MEASURE 2.7: AI system security and resilience 
+p36: MEASURE 3.3: Feedback processes for end users and impacted | MEASURE 4: | MEASURE 4.1: Measurement approaches 
+p37: MANAGE 1: AI | MAP and MEASURE | MANAGE 1.1: A determination is made as to whether the AI | MANAGE 1.2: Treatm
+p38: MANAGE 4: Risk | MANAGE 4.1: Post-deployment AI system monitoring plans | MANAGE 4.2: Measurable activities fo
+p40: Appendix A:
+p43: Appendix B:
+p45: Appendix C:
+p47: Appendix D:
