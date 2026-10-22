@@ -14,7 +14,7 @@ import requests
 from ingest import embed
 
 OLLAMA = "http://localhost:11434"
-GEN_MODEL = os.environ.get("GEN_MODEL", "qwen3.5:9b-q4_K_M")
+GEN_MODEL = os.environ.get("GEN_MODEL", "qwen3:4b-q4_K_M")  # 9B spilled 15% to CPU on the 5060; 4B is 100% GPU
 ABSTAIN = "NOT IN DOCUMENTS"
 
 SYSTEM = (
@@ -76,7 +76,7 @@ def answer(question: str, collection: str = "nist_800", k: int = 6, passages: li
     rec = {
         "ts": time.time(), "backend": GEN_MODEL, "collection": collection, "question": question,
         "retrieved_ids": [p["id"] for p in passages], "answer": text,
-        "abstained": text.strip().upper().startswith(ABSTAIN),
+        "abstained": ABSTAIN in text.upper(),  # models often add a sentence before the token
         **usage, "seconds": round(time.time() - t0, 2),
     }
     with Path("runs.jsonl").open("a", encoding="utf-8") as f:

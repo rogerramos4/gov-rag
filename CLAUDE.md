@@ -19,7 +19,7 @@ evaluation set. Portfolio project: retrieval + evals + measured trade-offs, not 
 - Every function has a docstring that says WHY it exists, not just what it does.
 - Every HTTP call has a timeout and `raise_for_status()`.
 - Ollama: embeddings `nomic-embed-text:v1.5` with `search_document:` / `search_query:` prefixes;
-  generation `qwen3.5:9b-q4_K_M` (fallback `qwen3:4b-q4_K_M`), `num_ctx` 8192, `stream: false`.
+  generation `qwen3:4b-q4_K_M` (9B spilled 15% to CPU at num_ctx 8192; `$env:GEN_MODEL` overrides), `num_ctx` 8192, `stream: false`.
 - Cite PHYSICAL PDF pages from 1 (NIST printed page 1 = physical page 6).
 - Run `.\.venv\Scripts\python.exe -m pytest` before saying anything is done.
 - Append a short retro to `docs/retros.md` at the end of each milestone.
