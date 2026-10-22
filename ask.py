@@ -114,6 +114,33 @@ def generate_local(system: str, user: str) -> tuple[str, dict]:
     return j["message"]["content"].strip(), usage
 
 
+BACKEND = os.environ.get("BACKEND", "local")  # local | claude
+CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-haiku-5-5")
+
+
+def generate_claude(system: str, user: str) -> tuple[str, dict]:
+    """Same prompt through the Claude API. Returns (text, usage).
+
+    Why Haiku 5.5: it is the cheapest current Claude model, so the comparison is
+    'small local model vs small hosted model', not 'small vs frontier'. Effort low keeps
+    thinking short; max_tokens leaves room for thinking plus the answer.
+    """
+    import anthropic  # imported here so local-only runs never need the SDK configured
+    client = anthropic.Anthropic()
+    resp = client.messages.create(
+        model=CLAUDE_MODEL, max_tokens=2048, output_config={"effort": "low"},
+        system=system, messages=[{"role": "user", "content": user}],
+    )
+    text = "".join(b.text for b in resp.content if b.type == "text").strip()
+    if resp.stop_reason == "refusal":
+        text = f"(refusal: {getattr(resp.stop_details, 'category', None)})"
+    return text, {"tokens_in": resp.usage.input_tokens, "tokens_out": resp.usage.output_tokens}
+
+
+def backend_name() -> str:
+    return CLAUDE_MODEL if BACKEND == "claude" else GEN_MODEL
+
+
 # Matches "(nist, 25)", "(doc=nist, page=25)", "(nist, page 25)", "(nist, p. 25)".
 CITE_RE = re.compile(r"\(\s*(?:doc\s*=\s*)?([A-Za-z_]+)\s*,\s*(?:page\s*=?\s*|p\.?\s*)?(\d+)\s*\)", re.I)
 
@@ -145,13 +172,14 @@ def answer(question: str, collection: str = "nist_800", k: int = 6, passages: li
     t0 = time.time()
     if passages is None:
         passages = retrieve(question, collection, k)
-    text, usage = generate_local(SYSTEM, build_prompt(question, passages))
+    generate = generate_claude if BACKEND == "claude" else generate_local
+    text, usage = generate(SYSTEM, build_prompt(question, passages))
     raw_text = text
     abstained = classify_abstention(text)
     if abstained:
         text = ABSTAIN  # normalize so downstream code sees the documented exact sentinel
     rec = {
-        "ts": time.time(), "backend": GEN_MODEL, "collection": collection,
+        "ts": time.time(), "backend": backend_name(), "collection": collection,
         "fingerprint": passages[0]["fingerprint"] if passages else None, "question": question,
         "retrieved_ids": [p["id"] for p in passages], "answer": text, "raw_answer": raw_text,
         "abstained": abstained,

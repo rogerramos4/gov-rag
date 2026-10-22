@@ -89,7 +89,7 @@ def run_one(q: dict, client, out_dir: Path, no_context: bool = False, collection
     evidence_pages = [e["page"] for e in q["evidence"]]
 
     row = {
-        "id": q["id"], "kind": q["kind"], "answerable": q["answerable"], "question": q["question"],
+        "id": q["id"] + ("_noctx" if no_context else ""), "kind": q["kind"] + ("/no-context" if no_context else ""), "answerable": q["answerable"], "question": q["question"],
         "answer": rec["answer"], "raw_answer": rec["raw_answer"], "abstained": rec["abstained"], "backend": rec["backend"],
         "fingerprint": rec.get("fingerprint"), "seconds": rec["seconds"],
         "tokens_in": rec["tokens_in"], "tokens_out": rec["tokens_out"],
@@ -145,9 +145,19 @@ def summarize(rows: list[dict], noctx_rows: list[dict]) -> str:
         lines.append(f"| Judge cost (total, {JUDGE_MODEL}) | ${cost:.4f} for {jin + jout} tokens |")
     secs = [r["seconds"] for r in rows[1:]]  # drop first (cold) call
     lines.append(f"| Mean warm latency | {sum(secs) / len(secs):.1f}s |" if secs else "| Mean warm latency | n/a |")
-    lines.append(f"| Generation cost | $0 (local {rows[0]['backend']}) |")
+    backend = rows[0]["backend"]
+    if backend.startswith("claude"):
+        gin = sum(r["tokens_in"] or 0 for r in rows); gout = sum(r["tokens_out"] or 0 for r in rows)
+        gcost = gin / 1e6 * JUDGE_PRICE_IN + gout / 1e6 * JUDGE_PRICE_OUT  # Haiku 5.5 prices; adjust if CLAUDE_MODEL changes
+        lines.append(f"| Generation cost | ${gcost:.4f} for {len(rows)} answers ({backend}, {gin + gout} tokens) |")
+    else:
+        lines.append(f"| Generation cost | $0 (local {backend}) |")
     if noctx_rows:
         lines.append(f"| No-context baseline: answered without abstaining | {rate([not r['abstained'] for r in noctx_rows])} of {len(noctx_rows)} |")
+        nj = [r for r in noctx_rows if r["judge_grounded"] in ("PASS", "FAIL")]
+        if nj:
+            lines.append(f"| No-context baseline: judge FAILED groundedness (the negatives we want it to catch) | {rate([r['judge_grounded'] == 'FAIL' for r in nj])} |")
+            lines.append(f"| No-context baseline: judge FAILED correctness | {rate([r['judge_correct'] == 'FAIL' for r in nj])} |")
     return "\n".join(lines)
 
 
@@ -159,10 +169,13 @@ def main() -> None:
     ap.add_argument("--no-context-baseline", type=int, default=5, help="answerable Qs to run with no passages (0 to skip)")
     ap.add_argument("--retriever", choices=["dense", "hybrid"], default=None, help="override RETRIEVER env (dense | hybrid)")
     ap.add_argument("--chunk", type=int, default=800, help="chunk size; selects collection nist_<size>")
+    ap.add_argument("--model", choices=["local", "claude"], default=None, help="generator backend (default: BACKEND env or local)")
     args = ap.parse_args()
+    import ask
     if args.retriever:
-        import ask
         ask.RETRIEVER = args.retriever
+    if args.model:
+        ask.BACKEND = args.model
     collection = f"nist_{args.chunk}"
 
     qs = [json.loads(l) for l in (ROOT / args.file).read_text(encoding="utf-8").splitlines() if l.strip()]
@@ -184,18 +197,19 @@ def main() -> None:
 
     noctx = []
     for q in [q for q in qs if q["answerable"]][: args.no_context_baseline]:
-        noctx.append(run_one(q, None, out_dir, no_context=True, collection=collection))
+        # Judged too: these are the deliberately bad answers that give the judge real negatives.
+        noctx.append(run_one(q, client, out_dir, no_context=True, collection=collection))
         print(f"{q['id']} no-context -> {'ABSTAIN' if noctx[-1]['abstained'] else 'answered anyway'}", file=sys.stderr)
 
     fields = [k for k in rows[0] if k not in ("retrieved_ids", "unsupported")]
     with (out_dir / "results.csv").open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore"); w.writeheader(); w.writerows(rows)
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore"); w.writeheader(); w.writerows(rows + noctx)
 
     labels = out_dir / "labels.csv"
     if not labels.exists():  # never overwrite hand labels
         with labels.open("w", newline="", encoding="utf-8") as f:
             w = csv.writer(f); w.writerow(["id", "human_correct", "human_grounded", "note"])
-            for r in rows: w.writerow([r["id"], "", "", ""])
+            for r in rows + noctx: w.writerow([r["id"], "", "", ""])
 
     summary = summarize(rows, noctx)
     meta = f"run: {time.strftime('%Y-%m-%d %H:%M')} · file: {args.file} · backend: {rows[0]['backend']} · fingerprint: {rows[0]['fingerprint']} · {time.time() - t0:.0f}s total"
