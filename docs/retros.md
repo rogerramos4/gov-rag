@@ -46,3 +46,8 @@
 - Result: WORSE. Recall@6 13/14 (vs 14/14), full-recall 12/14, MRR 0.81 (vs 0.90). Helped q07/q08 (exact ids), hurt q03/q13/q14 (semantic; "risk" is on every page).
 - Decision: dense stays default; hybrid kept behind a flag for a multi-document corpus. Reported as a negative result in the write-up; a measured "no" is a stronger portfolio signal than an unmeasured "yes".
 - Lesson: BM25 needs discriminative vocabulary. One document about one topic has almost none.
+
+## 2026-10-22 Stretch 3: chunk-size sweep
+- Built nist_400 (343 chunks) and nist_1200 (120 chunks); run_evals.py gained --chunk. 800 wins: MRR 0.90 vs 0.82 (400) and 0.80 (1200); 400 broke one citation (q08 definition split across a boundary -> uncited "not defined" answer), 1200 lost one page.
+- Lesson: chunk size is a two-sided trade. Too small splits the sentence you need; too large buries it in the embedding. Measure, do not guess.
+- Remaining stretches need an API key in Roger's terminal: Claude backend row, no-context negatives for judge TNR. EU AI Act needs a manual browser download.

@@ -1,0 +1,100 @@
+{
+  "id": "q13",
+  "kind": "multi",
+  "answerable": true,
+  "question": "How does the MEASURE function relate to the MAP and MANAGE functions?",
+  "answer": "The MEASURE function relates to the MAP and MANAGE functions by using knowledge relevant to AI risks identified in the MAP function and informing the MANAGE function. Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions (doc=nist, page=30). Additionally, the MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts (doc=nist, page=33).",
+  "raw_answer": "The MEASURE function relates to the MAP and MANAGE functions by using knowledge relevant to AI risks identified in the MAP function and informing the MANAGE function. Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions (doc=nist, page=30). Additionally, the MEASURE function employs quantitative, qualitative, or mixed-method tools, techniques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts (doc=nist, page=33).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.28,
+  "tokens_in": 634,
+  "tokens_out": 103,
+  "retrieved_ids": [
+    "nist-p008-c02",
+    "nist-p030-c02",
+    "nist-p033-c02",
+    "nist-p026-c05",
+    "nist-p030-c08",
+    "nist-p030-c03"
+  ],
+  "retrieved_pages": [
+    8,
+    30,
+    33,
+    26,
+    30,
+    30
+  ],
+  "evidence_pages": [
+    30,
+    33
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.5,
+  "n_citations": 2,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p008-c02",
+      "doc": "nist",
+      "page": 8,
+      "text": "ystems in practice. These functions \u2013 GOVERN , MAP, MEASURE , and MANAGE \u2013 are broken down further into categories and subcate- gories. While GOVERN applies to all stages of organizations\u2019 AI risk management pro- cesses and procedures, the MAP, MEASURE , and MANAGE functions can be applied in AI system-specific contexts and at specific stages of the AI lifecycle. Additional resources related to th",
+      "distance": 0.25702667236328125,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p030-c02",
+      "doc": "nist",
+      "page": 30,
+      "text": "while carrying out the MAP function enables negative risk pre- vention and informs decisions for processes such as model management, as well as an initial decision about appropriateness or the need for an AI solution. Outcomes in the MAP function are the basis for the MEASURE and MANAGE functions. Without contex- tual knowledge, and awareness of risks within the identified contexts, risk managemen",
+      "distance": 0.2599184513092041,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p033-c02",
+      "doc": "nist",
+      "page": 33,
+      "text": "Measure The MEASURE function employs quantitative, qualitative, or mixed-method tools, tech- niques, and methodologies to analyze, assess, benchmark, and monitor AI risk and related impacts. It uses knowledge relevant to AI risks identified in the MAP function and informs the MANAGE function. AI systems should be tested before their deployment and regu- larly while in operation. AI risk measuremen",
+      "distance": 0.2655198574066162,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p026-c05",
+      "doc": "nist",
+      "page": 26,
+      "text": "F would start with the MAP function and con- tinue to MEASURE or MANAGE . However users integrate the functions, the process should be iterative, with cross-referencing between functions as necessary. Simi- larly, there are categories and subcategories with elements that apply to multiple functions, or that logically should take place before certain subcategory decisions. 5.1 Govern The GOVERN fun",
+      "distance": 0.2764430046081543,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p030-c08",
+      "doc": "nist",
+      "page": 30,
+      "text": "ions should utilize the MEASURE and MANAGE functions along with policies and procedures put into place in the GOVERN function to assist in AI risk management efforts. It is incum- bent on Framework users to continue applying the MAP function to AI systems as context, capabilities, risks, benefits, and potential impacts evolve over time. Practices related to mapping AI risks are described in the NI",
+      "distance": 0.2813943028450012,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p030-c03",
+      "doc": "nist",
+      "page": 30,
+      "text": "edge, and awareness of risks within the identified contexts, risk management is difficult to perform. The MAP function is intended to enhance an organization\u2019s ability to identify risks and broader contributing factors. Implementation of this function is enhanced by incorporating perspectives from a diverse internal team and engagement with those external to the team that developed or deployed the",
+      "distance": 0.29702043533325195,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "MAP outcomes are the basis for MEASURE and MANAGE; MEASURE uses the risks identified in MAP and its results inform MANAGE."
+}

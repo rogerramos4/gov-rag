@@ -47,6 +47,19 @@ Answers questions about the NIST AI Risk Management Framework (AI RMF 1.0) from 
 
 "Accuracy" is deliberately absent: each row measures one failure mode.
 
+### Chunk-size sweep: dense retrieval, same generator, overlap held at ~19%
+
+| | 400 / 75 (343 chunks) | **800 / 150 (177 chunks)** | 1200 / 225 (120 chunks) |
+|---|---|---|---|
+| Recall@6 | 14/14 | 14/14 | 13/14 |
+| Recall@6, all evidence pages | 14/14 | 14/14 | 13/14 |
+| MRR | 0.82 | **0.90** | 0.80 |
+| Citation support | 13/14 | 14/14 | 14/14 |
+| Correct / false abstentions | 5/6, 0/14 | 5/6, 0/14 | 5/6, 0/14 |
+| Warm latency | 4.9 s | 5.0 s | 5.0 s |
+
+800 wins on MRR and is the only setting with no retrieval or citation regressions. At **400**, the right page is still retrieved but the definition sentence gets split across chunk boundaries: on q08 the p13 chunk that came back did not contain the residual-risk definition, so the model wrote "the AI RMF does not explicitly define residual risk" without citing anything, a wrong answer that is neither an abstention nor a hallucination. At **1200**, fewer, longer chunks dilute the embedding: q08 lost p13 entirely and q10/q13 dropped to rank 2. Three settings on 20 questions is a direction, not a curve; full traces in `results/chunk400/` and `results/chunk1200/`.
+
 ### Retrieval ablation: dense vs. hybrid (BM25 + RRF), same chunks, same generator
 
 | | Dense (nomic) | Hybrid (dense top-20 ∪ BM25 top-20, RRF k=60) |
@@ -87,6 +100,7 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 | Extra supported citation beyond the labelled evidence | 1 | q13 cited p35 too | none; it was retrieved and relevant |
 | Plausible neighbouring subcategory (MANAGE 4.1 for 2.4) | 1 | q14 | none yet; candidate for the Claude-backend comparison |
 | Judge returned no text (256-token cap consumed by Haiku's thinking) | 1 of 40 calls | q14 groundedness, first run | cap raised to 2048, stop_reason checked, unparsed calls now reported as their own row |
+| Definition split across chunk boundary → "not defined" answer with no citation | 1 | q08 at 400-char chunks | evidence that 400 is too small here; 800 kept |
 
 ## Limitations
 
@@ -99,7 +113,7 @@ Reference is MANAGE 2.4 ("supersede, disengage, or deactivate AI systems"). The 
 
 ## Next steps
 
-Judge the 5 no-context answers and label them, to get real negatives for TNR → human re-grade of the 20 labels → Claude backend row → chunk-size sweep (400 / 1200) → EU AI Act as a second document with its own question file.
+Judge the 5 no-context answers and label them, to get real negatives for TNR → human re-grade of the 20 labels → Claude backend row → EU AI Act as a second document with its own question file.
 
 ## How this maps to the AI RMF itself
 

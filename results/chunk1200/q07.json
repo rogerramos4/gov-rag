@@ -1,0 +1,99 @@
+{
+  "id": "q07",
+  "kind": "detail",
+  "answerable": true,
+  "question": "What does subcategory GOVERN 1.6 require?",
+  "answer": "According to the document, subcategory GOVERN 1.6 requires mechanisms to inventory AI systems and to resource them according to organizational risk priorities. (doc=nist, page=28)",
+  "raw_answer": "According to the document, subcategory GOVERN 1.6 requires mechanisms to inventory AI systems and to resource them according to organizational risk priorities. (doc=nist, page=28)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.86,
+  "tokens_in": 1426,
+  "tokens_out": 40,
+  "retrieved_ids": [
+    "nist-p004-c02",
+    "nist-p026-c02",
+    "nist-p029-c01",
+    "nist-p028-c01",
+    "nist-p031-c01",
+    "nist-p036-c02"
+  ],
+  "retrieved_pages": [
+    4,
+    26,
+    29,
+    28,
+    31,
+    36
+  ],
+  "evidence_pages": [
+    28
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.25,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p004-c02",
+      "doc": "nist",
+      "page": 4,
+      "text": " Table 1 Categories and subcategories for the GOVERN function. 22 Table 2 Categories and subcategories for the MAP function. 26 Table 3 Categories and subcategories for the MEASURE function. 29 Table 4 Categories and subcategories for the MANAGE function. 32 i",
+      "distance": 0.28031468391418457,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p026-c02",
+      "doc": "nist",
+      "page": 26,
+      "text": "ubcategories; others may choose and have the capacity to apply all categories and subcategories. Assuming a governance struc- ture is in place, functions may be performed in any order across the AI lifecycle as deemed to add value by a user of the framework. After instituting the outcomes in GOVERN , most users of the AI RMF would start with the MAP function and con- tinue to MEASURE or MANAGE . However users integrate the functions, the process should be iterative, with cross-referencing between functions as necessary. Simi- larly, there are categories and subcategories with elements that apply to multiple functions, or that logically should take place before certain subcategory decisions. 5.1 Govern The GOVERN function: \u2022 cultivates and implements a culture of risk management within organizations design- ing, developing, deploying, evaluating, or acquiring AI systems; \u2022 outlines processes, documents, and organizational schemes that anticipate, identify, and manage the risks a system can pose, including to users and others across society \u2013 and procedures to achieve those outcomes; \u2022 incorporates processes to assess potential impacts; \u2022 provides a structure by which AI risk managem",
+      "distance": 0.2905809283256531,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p029-c01",
+      "doc": "nist",
+      "page": 29,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) that considers and communicates AI risk. GOVERN 4.2: Organizational teams document the risks and po- tential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly. GOVERN 4.3: Organizational practices are in place to enable AI testing, identification of incidents, and information sharing. GOVERN 5: Processes are in place for robust engagement with relevant AI actors. GOVERN 5.1: Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks. GOVERN 5.2: Mechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation. GOVERN 6: Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues. GOVERN 6.1: Policies and ",
+      "distance": 0.349881649017334,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p028-c01",
+      "doc": "nist",
+      "page": 28,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) GOVERN 1.5: Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review. GOVERN 1.6: Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. GOVERN 1.7: Processes and procedures are in place for decom- missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 2: Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks. GOVERN 2.1: Roles and responsibilities and lines of communi- cation related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization. GOVERN 2.2: The organization\u2019s personnel and partners receive AI risk management training to enable them to perform their du- ties and responsibilities consis",
+      "distance": 0.3506525754928589,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p031-c01",
+      "doc": "nist",
+      "page": 31,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 2: Categories and subcategories for the MAP function. MAP 1: Context is established and understood. MAP 1.1: Intended purposes, potentially beneficial uses, context- specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and docu- mented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative im- pacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics. MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their par- ticipation is documented. Opportunities for interdisciplinary col- laboration are prioritized. MAP 1.3: The organization\u2019s mission and relevant goals for AI technology are understood and documented. MAP 1.4: The business value or context of business use has been clearly defined or \u2013 in the cas",
+      "distance": 0.35195326805114746,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p036-c02",
+      "doc": "nist",
+      "page": 36,
+      "text": "fected communities, and field data about context- relevant risks and trustworthiness characteristics are identified and documented. Categories Subcategories 5.4 Manage The MANAGE function entails allocating risk resources to mapped and measured risks on a regular basis and as defined by the GOVERN function. Risk treatment comprises plans to respond to, recover from, and communicate about incidents or events. Contextual information gleaned from expert consultation and input from relevant AI actors \u2013 established in GOVERN and carried out in MAP \u2013 is utilized in this function to decrease the likelihood of system failures and negative impacts. Systematic documentation practices established in GOVERN and utilized in MAP and MEASURE bolster AI risk management efforts and increase transparency and accountability. Processes for assessing emergent risks are in place, along with mechanisms for continual improvement. After completing the MANAGE function, plans for prioritizing risk and regular monitoring and improvement will be in place. Framework users will have enhanced capacity to man- age the risks of deployed AI systems and to allocate risk management resources based on assessed and prio",
+      "distance": 0.3522126078605652,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities."
+}

@@ -1,0 +1,99 @@
+{
+  "id": "q02",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What characteristics of trustworthy AI does the framework list?",
+  "answer": "The framework lists the following characteristics of trustworthy AI systems: valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. (doc=nist, page=17)",
+  "raw_answer": "The framework lists the following characteristics of trustworthy AI systems: valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. (doc=nist, page=17)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.92,
+  "tokens_in": 1455,
+  "tokens_out": 53,
+  "retrieved_ids": [
+    "nist-p017-c01",
+    "nist-p005-c02",
+    "nist-p017-c02",
+    "nist-p018-c02",
+    "nist-p005-c01",
+    "nist-p018-c03"
+  ],
+  "retrieved_pages": [
+    17,
+    5,
+    17,
+    18,
+    5,
+    18
+  ],
+  "evidence_pages": [
+    17
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p017-c01",
+      "doc": "nist",
+      "page": 17,
+      "text": "NIST AI 100-1 AI RMF 1.0 3. AI Risks and Trustworthiness For AI systems to be trustworthy, they often need to be responsive to a multiplicity of cri- teria that are of value to interested parties. Approaches which enhance AI trustworthiness can reduce negative AI risks. This Framework articulates the following characteristics of trustworthy AI and offers guidance for addressing them. Characteristics of trustworthy AI systems include: valid and reliable, safe, secure and resilient, accountable and trans- parent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. Creating trustworthy AI requires balancing each of these characteristics based on the AI system\u2019s context of use. While all characteristics are socio-technical system at- tributes, accountability and transparency also relate to the processes and activities internal to an AI system and its external setting. Neglecting these characteristics can increase the probability and magnitude of negative consequences. Fig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics. Accounta",
+      "distance": 0.14918267726898193,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p005-c02",
+      "doc": "nist",
+      "page": 5,
+      "text": "ted as a best practice, with those building and using the models separated from those verifying and validating the models. 11 Fig. 4 Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthi- ness characteristics. Accountable & Transparent is shown as a vertical box because it relates to all other characteristics. 12 Fig. 5 Functions organize AI risk management activities at their highest level to govern, map, measure, and manage AI risks. Governance is designed to be a cross-cutting function to inform and be infused throughout the other three functions. 20 Page ii",
+      "distance": 0.1555997133255005,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p017-c02",
+      "doc": "nist",
+      "page": 17,
+      "text": " magnitude of negative consequences. Fig. 4. Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trustworthiness and is shown as the base for other trustworthiness characteristics. Accountable & Transparent is shown as a vertical box because it relates to all other characteristics. Trustworthiness characteristics (shown in Figure 4) are inextricably tied to social and orga- nizational behavior, the datasets used by AI systems, selection of AI models and algorithms and the decisions made by those who build them, and the interactions with the humans who provide insight from and oversight of such systems. Human judgment should be employed when deciding on the specific metrics related to AI trustworthiness characteristics and the precise threshold values for those metrics. Addressing AI trustworthiness characteristics individually will not ensure AI system trust- worthiness; tradeoffs are usually involved, rarely do all characteristics apply in every set- ting, and some will be more or less important in any given situation. Ultimately, trustwor- thiness is a social concept that ranges across a spectrum and is only as strong as its weakest characteris",
+      "distance": 0.15645885467529297,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p018-c02",
+      "doc": "nist",
+      "page": 18,
+      "text": "s, and for identifying AI system benefits and positive impacts. These practices can increase the likelihood that risks arising in social contexts are managed appropriately. Understanding and treatment of trustworthiness characteristics depends on an AI actor\u2019s particular role within the AI lifecycle. For any given AI system, an AI designer or developer may have a different perception of the characteristics than the deployer. Trustworthiness characteristics explained in this document influence each other. Highly secure but unfair systems, accurate but opaque and uninterpretable systems, and inaccurate but secure, privacy-enhanced, and transparent systems are all unde- sirable. A comprehensive approach to risk management calls for balancing tradeoffs among the trustworthiness characteristics. It is the joint responsibility of all AI ac- tors to determine whether AI technology is an appropriate or necessary tool for a given context or purpose, and how to use it responsibly. The decision to commission or deploy an AI system should be based on a contextual assessment of trustworthi- ness characteristics and the relative risks, impacts, costs, and benefits, and informed by a broad set of",
+      "distance": 0.21628892421722412,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p005-c01",
+      "doc": "nist",
+      "page": 5,
+      "text": "NIST AI 100-1 AI RMF 1.0 List of Figures Fig. 1 Examples of potential harms related to AI systems. Trustworthy AI systems and their responsible use can mitigate negative risks and contribute to bene- fits for people, organizations, and ecosystems. 5 Fig. 2 Lifecycle and Key Dimensions of an AI System. Modified from OECD (2022) OECD Framework for the Classification of AI systems \u2014 OECD Digital Economy Papers. The two inner circles show AI systems\u2019 key di- mensions and the outer circle shows AI lifecycle stages. Ideally, risk man- agement efforts start with the Plan and Design function in the application context and are performed throughout the AI system lifecycle. See Figure 3 for representative AI actors. 10 Fig. 3 AI actors across AI lifecycle stages. See Appendix A for detailed descrip- tions of AI actor tasks, including details about testing, evaluation, verifica- tion, and validation tasks. Note that AI actors in the AI Model dimension (Figure 2) are separated as a best practice, with those building and using the models separated from those verifying and validating the models. 11 Fig. 4 Characteristics of trustworthy AI systems. Valid & Reliable is a necessary condition of trus",
+      "distance": 0.21806079149246216,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p018-c03",
+      "doc": "nist",
+      "page": 18,
+      "text": "sponsibly. The decision to commission or deploy an AI system should be based on a contextual assessment of trustworthi- ness characteristics and the relative risks, impacts, costs, and benefits, and informed by a broad set of interested parties. 3.1 Valid and Reliable Validation is the \u201cconfirmation, through the provision of objective evidence, that the re- quirements for a specific intended use or application have been fulfilled\u201d (Source: ISO 9000:2015). Deployment of AI systems which are inaccurate, unreliable, or poorly gener- alized to data and settings beyond their training creates and increases negative AI risks and reduces trustworthiness. Reliability is defined in the same standard as the \u201cability of an item to perform as required, without failure, for a given time interval, under given conditions\u201d (Source: ISO /IEC TS 5723:2022). Reliability is a goal for overall correctness of AI system operation under the conditions of expected use and over a given period of time, including the entire lifetime of the system. Page 13",
+      "distance": 0.2333248257637024,
+      "fingerprint": "nist|sha=7576edb531d9|size=1200|overlap=225|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "Valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; fair with harmful bias managed."
+}

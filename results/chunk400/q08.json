@@ -1,0 +1,99 @@
+{
+  "id": "q08",
+  "kind": "detail",
+  "answerable": true,
+  "question": "How does the AI RMF define residual risk?",
+  "answer": "The AI RMF does not explicitly define residual risk in the provided passages. However, it discusses the importance of addressing new risks as they emerge and the need to prioritize risks that are highest for the AI systems within a given context of use. It also mentions that the AI RMF is designed to be a living document that will be reviewed regularly to determine if an update is needed. Residual risk is a concept that is not directly addressed in the given passages.",
+  "raw_answer": "The AI RMF does not explicitly define residual risk in the provided passages. However, it discusses the importance of addressing new risks as they emerge and the need to prioritize risks that are highest for the AI systems within a given context of use. It also mentions that the AI RMF is designed to be a living document that will be reviewed regularly to determine if an update is needed. Residual risk is a concept that is not directly addressed in the given passages.",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.1,
+  "tokens_in": 647,
+  "tokens_out": 93,
+  "retrieved_ids": [
+    "nist-p009-c07",
+    "nist-p012-c01",
+    "nist-p013-c01",
+    "nist-p003-c02",
+    "nist-p013-c08",
+    "nist-p044-c04"
+  ],
+  "retrieved_pages": [
+    9,
+    12,
+    13,
+    3,
+    13,
+    44
+  ],
+  "evidence_pages": [
+    13
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.3333333333333333,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p009-c07",
+      "doc": "nist",
+      "page": 9,
+      "text": " overall system performance and trustworthiness and the likelihood that AI technologies will be used in ways that are beneficial. The AI RMF is designed to address new risks as they emerge. This flexibility is particularly important where impacts are not easily foreseeable and applications are evolving. While some AI risks and benefits are well-known, it can be challenging to assess negative impac",
+      "distance": 0.18220311403274536,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p012-c01",
+      "doc": "nist",
+      "page": 12,
+      "text": "NIST AI 100-1 AI RMF 1.0 1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization\u2019s or AI actor\u2019s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regula- tory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level",
+      "distance": 0.2025059461593628,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p013-c01",
+      "doc": "nist",
+      "page": 13,
+      "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurri",
+      "distance": 0.20417523384094238,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p003-c02",
+      "doc": "nist",
+      "page": 3,
+      "text": "e entities, materials, or equipment are necessarily the best available for the purpose. This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 Update Schedule and Versions The Artificial Intelligence Risk Management Framework (AI RMF) is intended to be a living document. NIST will review the content and usefulness of the Framework regularly to determine if an upda",
+      "distance": 0.20520657300949097,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p013-c08",
+      "doc": "nist",
+      "page": 13,
+      "text": "terprise risk management strategies and processes. Treating AI risks along with other critical risks, such as cybersecurity and privacy, will yield a more integrated outcome and organizational efficiencies. The AI RMF may be utilized along with related guidance and frameworks for managing AI system risks or broader enterprise risks. Some risks related to AI systems are common across other types of",
+      "distance": 0.20657294988632202,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p044-c04",
+      "doc": "nist",
+      "page": 44,
+      "text": " Framework. These frameworks have some features in common with the AI RMF. Like most risk management approaches, they are outcome-based rather than prescriptive and are often structured around a Core set of func- tions, categories, and subcategories. While there are significant differences between these frameworks based on the domain addressed \u2013 and because AI risk management calls for addressing ",
+      "distance": 0.21148306131362915,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "Risk remaining after risk treatment (from ISO GUIDE 73)."
+}

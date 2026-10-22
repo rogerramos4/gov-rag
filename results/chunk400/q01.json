@@ -1,0 +1,99 @@
+{
+  "id": "q01",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What are the four core functions of the NIST AI RMF?",
+  "answer": "The four core functions of the NIST AI RMF are GOVERN, MAP, MEASURE, and MANAGE (doc=nist, page=25).",
+  "raw_answer": "The four core functions of the NIST AI RMF are GOVERN, MAP, MEASURE, and MANAGE (doc=nist, page=25).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.88,
+  "tokens_in": 741,
+  "tokens_out": 34,
+  "retrieved_ids": [
+    "nist-p025-c01",
+    "nist-p008-c01",
+    "nist-p047-c01",
+    "nist-p026-c01",
+    "nist-p024-c01",
+    "nist-p002-c01"
+  ],
+  "retrieved_pages": [
+    25,
+    8,
+    47,
+    26,
+    24,
+    2
+  ],
+  "evidence_pages": [
+    25
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p025-c01",
+      "doc": "nist",
+      "page": 25,
+      "text": "NIST AI 100-1 AI RMF 1.0 Part 2: Core and Profiles 5. AI RMF Core The AI RMF Core provides outcomes and actions that enable dialogue, understanding, and activities to manage AI risks and responsibly develop trustworthy AI systems. As illus- trated in Figure 5, the Core is composed of four functions: GOVERN , MAP, MEASURE , and MANAGE . Each of these high-level functions is broken down into categor",
+      "distance": 0.17612051963806152,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p008-c01",
+      "doc": "nist",
+      "page": 8,
+      "text": "NIST AI 100-1 AI RMF 1.0 valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy enhanced, and fair with their harmful biases managed. Part 2 comprises the \u201cCore\u201d of the Framework. It describes four specific functions to help organizations address the risks of AI systems in practice. These functions \u2013 GOVERN , MAP, MEASURE , and MANAGE \u2013 ",
+      "distance": 0.19691431522369385,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p047-c01",
+      "doc": "nist",
+      "page": 47,
+      "text": "NIST AI 100-1 AI RMF 1.0 Appendix D: Attributes of the AI RMF NIST described several key attributes of the AI RMF when work on the Framework first began. These attributes have remained intact and were used to guide the AI RMF\u2019s devel- opment. They are provided here as a reference. The AI RMF strives to: 1. Be risk-based, resource-efficient, pro-innovation, and voluntary. 2. Be consensus-driven and",
+      "distance": 0.21968364715576172,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p026-c01",
+      "doc": "nist",
+      "page": 26,
+      "text": "NIST AI 100-1 AI RMF 1.0 deployed, or evaluated \u2013 which can create opportunities to surface problems and identify existing and emergent risks. An online companion resource to the AI RMF, the NIST AI RMF Playbook, is available to help organizations navigate the AI RMF and achieve its outcomes through suggested tactical actions they can apply within their own contexts. Like the AI RMF, the Playbook ",
+      "distance": 0.25024962425231934,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p024-c01",
+      "doc": "nist",
+      "page": 24,
+      "text": "NIST AI 100-1 AI RMF 1.0 4. Effectiveness of the AI RMF Evaluations of AI RMF effectiveness \u2013 including ways to measure bottom-line improve- ments in the trustworthiness of AI systems \u2013 will be part of future NIST activities, in conjunction with the AI community. Organizations and other users of the Framework are encouraged to periodically evaluate whether the AI RMF has improved their ability to ",
+      "distance": 0.25158971548080444,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p002-c01",
+      "doc": "nist",
+      "page": 2,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0) This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 January 2023 U.S. Department of Commerce Gina M. Raimondo, Secretary National Institute of Standards and Technology Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology",
+      "distance": 0.26218461990356445,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "GOVERN, MAP, MEASURE, and MANAGE."
+}

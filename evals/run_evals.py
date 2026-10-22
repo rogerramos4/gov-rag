@@ -80,11 +80,11 @@ def fmt_passages(passages: list[dict]) -> str:
     return "\n\n".join(f"[{i}] (doc={p['doc']}, page={p['page']})\n{p['text']}" for i, p in enumerate(passages, 1)) or "(none)"
 
 
-def run_one(q: dict, client, out_dir: Path, no_context: bool = False) -> dict:
+def run_one(q: dict, client, out_dir: Path, no_context: bool = False, collection: str = "nist_800") -> dict:
     """Answer one question, score it, save the full trace as JSON."""
-    rec = answer(q["question"], passages=[] if no_context else None)
+    rec = answer(q["question"], collection=collection, passages=[] if no_context else None)
     # Re-fetch passage objects for scoring (answer() only logs ids).
-    passages = [] if no_context else retrieve(q["question"])
+    passages = [] if no_context else retrieve(q["question"], collection)
     retrieved_pages = [p["page"] for p in passages]
     evidence_pages = [e["page"] for e in q["evidence"]]
 
@@ -158,10 +158,12 @@ def main() -> None:
     ap.add_argument("--judge", action="store_true", help="run Claude Haiku Pass/Fail judges (needs ANTHROPIC_API_KEY)")
     ap.add_argument("--no-context-baseline", type=int, default=5, help="answerable Qs to run with no passages (0 to skip)")
     ap.add_argument("--retriever", choices=["dense", "hybrid"], default=None, help="override RETRIEVER env (dense | hybrid)")
+    ap.add_argument("--chunk", type=int, default=800, help="chunk size; selects collection nist_<size>")
     args = ap.parse_args()
     if args.retriever:
         import ask
         ask.RETRIEVER = args.retriever
+    collection = f"nist_{args.chunk}"
 
     qs = [json.loads(l) for l in (ROOT / args.file).read_text(encoding="utf-8").splitlines() if l.strip()]
     out_dir = ROOT / "results" / args.tag
@@ -175,14 +177,14 @@ def main() -> None:
     t0 = time.time()
     rows = []
     for q in qs:
-        rows.append(run_one(q, client, out_dir))
+        rows.append(run_one(q, client, out_dir, collection=collection))
         r = rows[-1]
         flag = "ABSTAIN" if r["abstained"] else f"cites={r['n_citations']} unsupported={r['n_unsupported']}"
         print(f"{q['id']} {q['kind']:<14} recall={r['recall_any']} rr={r['rr']} {flag} {r['seconds']}s", file=sys.stderr)
 
     noctx = []
     for q in [q for q in qs if q["answerable"]][: args.no_context_baseline]:
-        noctx.append(run_one(q, None, out_dir, no_context=True))
+        noctx.append(run_one(q, None, out_dir, no_context=True, collection=collection))
         print(f"{q['id']} no-context -> {'ABSTAIN' if noctx[-1]['abstained'] else 'answered anyway'}", file=sys.stderr)
 
     fields = [k for k in rows[0] if k not in ("retrieved_ids", "unsupported")]

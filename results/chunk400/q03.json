@@ -1,0 +1,99 @@
+{
+  "id": "q03",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "How does the AI RMF define risk?",
+  "answer": "The AI RMF defines risk as the potential for an AI system to cause harm or negative impact, which the organization determines to be highest for the AI systems within a given context of use. It calls for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or where there is a high likelihood of negative impacts \u2013 the organization must take appropriate measures to mitigate these risks (doc=nist, page=13). Additionally, risk tolerance refers to the organization\u2019s or AI actor\u2019s readiness to bear the risk in order to achieve its objectives, which can be influenced by legal or regulatory requirements (doc=nist, page=12).",
+  "raw_answer": "The AI RMF defines risk as the potential for an AI system to cause harm or negative impact, which the organization determines to be highest for the AI systems within a given context of use. It calls for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurring, or where there is a high likelihood of negative impacts \u2013 the organization must take appropriate measures to mitigate these risks (doc=nist, page=13). Additionally, risk tolerance refers to the organization\u2019s or AI actor\u2019s readiness to bear the risk in order to achieve its objectives, which can be influenced by legal or regulatory requirements (doc=nist, page=12).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 5.66,
+  "tokens_in": 596,
+  "tokens_out": 156,
+  "retrieved_ids": [
+    "nist-p009-c07",
+    "nist-p013-c01",
+    "nist-p012-c01",
+    "nist-p003-c02",
+    "nist-p001-c01",
+    "nist-p013-c08"
+  ],
+  "retrieved_pages": [
+    9,
+    13,
+    12,
+    3,
+    1,
+    13
+  ],
+  "evidence_pages": [
+    9
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 2,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p009-c07",
+      "doc": "nist",
+      "page": 9,
+      "text": " overall system performance and trustworthiness and the likelihood that AI technologies will be used in ways that are beneficial. The AI RMF is designed to address new risks as they emerge. This flexibility is particularly important where impacts are not easily foreseeable and applications are evolving. While some AI risks and benefits are well-known, it can be challenging to assess negative impac",
+      "distance": 0.15145158767700195,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p013-c01",
+      "doc": "nist",
+      "page": 13,
+      "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurri",
+      "distance": 0.15883183479309082,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p012-c01",
+      "doc": "nist",
+      "page": 12,
+      "text": "NIST AI 100-1 AI RMF 1.0 1.2.2 Risk Tolerance While the AI RMF can be used to prioritize risk, it does not prescribe risk tolerance. Risk tolerance refers to the organization\u2019s or AI actor\u2019s (see Appendix A) readiness to bear the risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regula- tory requirements (Adapted from: ISO GUIDE 73). Risk tolerance and the level",
+      "distance": 0.1597604751586914,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p003-c02",
+      "doc": "nist",
+      "page": 3,
+      "text": "e entities, materials, or equipment are necessarily the best available for the purpose. This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 Update Schedule and Versions The Artificial Intelligence Risk Management Framework (AI RMF) is intended to be a living document. NIST will review the content and usefulness of the Framework regularly to determine if an upda",
+      "distance": 0.16993439197540283,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p001-c01",
+      "doc": "nist",
+      "page": 1,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "distance": 0.17139297723770142,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p013-c08",
+      "doc": "nist",
+      "page": 13,
+      "text": "terprise risk management strategies and processes. Treating AI risks along with other critical risks, such as cybersecurity and privacy, will yield a more integrated outcome and organizational efficiencies. The AI RMF may be utilized along with related guidance and frameworks for managing AI system risks or broader enterprise risks. Some risks related to AI systems are common across other types of",
+      "distance": 0.17509853839874268,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "The composite measure of an event's probability of occurring and the magnitude or degree of the consequences of that event."
+}

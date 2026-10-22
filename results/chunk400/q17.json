@@ -1,0 +1,97 @@
+{
+  "id": "q17",
+  "kind": "near_miss",
+  "answerable": false,
+  "question": "What monetary penalty does the AI RMF impose on organizations that fail to comply?",
+  "answer": "The AI RMF does not impose any monetary penalty on organizations that fail to comply. The AI RMF is intended to be voluntary, and the documents provided do not mention any financial penalties for non-compliance.",
+  "raw_answer": "The AI RMF does not impose any monetary penalty on organizations that fail to comply. The AI RMF is intended to be voluntary, and the documents provided do not mention any financial penalties for non-compliance.",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense",
+  "seconds": 4.65,
+  "tokens_in": 676,
+  "tokens_out": 43,
+  "retrieved_ids": [
+    "nist-p014-c01",
+    "nist-p007-c04",
+    "nist-p013-c01",
+    "nist-p002-c01",
+    "nist-p047-c03",
+    "nist-p003-c02"
+  ],
+  "retrieved_pages": [
+    14,
+    7,
+    13,
+    2,
+    47,
+    3
+  ],
+  "evidence_pages": [],
+  "recall_any": null,
+  "recall_all": null,
+  "rr": null,
+  "n_citations": 0,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": false,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p014-c01",
+      "doc": "nist",
+      "page": 14,
+      "text": "NIST AI 100-1 AI RMF 1.0 Organizations need to establish and maintain the appropriate accountability mechanisms, roles and responsibilities, culture, and incentive structures for risk management to be ef- fective. Use of the AI RMF alone will not lead to these changes or provide the appropriate incentives. Effective risk management is realized through organizational commitment at senior levels and",
+      "distance": 0.27081990242004395,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p007-c04",
+      "doc": "nist",
+      "page": 7,
+      "text": ". As directed by the National Artificial Intelligence Initiative Act of 2020 (P.L. 116-283), the goal of the AI RMF is to offer a resource to the organizations designing, developing, deploying, or using AI systems to help manage the many risks of AI and promote trustwor- thy and responsible development and use of AI systems. The Framework is intended to be voluntary, rights-preserving, non-sector-",
+      "distance": 0.2733861207962036,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p013-c01",
+      "doc": "nist",
+      "page": 13,
+      "text": "NIST AI 100-1 AI RMF 1.0 When applying the AI RMF, risks which the organization determines to be highest for the AI systems within a given context of use call for the most urgent prioritization and most thorough risk management process. In cases where an AI system presents unacceptable negative risk levels \u2013 such as where significant negative impacts are imminent, severe harms are actually occurri",
+      "distance": 0.2802296280860901,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p002-c01",
+      "doc": "nist",
+      "page": 2,
+      "text": "NIST AI 100-1 Artificial Intelligence Risk Management Framework (AI RMF 1.0) This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 January 2023 U.S. Department of Commerce Gina M. Raimondo, Secretary National Institute of Standards and Technology Laurie E. Locascio, NIST Director and Under Secretary of Commerce for Standards and Technology",
+      "distance": 0.29380112886428833,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p047-c03",
+      "doc": "nist",
+      "page": 47,
+      "text": "ior executives, government officials, non-governmental organization leadership, and those who are not AI professionals \u2013 while still of sufficient technical depth to be useful to practitioners. The AI RMF should allow for communication of AI risks across an organization, between organizations, with customers, and to the public at large. 4. Provide common language and understanding to manage AI ris",
+      "distance": 0.29562050104141235,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    },
+    {
+      "id": "nist-p003-c02",
+      "doc": "nist",
+      "page": 3,
+      "text": "e entities, materials, or equipment are necessarily the best available for the purpose. This publication is available free of charge from: https://doi.org/10.6028/NIST.AI.100-1 Update Schedule and Versions The Artificial Intelligence Risk Management Framework (AI RMF) is intended to be a living document. NIST will review the content and usefulness of the Framework regularly to determine if an upda",
+      "distance": 0.29748374223709106,
+      "fingerprint": "nist|sha=7576edb531d9|size=400|overlap=75|embed=nomic-embed-text:v1.5|retriever=dense"
+    }
+  ],
+  "reference_answer": "NOT IN DOCUMENTS"
+}
