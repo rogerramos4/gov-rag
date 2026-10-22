@@ -25,3 +25,7 @@
 - SCORER CHANGE AFTER SEEING FROZEN RESULTS (disclosed): classify_abstention now = sentinel present AND no citations parsed. Dropped the length rule. This moved q20 from miss to hit (4/6 -> 5/6). The question set was not touched. raw_answer is now logged so normalization never hides what the model actually said.
 - Known scorer limitation: a reply that guesses and then abstains (q01 no-context) counts as an abstention. The groundedness judge is the backstop for that pattern.
 - Judge rubrics live in evals/rubrics.py; Claude Haiku 5.5, effort low, binary PASS/FAIL per failure mode; results/frozen/labels.csv is the empty template for Roger's 40 hand labels.
+
+## 2026-10-21 Milestones 6-7: write-up, README, clean-run
+- Clean-run check passed: fresh clone into a scratch folder, new venv from requirements.txt, 19 tests pass, ingest gives the identical fingerprint, eval reproduces every number (14/14, 0.90, 14/14, 0, 5/6, 0/14). Latency 4.9 s vs 4.8 s.
+- Still pending, blocked on an Anthropic API key: judge run (`--judge`), 40 hand labels in results/frozen/labels.csv, TPR/TNR row. Not yet pushed to GitHub (no remote; Roger's call, and check KPMG outside-activities policy first).
