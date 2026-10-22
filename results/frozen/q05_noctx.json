@@ -1,0 +1,41 @@
+{
+  "id": "q05",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "Does the AI RMF prescribe a risk tolerance for organizations?",
+  "answer": "The AI RMF (Risk Management Framework) does not explicitly prescribe a risk tolerance for organizations. The AI RMF focuses on the processes and practices for managing risks, but it does not specify a particular risk tolerance. (doc, 1)",
+  "raw_answer": "The AI RMF (Risk Management Framework) does not explicitly prescribe a risk tolerance for organizations. The AI RMF focuses on the processes and practices for managing risks, but it does not specify a particular risk tolerance. (doc, 1)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": null,
+  "seconds": 2.59,
+  "tokens_in": 84,
+  "tokens_out": 50,
+  "retrieved_ids": [],
+  "retrieved_pages": [],
+  "evidence_pages": [
+    12
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "rr": 0.0,
+  "n_citations": 1,
+  "n_unsupported": 1,
+  "unsupported": [
+    [
+      "doc",
+      1
+    ]
+  ],
+  "supported": false,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [],
+  "reference_answer": "No. The RMF can be used to prioritize risk but does not prescribe risk tolerance; tolerance is contextual and set by the organization, laws, or sector."
+}

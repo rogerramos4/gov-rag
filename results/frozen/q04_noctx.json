@@ -1,0 +1,41 @@
+{
+  "id": "q04",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What are the three major categories of AI bias identified by NIST?",
+  "answer": "The three major categories of AI bias identified by NIST are: (1) data bias, (2) algorithmic bias, and (3) deployment bias. These categories are outlined in the NIST AI Risk Management Framework, which aims to help organizations manage the risks associated with AI systems. (doc, 1)",
+  "raw_answer": "The three major categories of AI bias identified by NIST are: (1) data bias, (2) algorithmic bias, and (3) deployment bias. These categories are outlined in the NIST AI Risk Management Framework, which aims to help organizations manage the risks associated with AI systems. (doc, 1)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": null,
+  "seconds": 2.63,
+  "tokens_in": 86,
+  "tokens_out": 66,
+  "retrieved_ids": [],
+  "retrieved_pages": [],
+  "evidence_pages": [
+    23
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "rr": 0.0,
+  "n_citations": 1,
+  "n_unsupported": 1,
+  "unsupported": [
+    [
+      "doc",
+      1
+    ]
+  ],
+  "supported": false,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [],
+  "reference_answer": "Systemic, computational and statistical, and human-cognitive bias."
+}

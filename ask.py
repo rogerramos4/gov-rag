@@ -5,6 +5,7 @@ Why a CLI: evals/run_evals.py imports `answer()` so the exact same code path is 
 import argparse
 import json
 import os
+import re
 import time
 from pathlib import Path
 
@@ -65,15 +66,28 @@ def generate_local(system: str, user: str) -> tuple[str, dict]:
     return j["message"]["content"].strip(), usage
 
 
+# Matches "(nist, 25)", "(doc=nist, page=25)", "(nist, page 25)", "(nist, p. 25)".
+CITE_RE = re.compile(r"\(\s*(?:doc\s*=\s*)?([A-Za-z_]+)\s*,\s*(?:page\s*=?\s*|p\.?\s*)?(\d+)\s*\)", re.I)
+
+
+def parse_citations(text: str) -> list[tuple[str, int]]:
+    """Pull (doc, page) pairs out of an answer.
+
+    Why tolerant: small models vary the format ("doc=nist, page=25" vs "nist, 25");
+    punishing format instead of substance would measure the wrong thing.
+    """
+    return [(d.lower(), int(p)) for d, p in CITE_RE.findall(text)]
+
+
 def classify_abstention(text: str) -> bool:
     """True only if the reply is an abstention, not an answer that merely mentions the token.
 
-    Why not a substring check: 'The doc says "NOT IN DOCUMENTS" means X' is an answer.
-    We call it an abstention when the token appears and the reply is short with no citation.
+    Rule: the sentinel appears AND the reply cites no passage. A reply that cites a page is
+    making a claim from the documents, so it is an answer even if it also says the token.
+    (Changed 2026-10-21 after the first frozen run: the earlier 200-char limit wrongly
+    rejected a long but correct abstention on q20. Disclosed in docs/retros.md.)
     """
-    t = text.strip()
-    return ABSTAIN in t.upper() and "(" not in t and len(t) <= 200
-
+    return ABSTAIN in text.upper() and not parse_citations(text)
 
 def answer(question: str, collection: str = "nist_800", k: int = 6, passages: list[dict] | None = None) -> dict:
     """Full pipeline for one question; logs a record to runs.jsonl and returns it.
@@ -84,13 +98,14 @@ def answer(question: str, collection: str = "nist_800", k: int = 6, passages: li
     if passages is None:
         passages = retrieve(question, collection, k)
     text, usage = generate_local(SYSTEM, build_prompt(question, passages))
+    raw_text = text
     abstained = classify_abstention(text)
     if abstained:
         text = ABSTAIN  # normalize so downstream code sees the documented exact sentinel
     rec = {
         "ts": time.time(), "backend": GEN_MODEL, "collection": collection,
         "fingerprint": passages[0]["fingerprint"] if passages else None, "question": question,
-        "retrieved_ids": [p["id"] for p in passages], "answer": text,
+        "retrieved_ids": [p["id"] for p in passages], "answer": text, "raw_answer": raw_text,
         "abstained": abstained,
         **usage, "seconds": round(time.time() - t0, 2),
     }

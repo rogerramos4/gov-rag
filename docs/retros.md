@@ -18,3 +18,10 @@
 - Roger asked me to write the questions rather than write them himself; trade-off noted (less content learning, faster to evals). 14 answerable (10 single-page lookups/details, 2 two-passage), 6 unanswerable (2 off-topic, 2 near-miss, 2 false-premise). 5 dev questions separate.
 - Every evidence quote is checked by pytest against the actual page text, so a mislabelled page can never masquerade as a retrieval miss.
 - Frozen at this commit. Do not edit evals/questions.jsonl after run_evals.py reports numbers.
+
+## 2026-10-21 Milestone 5: run_evals.py, first frozen run
+- Code-only metrics on qwen3:4b, 800/150 chunks: Recall@6 14/14, MRR 0.90, citation support 14/14, 0 hallucinated citations, correct abstentions 5/6, false abstentions 0/14, warm latency ~5 s. No-context baseline: 4/5 answered anyway (one invented four fake "core functions" then said NOT IN DOCUMENTS). Judges not yet run (no API key on this machine).
+- Failure taxonomy (first run, 2 abstention misses): (a) q17 "soft abstention": said the documents do not mention a penalty but never used the sentinel -> scored as an answer. Left as-is; this is a real prompt-adherence failure of the 4B model. (b) q20: correct, long abstention rejected by an arbitrary 200-char rule in classify_abstention -> scorer bug.
+- SCORER CHANGE AFTER SEEING FROZEN RESULTS (disclosed): classify_abstention now = sentinel present AND no citations parsed. Dropped the length rule. This moved q20 from miss to hit (4/6 -> 5/6). The question set was not touched. raw_answer is now logged so normalization never hides what the model actually said.
+- Known scorer limitation: a reply that guesses and then abstains (q01 no-context) counts as an abstention. The groundedness judge is the backstop for that pattern.
+- Judge rubrics live in evals/rubrics.py; Claude Haiku 5.5, effort low, binary PASS/FAIL per failure mode; results/frozen/labels.csv is the empty template for Roger's 40 hand labels.

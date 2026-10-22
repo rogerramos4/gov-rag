@@ -1,0 +1,99 @@
+{
+  "id": "q07",
+  "kind": "detail",
+  "answerable": true,
+  "question": "What does subcategory GOVERN 1.6 require?",
+  "answer": "Subcategory GOVERN 1.6 requires mechanisms to inventory AI systems and to resource them according to organizational risk priorities. (doc=nist, page=28)",
+  "raw_answer": "Subcategory GOVERN 1.6 requires mechanisms to inventory AI systems and to resource them according to organizational risk priorities. (doc=nist, page=28)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
+  "seconds": 4.59,
+  "tokens_in": 1038,
+  "tokens_out": 35,
+  "retrieved_ids": [
+    "nist-p026-c03",
+    "nist-p027-c03",
+    "nist-p028-c01",
+    "nist-p029-c01",
+    "nist-p031-c01",
+    "nist-p034-c04"
+  ],
+  "retrieved_pages": [
+    26,
+    27,
+    28,
+    29,
+    31,
+    34
+  ],
+  "evidence_pages": [
+    28
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 0.3333333333333333,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p026-c03",
+      "doc": "nist",
+      "page": 26,
+      "text": "F would start with the MAP function and con- tinue to MEASURE or MANAGE . However users integrate the functions, the process should be iterative, with cross-referencing between functions as necessary. Simi- larly, there are categories and subcategories with elements that apply to multiple functions, or that logically should take place before certain subcategory decisions. 5.1 Govern The GOVERN function: \u2022 cultivates and implements a culture of risk management within organizations design- ing, developing, deploying, evaluating, or acquiring AI systems; \u2022 outlines processes, documents, and organizational schemes that anticipate, identify, and manage the risks a system can pose, including to users and others across society \u2013 and procedures to achieve those outcomes; \u2022 incorporates processes t",
+      "distance": 0.30641496181488037,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p027-c03",
+      "doc": "nist",
+      "page": 27,
+      "text": "GOVERN function as knowledge, cultures, and needs or expectations from AI actors evolve over time. Practices related to governing AI risks are described in the NIST AI RMF Playbook. Table 1 lists the GOVERN function\u2019s categories and subcategories. Table 1: Categories and subcategories for the GOVERN function. GOVERN 1: Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively. GOVERN 1.1: Legal and regulatory requirements involving AI are understood, managed, and documented. GOVERN 1.2: The characteristics of trustworthy AI are inte- grated into organizational policies, processes, procedures, and practices. GOVERN 1.3: Processes, procedures, and practices are in p",
+      "distance": 0.3276907205581665,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p028-c01",
+      "doc": "nist",
+      "page": 28,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) GOVERN 1.5: Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and or- ganizational roles and responsibilities clearly defined, including determining the frequency of periodic review. GOVERN 1.6: Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities. GOVERN 1.7: Processes and procedures are in place for decom- missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization\u2019s trustworthiness. GOVERN 2: Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mappi",
+      "distance": 0.33197474479675293,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p029-c01",
+      "doc": "nist",
+      "page": 29,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 1: Categories and subcategories for the GOVERN function. (Continued) that considers and communicates AI risk. GOVERN 4.2: Organizational teams document the risks and po- tential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly. GOVERN 4.3: Organizational practices are in place to enable AI testing, identification of incidents, and information sharing. GOVERN 5: Processes are in place for robust engagement with relevant AI actors. GOVERN 5.1: Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts relat",
+      "distance": 0.34000933170318604,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p031-c01",
+      "doc": "nist",
+      "page": 31,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 2: Categories and subcategories for the MAP function. MAP 1: Context is established and understood. MAP 1.1: Intended purposes, potentially beneficial uses, context- specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and docu- mented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative im- pacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics. MAP 1.2: Interdisciplinary AI actors, competencies, skills, and capacities for establis",
+      "distance": 0.34450072050094604,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p034-c04",
+      "doc": "nist",
+      "page": 34,
+      "text": "generalizability be- yond the conditions under which the technology was developed are documented. Categories Subcategories Continued on next page Page 29",
+      "distance": 0.3470609784126282,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    }
+  ],
+  "reference_answer": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities."
+}

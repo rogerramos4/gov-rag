@@ -1,0 +1,41 @@
+{
+  "id": "q02",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "What characteristics of trustworthy AI does the framework list?",
+  "answer": "The framework lists the following characteristics of trustworthy AI: transparency, accountability, fairness, and non-discrimination (doc, 1).",
+  "raw_answer": "The framework lists the following characteristics of trustworthy AI: transparency, accountability, fairness, and non-discrimination (doc, 1).",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": null,
+  "seconds": 2.31,
+  "tokens_in": 82,
+  "tokens_out": 27,
+  "retrieved_ids": [],
+  "retrieved_pages": [],
+  "evidence_pages": [
+    17
+  ],
+  "recall_any": false,
+  "recall_all": false,
+  "rr": 0.0,
+  "n_citations": 1,
+  "n_unsupported": 1,
+  "unsupported": [
+    [
+      "doc",
+      1
+    ]
+  ],
+  "supported": false,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [],
+  "reference_answer": "Valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; fair with harmful bias managed."
+}

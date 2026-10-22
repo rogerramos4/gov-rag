@@ -34,3 +34,6 @@ def test_abstention_detection():
     assert classify_abstention("The documents do not cover this. NOT IN DOCUMENTS.")
     assert not classify_abstention('The RMF says "NOT IN DOCUMENTS" is used when... (nist, 12)')
     assert not classify_abstention("GOVERN, MAP, MEASURE, MANAGE (nist, 25)")
+    long_correction = ("The question assumes five functions but the documents list four: GOVERN, MAP, "
+                       "MEASURE, and MANAGE. There is no fifth function. " * 3 + "Therefore the answer is NOT IN DOCUMENTS.")
+    assert classify_abstention(long_correction)  # length alone must not disqualify an abstention

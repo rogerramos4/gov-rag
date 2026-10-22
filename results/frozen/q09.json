@@ -1,0 +1,99 @@
+{
+  "id": "q09",
+  "kind": "lookup",
+  "answerable": true,
+  "question": "According to the AI RMF, how do security and resilience differ?",
+  "answer": "According to the AI RMF, security and resilience differ in that security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks. Resilience, on the other hand, is the ability to return to normal function after an unexpected adverse event, and it relates to robustness and goes beyond the provenance of the data to encompass unexpected or adversarial use (or abuse or misuse) of the model or data. (doc=nist, page=20)",
+  "raw_answer": "According to the AI RMF, security and resilience differ in that security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks. Resilience, on the other hand, is the ability to return to normal function after an unexpected adverse event, and it relates to robustness and goes beyond the provenance of the data to encompass unexpected or adversarial use (or abuse or misuse) of the model or data. (doc=nist, page=20)",
+  "abstained": false,
+  "backend": "qwen3:4b-q4_K_M",
+  "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5",
+  "seconds": 5.19,
+  "tokens_in": 1103,
+  "tokens_out": 102,
+  "retrieved_ids": [
+    "nist-p020-c03",
+    "nist-p020-c02",
+    "nist-p038-c03",
+    "nist-p009-c04",
+    "nist-p035-c01",
+    "nist-p044-c02"
+  ],
+  "retrieved_pages": [
+    20,
+    20,
+    38,
+    9,
+    35,
+    44
+  ],
+  "evidence_pages": [
+    20
+  ],
+  "recall_any": true,
+  "recall_all": true,
+  "rr": 1.0,
+  "n_citations": 1,
+  "n_unsupported": 0,
+  "unsupported": [],
+  "supported": true,
+  "correct_abstention": false,
+  "false_abstention": false,
+  "judge_correct": null,
+  "judge_grounded": null,
+  "judge_reason_correct": "",
+  "judge_reason_grounded": "",
+  "judge_tokens_in": 0,
+  "judge_tokens_out": 0,
+  "passages": [
+    {
+      "id": "nist-p020-c03",
+      "doc": "nist",
+      "page": 20,
+      "text": "can maintain confidentiality, integrity, and availability through protection mechanisms that prevent unauthorized access and use may be said to be secure. Guidelines in the NIST Cybersecurity Framework and Risk Manage- ment Framework are among those which are applicable here. Security and resilience are related but distinct characteristics. While resilience is the abil- ity to return to normal function after an unexpected adverse event, security includes re- silience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks. Resilience relates to robustness and goes beyond the provenance of the data to encompass unexpected or adversarial use (or abuse or misuse) of the model or data. 3.4 Accountable and Transparent Trustworthy AI depends upon accountabil",
+      "distance": 0.17436403036117554,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p020-c02",
+      "doc": "nist",
+      "page": 20,
+      "text": "on-specific guidelines or standards. 3.3 Secure and Resilient AI systems, as well as the ecosystems in which they are deployed, may be said to be re- silient if they can withstand unexpected adverse events or unexpected changes in their envi- ronment or use \u2013 or if they can maintain their functions and structure in the face of internal and external change and degrade safely and gracefully when this is necessary (Adapted from: ISO /IEC TS 5723:2022). Common security concerns relate to adversarial examples, data poisoning, and the exfiltration of models, training data, or other intellectual property through AI system endpoints. AI systems that can maintain confidentiality, integrity, and availability through protection mechanisms that prevent unauthorized access and use may be said to be sec",
+      "distance": 0.24385380744934082,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p038-c03",
+      "doc": "nist",
+      "page": 38,
+      "text": "sights into how risk can be managed at various stages of the AI lifecycle or in specific sector, technology, or end-use applications. AI RMF profiles assist organizations in deciding how they might best manage AI risk that is well-aligned with their goals, considers legal/regulatory requirements and best practices, and reflects risk management priorities. AI RMF temporal profiles are descriptions of either the current state or the desired, target state of specific AI risk management activities within a given sector, industry, organization, or application context. An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals. Co",
+      "distance": 0.26207244396209717,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p009-c04",
+      "doc": "nist",
+      "page": 9,
+      "text": " overall system performance and trustworthiness and the likelihood that AI technologies will be used in ways that are beneficial. The AI RMF is designed to address new risks as they emerge. This flexibility is particularly important where impacts are not easily foreseeable and applications are evolving. While some AI risks and benefits are well-known, it can be challenging to assess negative impacts and the degree of harms. Figure 1 provides examples of potential harms that can be related to AI systems. AI risk management efforts should consider that humans may assume that AI systems work \u2013 and work well \u2013 in all settings. For example, whether correct or not, AI systems are often perceived as being more objective than humans or as offering greater capabilities than general software. Page 4",
+      "distance": 0.2640470266342163,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p035-c01",
+      "doc": "nist",
+      "page": 35,
+      "text": "NIST AI 100-1 AI RMF 1.0 Table 3: Categories and subcategories for the MEASURE function. (Continued) MEASURE 2.6: The AI system is evaluated regularly for safety risks \u2013 as identified in theMAP function. The AI system to be de- ployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics re- flect system reliability and robustness, real-time monitoring, and response times for AI system failures. MEASURE 2.7: AI system security and resilience \u2013 as identified in the MAP function \u2013 are evaluated and documented. MEASURE 2.8: Risks associated with transparency and account- ability \u2013 as identified in the MAP function \u2013 are examined and documented. MEASURE 2.9: ",
+      "distance": 0.26535511016845703,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    },
+    {
+      "id": "nist-p044-c02",
+      "doc": "nist",
+      "page": 44,
+      "text": "ed,\u201d organizations may consider leveraging available standards and guidance that provide broad guidance to organizations to reduce security and privacy risks, such as, but not limited to, the NIST Cy- bersecurity Framework, the NIST Privacy Framework, the NIST Risk Management Frame- work, and the Secure Software Development Framework. These frameworks have some features in common with the AI RMF. Like most risk management approaches, they are outcome-based rather than prescriptive and are often structured around a Core set of func- tions, categories, and subcategories. While there are significant differences between these frameworks based on the domain addressed \u2013 and because AI risk management calls for addressing many other types of risks \u2013 frameworks like those mentioned above may infor",
+      "distance": 0.2676149010658264,
+      "fingerprint": "nist|sha=7576edb531d9|size=800|overlap=150|embed=nomic-embed-text:v1.5"
+    }
+  ],
+  "reference_answer": "Resilience is the ability to return to normal function after an unexpected adverse event; security includes resilience but also covers protocols to avoid, protect against, respond to, or recover from attacks."
+}
